@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Welcome to Jekyll!</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <title>Using Jekyll to create my first blog</title>
+  <meta name="description" content="First Shot I’m trying to use Github Pages combined with Jekyll to create my blog. Although I succeeded, and the blog is online right now, I am still not sure...">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/09/02/welcome-to-jekyll.html">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">
   <link rel="alternate" type="application/rss+xml" title="Tsu Pei&#39;s Blog" href="/feed.xml">
   
   
@@ -70,9 +70,9 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
+    <h1 class="post-title" itemprop="name headline">Using Jekyll to create my first blog</h1>
     <p class="post-meta">
-      <time datetime="2017-09-02T00:38:15+08:00" itemprop="datePublished">
+      <time datetime="2017-09-02T00:00:00+08:00" itemprop="datePublished">
         
         Sep 2, 2017
       </time>
@@ -80,20 +80,46 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <h1 id="first-shot">First Shot</h1>
+<p>I’m trying to use <code class="highlighter-rouge">Github Pages</code> combined with <code class="highlighter-rouge">Jekyll</code> to create my blog.
+Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h1 id="review-of-my-wrok">Review of My Wrok</h1>
+<p>Here to review what I did to create this simple-style blog.
+Actually, Jekyll provides many themes for us to choose, And What I use right now is called <a href="https://github.com/jekyll/minima"><code class="highlighter-rouge">minima</code></a>.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>To begin, you have to own a github account, in order to use github page.
+<a href="https://www.youtube.com/watch?v=RaKX4A5EiQoa">Here is a video for you get a quick start</a>.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>After that, follow the instruction on the <a href="https://jekyllrb.com">Jekyll</a> website.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll bundler
+jekyll new my-awesome-site
+cd my-awesome-site
+bundle exec jekyll serve
+</code></pre>
+</div>
+<p>You could easily install Jekyll in your computer.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Then you could run your website on local host by this command:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>jekyll serve
+</code></pre>
+</div>
+<p>The default port is 4000. If you want to change it. you could change the <code class="highlighter-rouge">_config</code> file.</p>
 
+<p>Finally, you could have a simple website.
+Whenever you want to add a new post, the only thing you have to do is to add a new <strong>markdown file</strong> in the <code class="highlighter-rouge">_post</code> folder.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>To conclude it, there are some important points in this process.</p>
+<ol>
+  <li>How to use <code class="highlighter-rouge">git</code> and <code class="highlighter-rouge">github</code>.</li>
+  <li>Install jekyll and understand the command of Jekyll.</li>
+  <li>Learn the grammary of markdown.</li>
+  <li>Knowing that <code class="highlighter-rouge">_config</code> file and <code class="highlighter-rouge">front-matter</code> variables.</li>
+</ol>
+
+<p>And then what I am going to know is to to figure out the structure of Jekyll further and how to make changes on this existed structure. If I want to change some contents of it, what should I do.
+For examples, if I want to add a list to categorize my articles.</p>
 
   </div>
 
@@ -133,6 +159,12 @@
           </li>
           
 
+          
+          <li>
+            <a href="https://twitter.com/tsupei"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">tsupei</span></a>
+
+          </li>
           
         </ul>
       </div>

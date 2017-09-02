@@ -1,14 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-02T19:02:15+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/09/02/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-09-02T00:38:15+08:00</published><updated>2017-09-02T00:38:15+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-02T20:00:12+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
+</subtitle><entry><title type="html">Using Jekyll to create my first blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html" rel="alternate" type="text/html" title="Using Jekyll to create my first blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">&lt;h1 id=&quot;first-shot&quot;&gt;First Shot&lt;/h1&gt;
+&lt;p&gt;I’m trying to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt; combined with &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; to create my blog.
+Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h1 id=&quot;review-of-my-wrok&quot;&gt;Review of My Wrok&lt;/h1&gt;
+&lt;p&gt;Here to review what I did to create this simple-style blog.
+Actually, Jekyll provides many themes for us to choose, And What I use right now is called &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;minima&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;To begin, you have to own a github account, in order to use github page.
+&lt;a href=&quot;https://www.youtube.com/watch?v=RaKX4A5EiQoa&quot;&gt;Here is a video for you get a quick start&lt;/a&gt;.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;After that, follow the instruction on the &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; website.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install jekyll bundler
+jekyll new my-awesome-site
+cd my-awesome-site
+bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;You could easily install Jekyll in your computer.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">First time to create my own blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/first-time-to-create-my-own-blog.html" rel="alternate" type="text/html" title="First time to create my own blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/first-time-to-create-my-own-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/first-time-to-create-my-own-blog.html">&lt;p&gt;Just Try&lt;/p&gt;</content><author><name></name></author><summary type="html">Just Try</summary></entry></feed>
+&lt;p&gt;Then you could run your website on local host by this command:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The default port is 4000. If you want to change it. you could change the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Finally, you could have a simple website.
+Whenever you want to add a new post, the only thing you have to do is to add a new &lt;strong&gt;markdown file&lt;/strong&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_post&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;To conclude it, there are some important points in this process.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;How to use &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;github&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Install jekyll and understand the command of Jekyll.&lt;/li&gt;
+  &lt;li&gt;Learn the grammary of markdown.&lt;/li&gt;
+  &lt;li&gt;Knowing that &lt;code class=&quot;highlighter-rouge&quot;&gt;_config&lt;/code&gt; file and &lt;code class=&quot;highlighter-rouge&quot;&gt;front-matter&lt;/code&gt; variables.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And then what I am going to know is to to figure out the structure of Jekyll further and how to make changes on this existed structure. If I want to change some contents of it, what should I do.
+For examples, if I want to add a list to categorize my articles.&lt;/p&gt;</content><author><name></name></author><summary type="html">First Shot I’m trying to use Github Pages combined with Jekyll to create my blog. Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.</summary></entry></feed>
