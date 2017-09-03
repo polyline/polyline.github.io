@@ -13,7 +13,7 @@ You could compare these two styles below.
 ![Minima](\assets\img\minima.png ){: width="300"}
 
 If I want to make custom settings on my own, it's still available. 
-I could set the `sass folder`, since I have already change some settings. However, it's a little bit troublesome.
+I could set the `sass folder`, since I have already changed some settings. However, it's still a little bit troublesome.
 
 Therefore, I think this minima theme is more suitable for me, and all I need is to add some extra functions.
 For examples:
@@ -21,3 +21,4 @@ For examples:
 2. Categorize the articles.
 3. Personal Description.
 
+Then, I will keep exploring and testing the function of markdown everyday.
