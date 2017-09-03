@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-02T20:00:12+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
-</subtitle><entry><title type="html">Using Jekyll to create my first blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html" rel="alternate" type="text/html" title="Using Jekyll to create my first blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">&lt;h1 id=&quot;first-shot&quot;&gt;First Shot&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-03T21:23:56+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
+</subtitle><entry><title type="html">Try to fork other Jekyll themes</title><link href="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html" rel="alternate" type="text/html" title="Try to fork other Jekyll themes" /><published>2017-09-03T00:00:00+08:00</published><updated>2017-09-03T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html">&lt;h1 id=&quot;trying-to-fork-other-jekyll-theme&quot;&gt;Trying to Fork Other Jekyll Theme&lt;/h1&gt;
+
+&lt;p&gt;Today I tried to utilize others’ existed theme. However, I find it is a little bit hard to use.
+Since the theme is designed for &lt;strong&gt;photographer&lt;/strong&gt; and &lt;strong&gt;writter&lt;/strong&gt;, it doesn’t take many situations into account such as showing codes.
+You could compare these two styles below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;\assets\img\trophy.png&quot; alt=&quot;Trophy&quot; width=&quot;300&quot; /&gt;
+&lt;img src=&quot;\assets\img\minima.png&quot; alt=&quot;Minima&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I want to make custom settings on my own, it’s still available. 
+I could set the &lt;code class=&quot;highlighter-rouge&quot;&gt;sass folder&lt;/code&gt;, since I have already change some settings. However, it’s a little bit troublesome.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I think this minima theme is more suitable for me, and all I need is to add some extra functions.
+For examples:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Discussion Zoom.&lt;/li&gt;
+  &lt;li&gt;Categorize the articles.&lt;/li&gt;
+  &lt;li&gt;Personal Description.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">Trying to Fork Other Jekyll Theme</summary></entry><entry><title type="html">Using Jekyll to create my first blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html" rel="alternate" type="text/html" title="Using Jekyll to create my first blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">&lt;h1 id=&quot;first-shot&quot;&gt;First Shot&lt;/h1&gt;
 &lt;p&gt;I’m trying to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt; combined with &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; to create my blog.
 Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.&lt;/p&gt;
 
