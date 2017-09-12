@@ -41,3 +41,7 @@ To conclude it, there are some important points in this process.
 
 And then what I am going to know is to to figure out the structure of Jekyll further and how to make changes on this existed structure. If I want to change some contents of it, what should I do.
 For examples, if I want to add a list to categorize my articles.
+
+Trying to use some mathematic symbols here.
+\alpha
+

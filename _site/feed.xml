@@ -1,5 +1,249 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-03T21:23:56+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
-</subtitle><entry><title type="html">Try to fork other Jekyll themes</title><link href="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html" rel="alternate" type="text/html" title="Try to fork other Jekyll themes" /><published>2017-09-03T00:00:00+08:00</published><updated>2017-09-03T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html">&lt;h1 id=&quot;trying-to-fork-other-jekyll-theme&quot;&gt;Trying to Fork Other Jekyll Theme&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-12T20:44:40+08:00</updated><id>http://localhost:4000/</id><title type="html">Tsu Pei’s Blog</title><subtitle>This website is used to record my learning in the daily life. Including CS, observation in life, languages, and other worth recording things.
+</subtitle><entry><title type="html">Japanese idioms in Restaurant</title><link href="http://localhost:4000/jekyll/update/2017/09/12/Japanese-Restaurant-idiom.html" rel="alternate" type="text/html" title="Japanese idioms in Restaurant" /><published>2017-09-12T00:00:00+08:00</published><updated>2017-09-12T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/12/Japanese-Restaurant-idiom</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/12/Japanese-Restaurant-idiom.html">&lt;p&gt;Here are the collections of Japanese sentences which are often used in the restaurant.&lt;/p&gt;
+
+&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:1px solid #000000;
+}
+
+th{
+    border:1px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
+&lt;/style&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Japanese&lt;/th&gt;
+      &lt;th&gt;English&lt;/th&gt;
+      &lt;th&gt;Chinese&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;いらっしゃいませ&lt;/td&gt;
+      &lt;td&gt;Welcome&lt;/td&gt;
+      &lt;td&gt;歡迎光臨&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;お待たせしました&lt;/td&gt;
+      &lt;td&gt;Sorry for a long waiting time.&lt;/td&gt;
+      &lt;td&gt;抱歉久等了&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;かしこまりました&lt;/td&gt;
+      &lt;td&gt;Got it!&lt;/td&gt;
+      &lt;td&gt;我瞭解了&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;少々お待ちください&lt;/td&gt;
+      &lt;td&gt;Please hold on.&lt;/td&gt;
+      &lt;td&gt;請稍等一下&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;伺いましょか&lt;/td&gt;
+      &lt;td&gt;May I take your order now?&lt;/td&gt;
+      &lt;td&gt;請問可以幫您點餐了嗎？&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;伺います&lt;/td&gt;
+      &lt;td&gt;Let me take your order.&lt;/td&gt;
+      &lt;td&gt;這邊幫您點餐&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;おさげします&lt;/td&gt;
+      &lt;td&gt;May I take your plates?&lt;/td&gt;
+      &lt;td&gt;幫您收拾一下餐盤&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;合計は千円でございます&lt;/td&gt;
+      &lt;td&gt;Your bill comes to 1,000 dollars.&lt;/td&gt;
+      &lt;td&gt;總共1,000元&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;＊千円になります&lt;/td&gt;
+      &lt;td&gt;Your bill comes to 1,000 dollars.&lt;/td&gt;
+      &lt;td&gt;總共1,000元&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1万円からお預かりします&lt;/td&gt;
+      &lt;td&gt;Taking 10,000 dollars from you.&lt;/td&gt;
+      &lt;td&gt;收您一萬元&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ちょうど頂戴します&lt;/td&gt;
+      &lt;td&gt;—&lt;/td&gt;
+      &lt;td&gt;收您剛好&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;お先に&lt;/strong&gt;9000円にお返しします&lt;/td&gt;
+      &lt;td&gt;Here are nine thousand dollars, please.&lt;/td&gt;
+      &lt;td&gt;先找您9,000元&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;残り150円お釣りと領収書です&lt;/td&gt;
+      &lt;td&gt;Here are 150 dollars and the reciept, please.&lt;/td&gt;
+      &lt;td&gt;這邊是剩下的150元及發票&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;小銭&lt;/td&gt;
+      &lt;td&gt;charges&lt;/td&gt;
+      &lt;td&gt;零錢&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;まだお越しくださいませ&lt;/td&gt;
+      &lt;td&gt;Thank you! Welcome again.&lt;/td&gt;
+      &lt;td&gt;歡迎下次再來&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;袋は大丈夫です&lt;/td&gt;
+      &lt;td&gt;I don’t need bags, thank you!&lt;/td&gt;
+      &lt;td&gt;不用袋子&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;レジ袋&lt;/td&gt;
+      &lt;td&gt;plastic bag&lt;/td&gt;
+      &lt;td&gt;塑膠袋&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;additional-remark&quot;&gt;Additional Remark&lt;/h3&gt;
+
+&lt;p&gt;The contents of the article and the website are collected from the internet and some are created on my own. So, if there is any mistake or wierd usage of grammary, since I am a Taiwanese not a native English or Japanese speaker, please contact me! Thanks a lot.&lt;/p&gt;</content><author><name></name></author><summary type="html">Here are the collections of Japanese sentences which are often used in the restaurant.</summary></entry><entry><title type="html">Python-Numpy</title><link href="http://localhost:4000/jekyll/update/2017/09/09/Python-Numpy.html" rel="alternate" type="text/html" title="Python-Numpy" /><published>2017-09-09T00:00:00+08:00</published><updated>2017-09-09T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/09/Python-Numpy</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/09/Python-Numpy.html">&lt;h3 id=&quot;base-function&quot;&gt;Base Function&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;np.array()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.shape&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.dtype&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.item()&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.itemsize&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.nbytes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],[[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data type: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dim: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ndim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;item(0): &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;itemsize: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nbytes: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nbytes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[[1 2]
+  [3 4]]
+
+ [[5 6]
+  [7 8]]]
+(2, 2, 2)
+data type:  int64
+dim:  3
+item(0):  1
+itemsize:  8
+nbytes:  64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;transpose-matrix&quot;&gt;transpose Matrix&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;np.T&lt;/strong&gt; - (n.dim &amp;lt;= 2)&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[1 3]
+ [2 4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;shape-manipulation&quot;&gt;shape Manipulation&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;np.reshape()&lt;/strong&gt; - have to assign to a left variable, or the change will be saved&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.resize()&lt;/strong&gt; - it seems to automatically change multi-dimension array to one-dimension&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.flatten()&lt;/strong&gt; - copy&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.ravel()&lt;/strong&gt; - no copy, it means that any manipulation on it will be saved&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flatten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ravel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[1 2]
+ [3 4]]
+[[1 2 3 4]]
+[[1 2]
+ [3 4]]
+[1 2 3 4 0 0]
+[[1 2 3]
+ [4 0 0]]
+[[1 2 3]
+ [4 0 0]]
+[[  1   2   3]
+ [  4   0 100]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;item-manipulation-and-selection&quot;&gt;item manipulation and selection&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;np.take(index)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.put(index)&lt;/strong&gt; - could only replace existed entry&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;np.repeat(, axis=)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repeat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[1 2]
+ [3 4]]
+3
+[[ 1  2]
+ [22  4]]
+[ 1  1  2  2 22 22  4  4]
+[[ 1  2]
+ [ 1  2]
+ [22  4]
+ [22  4]]
+[[ 1  1  2  2]
+ [22 22  4  4]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Base Function</summary></entry><entry><title type="html">Try to fork other Jekyll themes</title><link href="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html" rel="alternate" type="text/html" title="Try to fork other Jekyll themes" /><published>2017-09-03T00:00:00+08:00</published><updated>2017-09-03T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/03/Trying-to-Fork-Other-Jekyll-Theme.html">&lt;h1 id=&quot;trying-to-fork-other-jekyll-theme&quot;&gt;Trying to Fork Other Jekyll Theme&lt;/h1&gt;
 
 &lt;p&gt;Today I tried to utilize others’ existed theme. However, I find it is a little bit hard to use.
 Since the theme is designed for &lt;strong&gt;photographer&lt;/strong&gt; and &lt;strong&gt;writter&lt;/strong&gt;, it doesn’t take many situations into account such as showing codes.
@@ -9,7 +253,7 @@ You could compare these two styles below.&lt;/p&gt;
 &lt;img src=&quot;\assets\img\minima.png&quot; alt=&quot;Minima&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If I want to make custom settings on my own, it’s still available. 
-I could set the &lt;code class=&quot;highlighter-rouge&quot;&gt;sass folder&lt;/code&gt;, since I have already change some settings. However, it’s a little bit troublesome.&lt;/p&gt;
+I could set the &lt;code class=&quot;highlighter-rouge&quot;&gt;sass folder&lt;/code&gt;, since I have already changed some settings. However, it’s still a little bit troublesome.&lt;/p&gt;
 
 &lt;p&gt;Therefore, I think this minima theme is more suitable for me, and all I need is to add some extra functions.
 For examples:&lt;/p&gt;
@@ -17,7 +261,9 @@ For examples:&lt;/p&gt;
   &lt;li&gt;Discussion Zoom.&lt;/li&gt;
   &lt;li&gt;Categorize the articles.&lt;/li&gt;
   &lt;li&gt;Personal Description.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">Trying to Fork Other Jekyll Theme</summary></entry><entry><title type="html">Using Jekyll to create my first blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html" rel="alternate" type="text/html" title="Using Jekyll to create my first blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">&lt;h1 id=&quot;first-shot&quot;&gt;First Shot&lt;/h1&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Then, I will keep exploring and testing the function of markdown everyday.&lt;/p&gt;</content><author><name></name></author><summary type="html">Trying to Fork Other Jekyll Theme</summary></entry><entry><title type="html">Using Jekyll to create my first blog</title><link href="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html" rel="alternate" type="text/html" title="Using Jekyll to create my first blog" /><published>2017-09-02T00:00:00+08:00</published><updated>2017-09-02T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/09/02/using-jekyll-to-create-my-first-blog.html">&lt;h1 id=&quot;first-shot&quot;&gt;First Shot&lt;/h1&gt;
 &lt;p&gt;I’m trying to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt; combined with &lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; to create my blog.
 Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.&lt;/p&gt;
 
@@ -56,4 +302,7 @@ Whenever you want to add a new post, the only thing you have to do is to add a n
 &lt;/ol&gt;
 
 &lt;p&gt;And then what I am going to know is to to figure out the structure of Jekyll further and how to make changes on this existed structure. If I want to change some contents of it, what should I do.
-For examples, if I want to add a list to categorize my articles.&lt;/p&gt;</content><author><name></name></author><summary type="html">First Shot I’m trying to use Github Pages combined with Jekyll to create my blog. Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.</summary></entry></feed>
+For examples, if I want to add a list to categorize my articles.&lt;/p&gt;
+
+&lt;p&gt;Trying to use some mathematic symbols here.
+\alpha&lt;/p&gt;</content><author><name></name></author><summary type="html">First Shot I’m trying to use Github Pages combined with Jekyll to create my blog. Although I succeeded, and the blog is online right now, I am still not sure if I knew how it operates.</summary></entry></feed>
