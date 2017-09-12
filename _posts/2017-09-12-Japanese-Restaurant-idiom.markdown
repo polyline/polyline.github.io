@@ -37,7 +37,7 @@ td{
 | ちょうど頂戴します | --- | 收您剛好 |
 |  **お先に**9000円にお返しします | Here are nine thousand dollars, please. | 先找您9,000元 |
 | 残り150円お釣りと領収書です | Here are 150 dollars and the reciept, please.| 這邊是剩下的150元及發票 |
-| 小銭 | charges | 零錢 |
+| 小銭 | change | 零錢 |
 | まだお越しくださいませ | Thank you! Welcome again. | 歡迎下次再來 |
 | 袋は大丈夫です | I don't need bags, thank you! | 不用袋子 |
 | レジ袋 | plastic bag | 塑膠袋 |
