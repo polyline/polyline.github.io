@@ -44,4 +44,4 @@ td{
 
 ### Additional Remark
 
-The contents of the article and the website are collected from the internet and some are created on my own. So, if there is any mistake or wierd usage of grammary, since I am a Taiwanese not a native English or Japanese speaker, please contact me! Thanks a lot.
+The content of the article and other articles on the website are collected from the internet and some are created on my own. So, if there is any mistake or wierd usage of grammary, since I am a Taiwanese instead of a native English or Japanese speaker, please contact me! Thanks a lot.
