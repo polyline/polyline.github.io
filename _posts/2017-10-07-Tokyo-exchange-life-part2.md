@@ -3,6 +3,13 @@ layout: post
 title:  "Tokyo Exchange Life Part2"
 categories: jekyll update
 ---
+<style>
+img{
+  display:block;
+  margin: 0 auto;
+}
+</style>
+
 終於等到有時間跟有心情來好好整理一下第二篇了
 
 老實說，這段時間遇到很多衝擊，不太想繼續打也是因為我知道不符合很多人對留學生的想像（或我自己的想像）
@@ -105,6 +112,10 @@ categories: jekyll update
 
 這個社團以後還會有活動，我應該會很想參加
 
+![Imgur](https://i.imgur.com/Y6vpzXA.jpg){: width="300"}
+![Imgur](https://i.imgur.com/UG8UXuQ.jpg){: width="300"}
+*去新宿跟明治神宮*
+
 # 生活雜記
 
 我這幾個禮拜就是毫無目的的到處亂逛，超市、藥妝店、服裝店等等。
@@ -119,6 +130,9 @@ categories: jekyll update
 
 但是貴的就是外食，如果到餐廳的話，一餐大概都要800日圓起跳，所以我現在都盡量自己煮
 
+![Imgur](https://i.imgur.com/u1wqQsw.jpg){: width="300"}
+*這樣只要台幣300元唷*
+![Imgur](https://i.imgur.com/8GyfDxz.jpg){: width="300"}
 
 # 目標
 
