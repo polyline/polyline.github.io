@@ -4,15 +4,16 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+你好！歡迎來到我的部落格，目前在日本東京工業大學留學交換
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+這個部落格上會有我許多生活牢騷，也會有一些我研究程式的紀錄
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+我的興趣有很多，運動、音樂、程式設計、下廚等等
 
+運動來說，游泳、慢跑是我最常做的，籃球跟跆拳道會一點
 
-[jekyll-organization]: https://github.com/jekyll
+音樂的話，我都還在半調子的初學程度，像是吉他跟鋼琴，不過我很喜歡聽各種音樂
+
+下廚的話，因為留學的關係，常常有機會可以自己煮，於是也學會了各種簡單的料理
+
+歡迎跟我聊聊做個朋友:a5560648@gmail.com
