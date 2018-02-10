@@ -1,0 +1,150 @@
+html {
+	margin: 0;
+	padding: 0;
+	font: normal 100% / 1.4 Georgia, serif;
+	max-width: 100%;
+	height: 100%;
+}
+body {
+	height:100%;
+}
+ 
+.navbar.navbar-default{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+}
+
+.profile-view {
+	height: 500px;
+	background-color: #66CDAA; /* Green */
+}
+
+.profile-element {
+	height: 100%;
+	font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.profile-photo {
+	padding: 150px 0;
+	background-color: #B0C4DE; /* Steel blue */
+    color: #ffffff;
+}
+
+.profile-intro {
+	padding: 200px 30px;
+	background-color: #F0F8FF; /* Green */
+    color:black;
+}
+
+/* Ariticle Preview Setting */
+
+.post-view-home{
+	background-color: #F5DEB3; /* Steel blue */
+    letter-spacing: 3px;
+}
+
+
+.post-view-window{
+	display:inline-block;
+	background-color: #F0F8FF;
+	max-height: 350px;
+	width: 80%;
+	margin: 50px;
+	border-radius: 10px;
+}
+
+.post-view{
+	margin: 15px 10px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: black;
+	word-wrap:break-word;
+	overflow: hidden;
+}
+
+.post-view-title{
+	background-color: #FDF5E6;
+	height: 50px;
+	font-size: 3rem;
+}
+
+/* should be smaller when appear in smaller device */
+.post-view-preview{
+	max-height: 200px;
+	background-color: #FDF5E6;
+	font-size: 1.6rem;
+	line-height: 20px;
+}
+
+.post-view-readmore{
+	height: 30px;
+	background-color: #FDF5E6;
+	font-size: 1.6rem;
+}
+
+/* Article setting */
+
+.article-window {
+	border-radius: 10px;
+	padding: 5px 5px;
+}
+
+.article-title {
+	background-color: #FDF5E6;
+	padding: 5px 20px;
+	margin: 10px 0;
+	border-radius: 10px;
+}
+
+.article-content {
+	background-color: #FDF5E6;
+	padding: 20px;
+	margin: 10px 0;
+	border-radius: 10px;
+}
+
+/* Footer Setting */
+
+.footer-window {
+	background: #F5F5F5;
+	padding: 30px 100px;
+	margin: 0px;
+	font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.footer-view {
+	padding: 30px;
+	display: inline-block;
+	height: 200px;
+}
+
+.footer-info {
+	font-size: 1.5em;
+	line-height: 50px;
+}
+
+.footer-words{
+	padding: 70px 0;
+	line-height: 20px;
+}
+
+.footer-license{
+	padding: 70px 0;
+	line-height: 20px;
+
+}
+
+.account {
+	font-size: 1.5rem;
+}
+
+
+
+
