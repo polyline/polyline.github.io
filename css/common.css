@@ -114,7 +114,7 @@ body {
 
 .footer-window {
 	background: #F5F5F5;
-	padding: 30px 75px;
+	padding: 30px 60px;
 	margin: 0px;
 	font-size: 12px;
     letter-spacing: 5px;
@@ -127,7 +127,7 @@ body {
 }
 
 .footer-info {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	line-height: 50px;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 
 .account {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 
