@@ -20,12 +20,11 @@ body {
 }
 
 .profile-view {
-	height: 500px;
 	background-color: #66CDAA; /* Green */
 }
 
 .profile-element {
-	height: 100%;
+	height: 500px;
 	font-size: 12px;
     letter-spacing: 5px;
 }
