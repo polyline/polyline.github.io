@@ -1,0 +1,16 @@
+
+
+<div class="container-fluid img-window border border-dark">
+	<div class="row">
+		{% for photo in include.photo %}
+		{% if include.show == photo.name %}
+			<div class="img-photo col-md-6 col-sm-12">
+				<img class="img-rounded" src="{{ photo.url }}" style="width:300px;">
+			</div>
+			<div class="img-description col-md-6 col-sm-12 text-center">
+				{{ photo.description }}
+			</div>
+		{% endif %}
+		{% endfor %}
+	</div>
+</div>

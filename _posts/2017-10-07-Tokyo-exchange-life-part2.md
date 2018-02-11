@@ -3,12 +3,6 @@ layout: articles_default
 title:  "東京交換生日記 Part I"
 categories: life
 ---
-<style>
-img{
-  display:block;
-  margin: 0 auto;
-}
-</style>
 
 終於等到有時間跟有心情來好好整理一下第二篇了
 
@@ -115,6 +109,7 @@ img{
 ![Imgur](https://i.imgur.com/Y6vpzXA.jpg){: width="300"}
 ![Imgur](https://i.imgur.com/UG8UXuQ.jpg){: width="300"}
 *去新宿跟明治神宮*
+
 
 # 生活雜記
 

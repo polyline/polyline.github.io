@@ -8,7 +8,32 @@ html {
 body {
 	height:100%;
 }
+
+/* Color Setting */
+/* We control background color seperately*/
+
+
+.nav-color {
+}
  
+.bg-color {
+	background-color: white;
+}
+
+.home-color {
+	background-color: #F5DEB3; /* Steel blue */
+}
+
+.view-color {
+	background-color: #F0F8FF;
+}
+
+.text-bg-color {
+	background-color: #FDF5E6;
+}
+
+/* navbar Setting */
+
 .navbar.navbar-default{
       padding-top: 15px;
       padding-bottom: 15px;
@@ -36,7 +61,7 @@ body {
 }
 
 .profile-intro {
-	padding: 200px 30px;
+	padding: 150px 30px;
 	background-color: #F0F8FF; /* Green */
     color:black;
 }
@@ -44,15 +69,13 @@ body {
 /* Posts Setting */
 
 .post-view-home{
-	background-color: #F5DEB3; /* Steel blue */
     letter-spacing: 3px;
-    padding: 0;
+    padding: 0 15px;
 }
 
 
 .post-view-window{
 	display:inline-block;
-	background-color: #F0F8FF;
 	max-height: 350px;
 	width: 100%;
 	margin: 50px 0px;
@@ -69,23 +92,20 @@ body {
 }
 
 .post-view-title{
-	background-color: #FDF5E6;
 	height: 50px;
-	font-size: 3rem;
+	font-size: 1.8rem;
 }
 
 /* should be smaller when appear in smaller device */
 .post-view-preview{
 	max-height: 200px;
-	background-color: #FDF5E6;
-	font-size: 1.6rem;
+	font-size: 1rem;
 	line-height: 20px;
 }
 
 .post-view-readmore{
 	height: 30px;
-	background-color: #FDF5E6;
-	font-size: 1.6rem;
+	font-size: 1rem;
 }
 
 /* Article setting */
@@ -126,7 +146,6 @@ body {
 }
 
 .footer-info {
-	font-size: 1.5em;
 	line-height: 50px;
 }
 
@@ -141,9 +160,50 @@ body {
 
 }
 
-.account {
+.account-icon {
 	font-size: 1.5rem;
 }
+
+.account {
+	font-size: 1rem;
+}
+
+/* img window */
+
+.img-window {
+	border-radius: 10px;
+	background-color: #F5F5F5;
+	border-style: solid;
+    border-width: 2px;
+}
+
+.img-photo{
+	padding: 10px 0px;
+	border-radius: 10px;
+}
+
+.img-description{
+	border-radius: 10px;
+	padding: 20px;
+
+}
+
+img {
+	display:block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
