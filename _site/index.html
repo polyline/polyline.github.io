@@ -22,6 +22,7 @@
 <!-- My CSS -->
 <link href="/css/common.css" rel="stylesheet">
 
+
 	</head>
 	<body>		
 		<header>
@@ -62,35 +63,49 @@
 
 <div class="container-fluid text-center">
 	<div class="profile-view row">
-		<div class="profile-element profile-photo col-md-6 col-sm-12">
-			<img class="img-responsive img-circle" src="./res/photo/me.JPG" style="display:inline;height:200px;">
-		</div>
-		<div class="profile-element profile-intro col-md-6 col-sm-12">
-			
-			<p>你好！歡迎來到我的部落格，目前在東京工業大學留學交換</p>
-
-			<p>這個部落格上會有我許多生活牢騷</p>
-
-			<p>也會有一些我研究程式的紀錄</p>
-
-			<p>我的興趣有很多，運動、音樂、程式設計、下廚等等</p>
-
-			<p>運動來說，游泳、慢跑是我最常做的，籃球跟跆拳道會一點</p>
-
-			<p>音樂的話，我都還在半調子的初學程度，像是吉他跟鋼琴，不過我很喜歡聽各種音樂</p>
-
-			<p>下廚的話，因為留學的關係，常常有機會可以自己煮，於是也學會了各種簡單的料理</p>
-
+		<div class="profile-intro">
+			<p id="intro"> </p>
 		</div>
 	</div>
 </div>
+
+<script>
+var words = [
+	"我是陳祖培，歡迎來到我的部落格",
+	"現在在東京工業大學交換留學中",
+	"喜歡創作屬於自己的東西，例如這個部落格",
+	"個性雖然隨和，但對自己決定的事情很固執",
+	"在這裡是我紀錄生活，還有留下學習軌跡的地方"
+]
+var i=0;
+var j=0;
+var speed = 100;
+
+function typeWriter() {
+	txt = words[j];
+	if (i < txt.length) {
+	    document.getElementById("intro").innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	}else{
+		if(j+1 < words.length){
+			document.getElementById("intro").innerHTML += "<br>"
+			j++;
+			i=0;
+			setTimeout(typeWriter, speed);
+		}
+	}
+}
+typeWriter()
+
+</script>
 		</main>
 		<footer class="footer">
 			<!-- No -->
 
 <!--This is the footer of the website-->
 
-<div class="footer-window container-fluid ">
+<div class="footer-window container-fluid footer-color">
 	<div class="row text-center">
 		<div class="footer-view footer-info col-md-4 text-left">
 				<div class="text-left">
@@ -103,14 +118,14 @@
 				</div>
 				<div>
 					<i class="fas fa-envelope account-icon" ></i> 
-					<span class="account">a5560648(@gamil)</span>
+					<span class="account">a5560648(@gmail)</span>
 				</div>
 		</div>
 		<div class="footer-view footer-words col-md-4">
-			<p>Welcome to my blog! Please enjoy it. Now I am digging into website developing</p>
+			<p>網頁學習中 2018.2.28</p>
 		</div>
 		<div class="footer-view footer-license col-md-4">
-			<p>Special Thanks to w3school and FontAwesome</p>
+			<p>Version 0.0.2</p>
 		</div>
 	</div>
 </div>

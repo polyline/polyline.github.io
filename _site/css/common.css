@@ -7,6 +7,7 @@ html {
 }
 body {
 	height:100%;
+		background-color: #FFF2CC;
 }
 
 /* Color Setting */
@@ -14,22 +15,27 @@ body {
 
 
 .nav-color {
+	background-color: #FFF2CC;
 }
  
 .bg-color {
-	background-color: white;
+	background-color: black;
 }
 
 .home-color {
-	background-color: #F5DEB3; /* Steel blue */
+	background-color: #FFDD00; /* Steel blue */
 }
 
 .view-color {
-	background-color: #F0F8FF;
+	background-color: #F5F5F5	;
 }
 
 .text-bg-color {
-	background-color: #FDF5E6;
+	background-color: #FFF2CC	;
+}
+
+.footer-color{
+	background: #FFF2CC;
 }
 
 /* navbar Setting */
@@ -41,29 +47,18 @@ body {
       border-radius: 0;
       margin-bottom: 0;
       font-size: 12px;
+      color: white;
       letter-spacing: 5px;
 }
 
-.profile-view {
-	background-color: #66CDAA; /* Green */
-}
-
-.profile-element {
-	height: 500px;
-	font-size: 12px;
-    letter-spacing: 5px;
-}
-
-.profile-photo {
-	padding: 150px 0;
-	background-color: #B0C4DE; /* Steel blue */
-    color: #ffffff;
-}
+/* profile */
 
 .profile-intro {
 	padding: 150px 30px;
-	background-color: #F0F8FF; /* Green */
-    color:black;
+	background-color: black; /* Green */
+	font-size: 1.2rem;
+	letter-spacing: 3px;
+    color:white;
 }
 
 /* Posts Setting */
@@ -116,14 +111,12 @@ body {
 }
 
 .article-title {
-	background-color: #FDF5E6;
 	padding: 5px 20px;
 	margin: 10px 0;
 	border-radius: 10px;
 }
 
 .article-content {
-	background-color: #FDF5E6;
 	padding: 20px;
 	margin: 10px 0;
 	border-radius: 10px;
@@ -132,7 +125,6 @@ body {
 /* Footer Setting */
 
 .footer-window {
-	background: #F5F5F5;
 	padding: 30px 60px;
 	margin: 0px;
 	font-size: 12px;

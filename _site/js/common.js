@@ -1,19 +1,3 @@
----
-layout: default
----
-<!-- OK v.0-->
-<!-- img 跟 text 置中問題-->
-<!-- 設計要重新思考 -->
-
-<div class="container-fluid text-center">
-	<div class="profile-view row">
-		<div class="profile-intro">
-			<p id="intro"> </p>
-		</div>
-	</div>
-</div>
-
-<script>
 var words = [
 	"我是陳祖培，歡迎來到我的部落格",
 	"現在在東京工業大學交換留學中",
@@ -41,5 +25,3 @@ function typeWriter() {
 	}
 }
 typeWriter()
-
-</script>
