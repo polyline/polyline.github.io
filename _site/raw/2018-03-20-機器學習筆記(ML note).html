@@ -1,0 +1,257 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<script defer src="/js/fontawesome-all.js"></script>
+
+<!-- My CSS -->
+<link href="/css/common.css" rel="stylesheet">
+
+
+	</head>
+	<body>		
+		<header>
+			<!-- OK -->
+
+<nav class="navbar navbar-default nav-color">
+<div class="container">
+      <!-- the header of nav-bar, including the name and the stacking setting -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+      </div>
+      <!--Menu-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link active" href="/index.html">About Me</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/posts">Articles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Works</a>
+        </li>
+      </ul>
+      </div>
+</div>
+</nav>
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center">
+	<div class="row bg-color">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="post-view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title text-bg-color">
+	<h1>機器學習筆記</h1>
+</div>
+
+<div class="article-content text-bg-color">
+	<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>機器學習(Machine Learning)是最近非常夯的一個詞，而清大資工也在最近將機器學習納入選修課程了，可知他的重要性</p>
+
+<p>而機器學習能應用的範圍據我所知，不僅僅能用於資工相關領域</p>
+
+<p>相反的，幾乎各種領域都能運用這個技術，包括醫學、財經、商業、工業等等</p>
+
+<p>這篇文章將會持續更新，我會將我過去及未來所學相關的機器學習筆記全部消化過</p>
+
+<p>以我自己的語言作成的筆記，分享給大家</p>
+
+<p>因為我並非專業，算是自己自學的，所以內容也許有錯誤或有說得不夠精準的地方</p>
+
+<p>請不吝來信指正我的錯誤: <strong>a5560648@gmail.com</strong></p>
+
+<hr />
+<h2 id="什麼是機器學習跟深度學習又有什麼差異">什麼是機器學習？跟深度學習又有什麼差異？</h2>
+<hr />
+
+<hr />
+<h2 id="常常聽到人家說調參數是什麼意思呢">常常聽到人家說「調參數」，是什麼意思呢？</h2>
+<hr />
+
+<hr />
+<h2 id="訓練集training-setdeveloping-set測試集testing-set怎麼分">訓練集(training set)、(developing set)、測試集(testing set)怎麼分？</h2>
+<hr />
+
+<ol>
+  <li>training set, developing set, testing set的意義</li>
+  <li>一個資料集(dataset)，如何切分</li>
+  <li>實際例子以及在python上如何操作</li>
+</ol>
+
+<hr />
+<h2 id="bias-variance-tradeoff">bias-variance tradeoff</h2>
+<hr />
+
+<ol>
+  <li>overfitting及underfitting</li>
+  <li>high-variance及high-bias</li>
+  <li>tradeoff</li>
+  <li>從error觀察model有可能存在問題</li>
+</ol>
+
+<p>overfitting顧名思義，是這個model訓練過頭了，雖然在training set得到的error很低</p>
+
+<p>但是在developing set的error卻很高</p>
+
+<p>換句話說，就是你的model因為訓練過頭，變成只適用於你給的training data，換成沒看過的data，預測失敗的比率就很高</p>
+
+<p>underfitting則跟overfitting相反，在training set的時候error就很高了</p>
+
+<p>代表你的model訓練不夠，所以沒辦法正確的預測結果，通常underfitting的情況下</p>
+
+<p>training set error跟developing set error兩者都會很高</p>
+
+<p>再來我們談high-variance跟high-bias</p>
+
+<p>high-variance基本上可以視作overfitting，過度fit data，所以畫出來的decision boundary會是一條很複雜的曲線</p>
+
+<p>當看到新的data，預測錯誤的機率高</p>
+
+<p>high-bias則是可以視作underfitting，因為訓練不夠或者有錯誤，導致連在training set的data都預測不準</p>
+
+<p>所以簡單來說：</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>overfitting</td>
+      <td>high-variance</td>
+      <td>過度訓練</td>
+      <td>train set error低</td>
+      <td>dev set error高</td>
+    </tr>
+    <tr>
+      <td>underfitting</td>
+      <td>high-bias</td>
+      <td>訓練不夠</td>
+      <td>train set error高</td>
+      <td>dev set error高</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>而回歸這個部分的標題: bias-variance tradeoff，為什麼說tradeoff呢？</p>
+
+<p>因為其實bias跟variance應該是看作為一種「傾向」，當我們往high-bias那一方走時，同時variance就越來越低</p>
+
+<p>從以下的例子來看：</p>
+
+<p>|A|B|C|
+Train set error|1%|15%|15%|
+Dev set error|11%|16%|30%|
+Base error: ~0</p>
+
+<p>這這裡很重要的一個觀念是Base Error，也就是在最好的model下、或者人直接觀察的情況下的error有多少</p>
+
+<p>比如說判別一個圖片中的人，我們用人眼觀察幾乎能百分之百辨認出來，所以Base error就趨近於零</p>
+
+<p>但是若是像辨別一個句子主不主觀，每個人做出來的結果可能就有差，而也有無法辨別出來的人，這是後Base Error就不等於零</p>
+
+<p>而假設今天Base Error等於5%好了，那我們做出來一個model雖然他的error等於6%，但這樣的結果卻是極好的了</p>
+
+<p>換句話說，我們在觀察model的error時，應該考量Base Error來分辨Model的好壞</p>
+
+<p>回到這裡，A的traing set error是1%，相對於Base Error也算是相當好的結果，而dev set error卻很高</p>
+
+<p>所以我們說A是high-variance</p>
+
+<p>B則是training set error跟dev set error都很高，所以B較有可能是high-bias</p>
+
+<p>最後C也是traing set error跟dev set error都很高，但dev set error又比train set error高出許多</p>
+
+<p>這時候不只是訓練不夠，而是訓練錯誤、訓練錯方向，所以導致high-bias&amp;high-variance</p>
+
+<hr />
+<h2 id="regularization">Regularization</h2>
+<hr />
+
+<hr />
+<h2 id="來源reference">來源(Reference)</h2>
+<hr />
+
+<p><em>Couresa</em></p>
+<ul>
+  <li>Machine Learning:</li>
+  <li>Deeping Learning Specialization: https://www.coursera.org/specializations/deep-learning</li>
+</ul>
+
+<p><em>Github</em></p>
+<ul>
+  <li>Kulbear/deep-learning-course: https://github.com/Kulbear/deep-learning-coursera/blob/master/Neural%20Networks%20and%20Deep%20Learning/Deep%20Neural%20Network%20-%20Application.ipynb</li>
+</ul>
+
+<p><em>Userful Blog</em></p>
+
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row text-center">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square account-icon"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram account-icon"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope account-icon" ></i> 
+					<span class="account">a5560648(@gmail)</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>網頁學習中 2018.2.28</p>
+		</div>
+		<div class="footer-view footer-license col-md-4">
+			<p>Version 0.0.2</p>
+		</div>
+	</div>
+</div>
+		</footer>
+		</div>
+	</body>
+</html>
