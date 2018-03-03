@@ -10,6 +10,22 @@ body {
 		background-color: #FFF2CC;
 }
 
+/* Custom Markdown Style*/
+
+pre {
+	border-radius: 0;	
+	background-color: white;
+
+}
+
+pre > code {
+	color: black;
+	font-family: courier;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+
 /* Color Setting */
 /* We control background color seperately*/
 
