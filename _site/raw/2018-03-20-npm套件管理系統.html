@@ -72,17 +72,19 @@
 </div>
 
 <div class="article-content text-bg-color">
-	<hr />
+	<p><em>此文章尚未校正</em></p>
+
+<hr />
 <h2 id="前言">前言</h2>
 <hr />
 
-<p>由於我最近在學習<code class="highlighter-rouge">React.js</code>跟<code class="highlighter-rouge">node.js</code>，於是開始接觸到<code class="highlighter-rouge">npm</code>這個詞</p>
+<p>由於我最近在學習<em>React.js</em>跟<em>node.js</em>，於是開始接觸到<em>npm</em>這個詞</p>
 
 <p>常常有時候在安裝軟體時，也會看到這行指令</p>
 
-<p>但總是沒有認真地去理解，為什麼要用<code class="highlighter-rouge">npm</code>？</p>
+<p>但總是沒有認真地去理解，為什麼要用npm？</p>
 
-<p>所以今天好好的整理一篇文章來學習<code class="highlighter-rouge">npm</code>到底是什麼</p>
+<p>所以今天好好的整理一篇文章來學習npm到底是什麼</p>
 
 <hr />
 <h2 id="npm是什麼為什麼要知道它">npm是什麼？為什麼要知道它？</h2>
@@ -96,13 +98,13 @@
 
 <p>專案下的套件(packages)會放在<code class="highlighter-rouge">node_modules</code>的資料夾下</p>
 
-<p>此外，也能夠自訂自己的套件，並且在<code class="highlighter-rouge">package.json</code>檔案中，提供基本訊息像是：作者、版本號、名稱等等</p>
+<p>此外，也能夠自訂自己的套件，並且在<em>package.json</em>檔案中，提供基本訊息像是：作者、版本號、名稱等等</p>
 
 <hr />
 <h2 id="npm常用指令">npm常用指令</h2>
 <hr />
 
-<p>查詢<code class="highlighter-rouge">npm</code>命令列表</p>
+<p>查詢npm命令列表</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm help
 </code></pre>
@@ -114,7 +116,7 @@
 </code></pre>
 </div>
 
-<p>初始化一個新的<code class="highlighter-rouge">package.json</code>文件</p>
+<p>初始化一個新的<em>package.json</em>文件</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm init
 </code></pre>
@@ -126,7 +128,7 @@
 </code></pre>
 </div>
 
-<p>找出放全局包(<code class="highlighter-rouge">global packages</code>)的路徑</p>
+<p>找出放全局包(glocal packaged)的路徑</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm root -g
 </code></pre>
@@ -146,25 +148,19 @@ npm install -g {package-name} # global mode
 </code></pre>
 </div>
 
-<p>也能直接用<code class="highlighter-rouge">github</code>代碼庫地址</p>
+<p>也能直接用<em>Github</em>代碼庫地址</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm install {http://github.com/~}
 </code></pre>
 </div>
 
-<p><code class="highlighter-rouge">dependencies</code>，也就是專案中會用到的其他工具包列表</p>
+<p>dependencies(依賴)，也就是專案中會用到的其他工具包列表，分為兩種：dependencies(依賴)跟devDependencies(開發依賴)</p>
 
-<p>分為兩種：<code class="highlighter-rouge">dependencies</code>(依賴)跟<code class="highlighter-rouge">devDependencies</code>(開發依賴)</p>
+<p>dependencies下的package指的是，別人如果要使用現在這個package，也必須安裝的pacakges，就像是堆積木一樣</p>
 
-<p><code class="highlighter-rouge">dependencies</code>下的package指的是，別人如果要使用現在這個package，也必須安裝的pacakges，就像是堆積木一樣</p>
+<p>現在這個package是基於dependencies下其他的packages所構成的，所以當要使用現在這個package，就要先連下面的packages都安裝好</p>
 
-<p>現在這個package是基於<code class="highlighter-rouge">dependencies</code>下其他的packages所構成的</p>
-
-<p>所以當要使用現在這個package，就要先連下面的packages都安裝好</p>
-
-<p>而<code class="highlighter-rouge">devDependencies</code>(開發依賴)指的是只有在開發環境下用到的別的packages</p>
-
-<p>意味著別人使用這個package，並不需要安裝</p>
+<p>而devDependencies(開發依賴)指的是只有在開發環境下用到的別的packages，意味著別人使用這個package，並不需要安裝</p>
 
 <p>舉例來說，假設你今天買了一台iphone，如果要順利使用iphone，手機裡面那些零件是必備的，所以也要包含在iphone中</p>
 
@@ -181,19 +177,19 @@ npm install {package-name} --save-dev # devDependencies
 </code></pre>
 </div>
 
-<p>安裝後，我們可以很輕易的來使用這些packages，透過<code class="highlighter-rouge">require</code></p>
+<p>安裝後，我們可以很輕易的來使用這些packages，透過<strong>require</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>var package = require('{package-name}')
 </code></pre>
 </div>
 
-<p>在<code class="highlighter-rouge">package.json</code>中，有一個欄位是<code class="highlighter-rouge">scripts</code>，裡面代表我們能夠運行的腳本</p>
+<p>在<em>package.json</em>中，有一個欄位是<strong>scripts</strong>，裡面代表我們能夠運行的腳本</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm run {script-name}
 </code></pre>
 </div>
 
-<p>這裡是我目前某個專案的<code class="highlighter-rouge">package.json</code>檔節錄</p>
+<p>這裡是我目前某個專案的<em>package.json</em>檔節錄</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>"scripts": {
 "start": "react-scripts start",
@@ -216,9 +212,9 @@ npm install {package-name} --save-dev # devDependencies
 </code></pre>
 </div>
 
-<p>此外，npm中每個腳本有兩個hooks，分別為<code class="highlighter-rouge">pre-</code>跟<code class="highlighter-rouge">post-</code>，在執行腳本時，會先檢查有沒有<code class="highlighter-rouge">pre-</code>，有的話會先跑<code class="highlighter-rouge">pre-</code></p>
+<p>此外，npm中每個腳本有兩個hooks，分別為pre-跟post-，在執行腳本時，會先檢查有沒有pre-，有的話會先跑pre-</p>
 
-<p>一樣的，運行完也會檢查有沒有<code class="highlighter-rouge">post-</code></p>
+<p>一樣的，運行完也會檢查有沒有post-</p>
 
 <p>舉例來說：當我們跑</p>
 
@@ -232,7 +228,7 @@ npm install {package-name} --save-dev # devDependencies
 
 <p>在npm中還有一個很有用的指令：<code class="highlighter-rouge">npm link</code></p>
 
-<p>原本不能直接對<code class="highlighter-rouge">global package</code>使用<code class="highlighter-rouge">require</code>，但如果使用<code class="highlighter-rouge">link</code>指令將global package指到存放local package的位置後</p>
+<p>原本不能直接對global package使用require，但如果使用link指令將global package指到存放local package的位置後</p>
 
 <p>就能夠打破此限制</p>
 
@@ -250,9 +246,7 @@ npm install {package-name} --save-dev # devDependencies
 </code></pre>
 </div>
 
-<p>在npm中，我們建構package時，就像是堆積木一樣</p>
-
-<p>大部分時候我們需要依賴別人已經做好的package，在這之上完成更大的package</p>
+<p>在npm中，我們建構package時，就像是堆積木一樣，大部分時候我們需要依賴別人已經做好的package，在這之上完成更大的package</p>
 
 <p>但如果今天把積木底層的一塊抽開，整座積木就變得不穩定，甚至可能會倒塌</p>
 
@@ -260,9 +254,7 @@ npm install {package-name} --save-dev # devDependencies
 
 <p>就像病毒擴散一樣，更多的package又建構在受污染的package上，因而造成安全性問題</p>
 
-<p>下面這篇文章的作者就說明了npm潛藏的問題</p>
-
-<p>假設今天有一段盜用信用卡的程式碼偽裝成有用的小工具，並且利用npm平台擴散出去</p>
+<p>下面這篇文章的作者就說明了npm潛藏的問題，假設今天有一段盜用信用卡的程式碼偽裝成有用的小工具，並且利用npm平台擴散出去</p>
 
 <p>便能夠藉此取得全球上千萬人的信用卡資料，有興趣的人可以參考<a href="https://medium.com/@CQD/翻譯-我是這樣拿走大家網站上的信用卡號跟密碼的-991cb6c4631e">這篇文章</a></p>
 
@@ -270,18 +262,12 @@ npm install {package-name} --save-dev # devDependencies
 <h2 id="來源references">來源(References)</h2>
 <hr />
 
-<p><em>wiki: https://zh.wikipedia.org/wiki/Npm</em></p>
-
-<p><em>RUNOOB.COM: http://www.runoob.com/nodejs/nodejs-npm.html</em></p>
-
-<p><em>Never_yu’s Blog: https://neveryu.github.io/2017/04/10/npm/</em></p>
-
-<p><em>CQD&amp;hackermoon</em>:</p>
-
-<ol>
-  <li>https://medium.com/@CQD/翻譯-我是這樣拿走大家網站上的信用卡號跟密碼的-991cb6c4631e</li>
-  <li>https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5</li>
-</ol>
+<p><em>wiki: https://zh.wikipedia.org/wiki/Npm</em>
+<em>RUNOOB.COM: http://www.runoob.com/nodejs/nodejs-npm.html</em>
+<em>Never_yu’s Blog: https://neveryu.github.io/2017/04/10/npm/</em>
+<em>CQD&amp;hackermoon</em>: 
+	- https://medium.com/@CQD/翻譯-我是這樣拿走大家網站上的信用卡號跟密碼的-991cb6c4631e
+	- https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5</p>
 
 
 </div>
