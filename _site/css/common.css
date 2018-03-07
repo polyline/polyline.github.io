@@ -25,6 +25,11 @@ pre > code {
 	letter-spacing: 2px;
 }
 
+blockquote {
+	font-family: courier;
+	font-size: 1rem;
+	background-color: #FAF0E6;
+}
 
 /* Color Setting */
 /* We control background color seperately*/
