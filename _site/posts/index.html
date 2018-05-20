@@ -45,16 +45,22 @@
         <li class="nav-item">
             <a class="nav-link active" href="/index.html">About Me</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/posts">Articles</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/posts">All</a>
+              <a class="dropdown-item" href="/posts/categories/cs">cs</a>
+              <a class="dropdown-item" href="/posts/categories/life">life</a>
+            </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Works</a>
+            <a class="nav-link" href="/works">Works</a>
         </li>
       </ul>
       </div>
 </div>
 </nav>
+
 		</header>
 		<main>
 			<!-- OK -->
@@ -66,6 +72,551 @@
 		</div>
 		<div class="post-view-home col-md-8 col-sm-12 home-color">
 			
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>[EN] real-time keyword extraction</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			<hr />
+<h2 id="preview">Preview</h2>
+<hr />
+
+<p>In this work, I would like to collect all related papers of this topic. Try to clarify the most popular methods in this areas. Also, I would also point out some specific features in this work. For examples, multi-party’s utterances would imply diffenct styles.</p>
+
+<p>To briefly introduce my research, I want to analyze comments of a live video, and try to find out some keywords or key concepts in a particular interval. For example, from <em>t=0</em> to <em>t=3</em>, showing a set of keywords, and the next interval <em>t=3</em> to <em>t=6</em>, showing another set of keywords. All of keywords are extracted from comments.</p>
+
+<p>In order to do that, let’s think some related work. First of all, keyword extraction is neccessary, however, most of research of keyword extraction are focus on long and formal articles(ex. news, wiki-document). In this task, we get to focus on <code class="highlighter-rouge">short</code> and <code class="highlighter-rouge">informal</code> documents, but we can still learn some techniques from those, maybe it could be also used in short documents. On the other hand, there are few researches about short and informal documents such as <code class="highlighter-rouge">Tweet</code>, <code class="highlighter-rouge">Meeting Script</code>, <code class="highlighter-rouge">Comments</code> may be helpful.</p>
+
+<p>Besides, real-time is also an important task here. To recap, our input is a sequence of sets of comments in a particular interval. In the live streaming, topics of intervals are suppposed to be <code class="highlighter-rouge">continuously changing</code>, that is, it’s less possible to change topics suddenly between two neighboring intervals. Moreover, information in <code class="highlighter-rouge">previous intervals still could be useful</code> in current interval.</p>
+
+<p>To sum up, we can list:</p>
+
+<ol>
+  <li>keyword extraction toward short-documents</li>
+  <li>algorithm that can preserve information in past rounds and discard unused information</li>
+  <li>process multi-party comments</li>
+  <li>unsupervised method(since it’s difficult to get labeled output)</li>
+</ol>
+
+<p>And in live streaming, there are some profound features:</p>
+
+<ol>
+  <li>comments could be high-repetitive</li>
+  <li>information are incompelete<em>*1</em></li>
+  <li>order is important, comments are with time-stamp
+(4.) compared to keyword extraction from meeting scripts, comments are without imcomplete words, filler words(ex. uh..), interruption.</li>
+</ol>
+
+<p><em>*1.</em> Comments in a live streaming could be diaglogue between audience and the host, while we can only analyze comments from audience. That’s also why we only want to extract keywords instead of summary. Our goal is to give a quick knowledge of the topic in the live streaming to new audience.</p>
+
+<hr />
+<h2 id="read-papers">Read Papers</h2>
+<hr />
+
+<ol>
+  <li>Real-Time Keyword Extraction from Conversations(Polykarpos et al. 2017 EACL)
+    <ul>
+      <li>k-core decomposition(Batagelj and Zaveršnik 2011)</li>
+      <li>centrality + tightly knitted structure(Tixier et al. 2016a)</li>
+      <li>CoreRank(CR)</li>
+    </ul>
+  </li>
+  <li>3.
+4.</li>
+</ol>
+
+<hr />
+<h2 id="real-time-keyword-extraction-from-conversationspolykarpos-et-al-2017-eacl">Real-Time Keyword Extraction from Conversations(Polykarpos et al. 2017 EACL)</h2>
+<hr />
+
+<ol>
+  <li>preprocessing</li>
+  <li>each word represented as a vertex</li>
+  <li>word co-occurence network, in fixed sliding window size, if two word co-occur, then build a edge between two nodes</li>
+  <li>weighted, undirect graph</li>
+  <li>k-core decomposition
+    <ol>
+      <li>counting k-core</li>
+      <li>counting CoreRank</li>
+      <li>get optimistic subgraph</li>
+      <li>counting degree</li>
+      <li>delete the vertex of the lowest degree in the subgraph</li>
+    </ol>
+  </li>
+  <li>Keyword Qaulity Function
+ Since we  want to extract the best substructure of the graph, we define a quality function as criteria for choosing. We take two factors into accout, CoreRank and how many steps to be a fully connected graph, which imply the graph being highly knitted.</li>
+  <li>Time Complexity
+    <ol>
+      <li>counting k-cores: O(V+Elog(V))</li>
+      <li>counting CR: O(V)</li>
+    </ol>
+  </li>
+  <li>Evaluation
+ Compare with 5 baseline: random, frequency, RAKE, weighted degree centrality, PageRank.
+ In this paper, they used two scenario to evaluate. The first one is the cosine similarity of commulative one-hot word vector between extracted keyword set and the provided extractive summary. The second one is to concatenate all extracted keywords as a summary and use two methods, ROUGE-1, WMD, to compare the similarity with abstractive summary.</li>
+  <li>Discussion and related papers
+    <ol>
+      <li>Lin et al. 2009
+ ?</li>
+      <li>Habibi and Popescu-Belis 2003
+ LDA and submodularity to select keywords covering as much topics as possible</li>
+      <li>Meladianos et al. 2015, <em>Degeneracy-Based Real-Time Sub-Event Detection in Twitter Stream</em>
+ ?</li>
+    </ol>
+  </li>
+  <li>Some Pre-setting or assumption in this paper
+    <ol>
+      <li>word-embedding - 300-dimensional vectors learned from a 100B-word corpus(Google news)</li>
+      <li>assume that at most on topic could be discussed in each interval</li>
+    </ol>
+  </li>
+</ol>
+
+<p><em>PS.</em>
+<em>1. We have to calculate time complexity to gaurantee that the performance meets real-time requirement</em>
+<em>2. Being with high degree means be more central, and being with high CR means being tightly knitted</em></p>
+
+<hr />
+<h2 id="related-work">Related Work</h2>
+<hr />
+
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/cs/2018/05/16/EN-real-time-keyword-extraction.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>[EN] NLP Review</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			<hr />
+<h2 id="preview">Preview</h2>
+<hr />
+
+<blockquote>
+  <p>In this articles, I will cover a few good articles that I found on the internet. The goal is to orgnize the resources and notes in the process of learning NLP. The followings are the index of the article.</p>
+</blockquote>
+
+<ol>
+  <li>Pre-requirments - Suggest what kinds of knowledge are recommanded to gain before starting NLP task</li>
+  <li>Resources - The resources that I used to learn NLP</li>
+  <li>Read-Papers - I will show a short summary for the papers I read before. Some will have detailed introduction articles</li>
+  <li>Concepts - I would like to collect some important concepts related to NLP tasks in this section</li>
+  <li>Implementation - In order to make these theories into real work, what kinds of knowledge do we need.</li>
+  <li>Experiment Results - In this section, I will show the experiments that I made before.</li>
+</ol>
+
+<p>Why I am writting this article in English? It’s because of terminology. I prefer to directly using the original English term to specify the concept or word. Also, Writing in English will be easy to be shared in the world.</p>
+
+<p>Let’s get started!</p>
+
+<hr />
+<h2 id="2-resources">[2] Resources</h2>
+<hr />
+
+<p>There are two necessary textbooks are really recommended to the beginners in NLP.</p>
+
+<ol>
+  <li>PRML</li>
+  <li>Speech and Language Processing</li>
+</ol>
+
+<p>Also, in NLP, there are also a lot of math, mostly probability. So I will recommand to review this textbook</p>
+
+<ol>
+  <li>Saeed-Ghahramani-Fundamentals-of-Probability</li>
+</ol>
+
+<p>And here I am listing some famous papers in NLP. The most possibly related region is shown on the subtitle. Also, I tend to collect all related paper(or let’s say variations) together</p>
+
+<p>Let’s take a look:</p>
+
+<ul>
+  <li></li>
+  <li>[LDA Topic Model, Summarisation]:</li>
+  <li>[Word Embedding, Tagging, Labelling]:</li>
+  <li>[Recurrent Dropout, Tagging, Labelling]:</li>
+  <li>[LexRank, Keyword Extraction]:
+    <ul>
+      <li>[TextRank]:</li>
+    </ul>
+  </li>
+  <li>[Keyword Extraction]:</li>
+  <li>[LSTMs]:</li>
+</ul>
+
+<p>Also, I watched a series of courses about ML and DL in coursera.</p>
+
+<ul>
+  <li>Machine Learning(by Andrew Ng)</li>
+  <li>Deep Learning specialty(by Andrew Ng)</li>
+</ul>
+
+<p>Lastly, when I seek information in the internet, I have found many useful articles. For English:</p>
+
+<ul>
+  <li></li>
+</ul>
+
+<p>and for chinese(both tradional and simplified):</p>
+
+<p>1.</p>
+
+<p>For datasets, since I am doing comments summarisation, There are some available datasets on the internet.</p>
+
+<ul>
+  <li>Google’s rebbit data:</li>
+</ul>
+
+<hr />
+<h2 id="reference">Reference</h2>
+<hr />
+
+<ol>
+  <li></li>
+</ol>
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/cs/2018/05/10/EN-NLP-Review.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>S_multinomial_variables</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			
+<p>看懂表達式</p>
+
+<p>x 觀察的變量
+u = xk 為 1的機率</p>
+
+<p>這邊我們有一個假設，xk只會是1或0
+所以這邊才會把xk放在uk的次方
+當xk為一，代表我們要取uk的機率，為零，不取uk所以次方為零等於一</p>
+
+<p>舉例來說，有一個x = (0,1,0)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(x|u)= u0^x0 * u1^x1 * u2^x2
+	  = 1 * u1 * 1
+	  = u1
+</code></pre>
+</div>
+
+<hr />
+<h2 id="參考資料references">參考資料(References)</h2>
+<hr />
+
+<ol>
+  <li><a href="http://crescentmoon.info/2012/09/23/多项分布概率公式的理解/">多項式分布概率公式的理解</a></li>
+  <li></li>
+</ol>
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/2018/05/03/s_multinomial_variables.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>[讀]共軛性(conjugacy)</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>在繼續研究PRML這本書的Beta Distribution的時候</p>
+
+<p>有個疑問是，為什麼</p>
+
+<p>把Binoninal Distribution當作Likelihood，把Beta Distribution當作Prior</p>
+
+<p>相乘之後就可以得到Posterior Distribution</p>
+
+<p>所以，這篇文章想要再更深入的研究這些問題</p>
+
+<hr />
+<h2 id="整理疑惑">整理疑惑</h2>
+<hr />
+
+<p>我會在這裡感到疑惑是</p>
+
+<ol>
+  <li>不知道為什麼共軛性(conjugacy)的由來</li>
+  <li>為什麼Gamma函數可以使Bata分布達到歸一化(sum = 1)的效果</li>
+  <li>Beyes’ Theorem以往只知道在機率上的應用，在Distribution上也能直接相乘嗎？</li>
+  <li>關於最後面的推導</li>
+</ol>
+
+<p>test</p>
+
+<p><img src="https://i.imgur.com/VbuEkLG.png =x10" alt="my equation" /></p>
+
+<p>conjugate</p>
+
+<p>Beta Distribution - continuous distribution</p>
+
+<p>Gamma Function</p>
+
+<p>Bayes’ Theorem</p>
+
+<p>Prior and Posterior Distribution</p>
+
+<p>Posterior (is proportional to) Likelihood * Prior</p>
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/cs/2018/05/02/s_conjugacy.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>京阪櫻花畢旅-上</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			<hr />
+<h2 id="前情提要">前情提要</h2>
+<hr />
+
+<p>前兩天，我們主要在京都玩</p>
+
+<p>但其實京都只玩兩天實在不太夠</p>
+
+<p>而且又在是這著超美櫻花季節</p>
+
+<p>另外，令我驚訝的是</p>
+
+<p>從京都搭新快速的電車到大阪只需要三十分鐘</p>
+
+<p>平常從我宿舍到學校都要四十分鐘以上了</p>
+
+<p>意外地比想像中近</p>
+
+<hr />
+<h1 id="大阪大冒險">大阪大冒險</h1>
+<hr />
+
+<p>今天是畢旅中特別的一天</p>
+
+<p>我們大家拆散走</p>
+
+<p>每一組都有要破的任務</p>
+
+<p>所以我們就在大阪各地邊破任務邊玩</p>
+
+<p>從我們住的地方新今宮可以直接慢慢用走的走到難波再通到道頓崛</p>
+
+<p>由於我們第一個任務是要戴面膜在道頓崛跟Oligo合照</p>
+
+<p>我們在沿途買了面膜、抹茶冰淇淋、章魚燒</p>
+
+<p>然後就在道頓崛的橋上做了這件蠢事</p>
+
+<p>[面膜]</p>
+
+<p>我們的第二個任務是要模仿照片中的人物拍照</p>
+
+<p>分別是</p>
+
+<ol>
+  <li>半澤直樹跟道頓崛橋的合照</li>
+  <li>半澤直樹在通天閣講電話照片</li>
+  <li>名偵探柯南中在道頓崛的照片</li>
+</ol>
+
+<p>再來，我們查了大阪幾個有名的賞櫻景點</p>
+
+<p>所以我們決定去櫻之宮公園看看</p>
+
+<p>從道頓崛搭車到扇町轉車</p>
+
+<p>出站後，我們看到一個充滿櫻花的公園</p>
+
+<p>這裡就超級漂亮了！</p>
+
+<p>很多日本人就坐在櫻花下野餐</p>
+
+<p>不過，等到我們到了櫻之宮公園才是大為驚嘆</p>
+
+<p>整條沿著河岸都是爆滿的櫻花</p>
+
+<p>就是在這天，讓我們看到櫻花看到麻痺</p>
+
+<p>這個公園非常的大，櫻花並木也是延伸的很長</p>
+
+<p>大概是兩個車站間的距離</p>
+
+<p>整排的櫻花配上藍天、蔚藍河流</p>
+
+<p>真的超級美，都有點美景麻痺了</p>
+
+<p>如果是櫻花季來大阪玩，千萬別錯過這個景點喔！</p>
+
+<p>在離集合時間不遠時</p>
+
+<p>我們還剩下大概一個小時的時間</p>
+
+<p>我們就決定去破一下女僕咖啡廳的關卡</p>
+
+<p>這是我這輩子第一次去女僕咖啡廳</p>
+
+<p>去玩的心得呢…我只能說很妙的感覺</p>
+
+<p>除了點一杯飲料之外，你還可以加購一些服務</p>
+
+<p>像是讓女僕幫你施魔法讓食物變好吃</p>
+
+<p>或者跟女僕合照之類的</p>
+
+<p>當然，我們有加購跟女僕的合照</p>
+
+<p>或許因為我們是觀光客的關係</p>
+
+<p>感覺沒有享受到太多服務？</p>
+
+<p>等到時間差不多後，我們大家回到道頓崛吃晚餐</p>
+
+<p>都來到大阪了，當然要吃大阪燒啊</p>
+
+<p>團員查到的有名大阪燒都大排長龍</p>
+
+<p>我們後來到小巷子中，看到一間微微排隊</p>
+
+<p>但看起來也是頗好吃的店</p>
+
+<p>就憑直覺進去了</p>
+
+<p>果然沒有讓我失望，我覺得非常好吃</p>
+
+<p>非常滿足的一餐</p>
+
+<p>在晚餐後大家都各自鳥獸散</p>
+
+<p>我則是留在心齋橋開始要大肆血拼</p>
+
+<p>心齋橋跟道頓崛這邊真的很適合購物</p>
+
+<p>很開心的買到了喜歡的衣服</p>
+
+<p>就這樣，幾乎跑過了大阪幾個熱門景點</p>
+
+<p>充實的一天劃下了句號</p>
+
+<hr />
+<h2 id="在天守閣穿越學日本歷史">在天守閣穿越學日本歷史</h2>
+<hr />
+
+<p>這一天，其他的團員們去奈良玩</p>
+
+<p>但因為我二月已經去過奈良了</p>
+
+<p>奈良的大部分景點都是走路</p>
+
+<p>懶人如我，就不跟這次的景點了</p>
+
+<p>取而代之的是，我到大阪城逛了一天</p>
+
+<p>我必須說，大阪城真的很大</p>
+
+<p>如果認真把每個地方逛完，花上一天絕對是剛剛好的</p>
+
+<p>但我只買了天守閣的票</p>
+
+<p>天守閣裡面，頂樓是觀景臺，可以瞭望四周的景色</p>
+
+<p>接下來每一層，都在介紹日本的歷史</p>
+
+<p>因為我這天時間真的很多</p>
+
+<p>我就很認真的看完了每一層</p>
+
+<p>大概了解一下豐臣秀吉、織田信長、德川家康的身世</p>
+
+<p>還有看了大阪夏之陣的動畫</p>
+
+<p>不過，我對歷史真的沒什麼天份</p>
+
+<p>看的時候覺得蠻有趣的，但就是記不太起來</p>
+
+<p>我只記得是一個很慘烈的戰役</p>
+
+<p>人民從大阪城開始脫逃，逃到最後面還遇到強盜把衣物都搶光</p>
+
+<p>結束大阪城的行程後</p>
+
+<p>我又再回到心齋橋亂逛了一下</p>
+
+<p>然後在難波和我們住的地方中間有一間溫泉</p>
+
+<p>我很喜歡大阪這邊溫泉（抑或是超級錢湯）</p>
+
+<p>有很多種類的溫泉可以選擇，按摩池也超級舒服</p>
+
+<p>來這邊真的可以完全釋放一天的壓力</p>
+
+<p>許多日本人工作下班後，就在這邊聊天打屁</p>
+
+<p>邊泡湯邊看電視，真的很爽的感覺</p>
+
+<p>來到日本後我真的完全愛上溫泉</p>
+
+<p>如果台灣也有這種溫泉的文化該有多好</p>
+
+<hr />
+<h2 id="說再見">說再見</h2>
+<hr />
+
+<p>短短的畢旅五天，就在這邊結束了</p>
+
+<p>朋友們坐飛機回台灣後</p>
+
+<p>我自己再回去京都多玩兩天</p>
+
+<p>這兩天彷彿又回到我在東京時常一人旅行的感覺</p>
+
+<p>不管是跟朋友一起旅行</p>
+
+<p>還是獨自一人的ひとりたび</p>
+
+<p>都有各自的好處</p>
+
+<p>接下來，我會在京都看到我心目中的賞櫻第一名</p>
+
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/life/2018/05/01/%E4%BA%AC%E9%98%AA%E6%AB%BB%E8%8A%B1%E7%95%A2%E6%97%85-%E4%B8%AD.html">Readmore</a>
+	</div>
+</div>
+
 	<!-- OK -->
 
 <div class="post-view-window view-color">
@@ -338,9 +889,9 @@ t為正面（成功）的次數，N為總次數
 
 <p>一直滿心期盼畢旅來到的這一天</p>
 
-<p>雖然我今天其實一整年就在日本</p>
+<p>雖然我其實今年一整年就在日本</p>
 
-<p>但跟大學朋友們一起旅行感覺會很好玩</p>
+<p>但跟大學朋友們一起旅行感覺會有不一樣的好玩</p>
 
 <p>又剛好，我們誤打誤撞碰到了櫻花滿開時期</p>
 
@@ -2209,6 +2760,7 @@ npm install {package-name} --save-dev # devDependencies
 		<div class="footer-view footer-license col-md-4">
 			<p>Version 0.0.3</p>
 			<p>0.0.3 - 圖片設定完成</p>
+			<p>下版：圖片插入模組化、資料分離化、文章分類</p>
 			<p>0.0.3 - 2018.4.29</p>
 		</div>
 	</div>

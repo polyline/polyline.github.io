@@ -1,7 +1,7 @@
 html {
 	margin: 0;
 	padding: 0;
-	font: normal 100% / 1.4 Georgia, serif;
+	font: normal 100% / 1.4 Time New Roman;
 	max-width: 100%;
 	height: 100%;
 }
@@ -11,6 +11,18 @@ body {
 }
 
 /* Custom Markdown Style*/
+
+
+/* change html tags*/
+
+a{
+	color: #666666;
+
+}
+a:hover{
+	text-decoration: none;
+	color: #444444;
+}
 
 pre {
 	border-radius: 0;	
@@ -34,6 +46,10 @@ blockquote {
 /* Color Setting */
 /* We control background color seperately*/
 
+.dropdown-color{
+	background-color: #FFF2CC;
+	opacity: 0.8;
+}
 
 .nav-color {
 	background-color: #FFF2CC;
@@ -44,19 +60,33 @@ blockquote {
 }
 
 .home-color {
-	background-color: #E6C191; /* Steel blue */
+	background-color: #20B2AA; /* Steel blue */
 }
 
 .view-color {
-	background-color: #FFF2CC	;
+	background-color: #F0FFF0	;
 }
 
 .text-bg-color {
-	background-color: #FFF2CC	;
+	background-color: white	;
+	opacity: 0.8;
 }
 
 .footer-color{
 	background: #FFF2CC;
+}
+
+.work-home-color{
+	background-color: #009FCC;
+}
+
+.work-view-color{
+	background-color: #DDDDDD;
+	opacity: 0.7;
+}
+
+.work-text-bg-color {
+	background-color: #DDDDDD;
 }
 
 /* navbar Setting */
@@ -72,6 +102,18 @@ blockquote {
       letter-spacing: 5px;
 }
 
+.dropdown-menu{
+	padding: 10px;
+	text-decoration:none;
+}
+
+.dropdown-item{
+	text-align: center;
+	padding: 10px 0px;
+	display: block;
+	width:100%;
+}
+
 /* profile */
 
 .profile-intro {
@@ -85,7 +127,7 @@ blockquote {
 /* Posts Setting */
 
 .post-view-home{
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     padding: 0 15px;
 }
 
@@ -124,6 +166,48 @@ blockquote {
 	font-size: 1rem;
 }
 
+/* Works Setting */
+
+.work-view-home{
+	letter-spacing: 1px;
+    padding: 0 15px;
+
+}
+
+.work-view-window{
+	display:inline-block;
+	max-height: 350px;
+	width: 100%;
+	margin: 50px 0px;
+	border-style: solid;
+	padding: 20px;
+}
+
+.work-view{
+	margin: 15px 10px;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: black;
+	word-wrap:break-word;
+	overflow: hidden;
+}
+
+.work-view-title{
+	height: 50px;
+	font-size: 1.8rem;
+}
+
+.work-view-preview{
+	max-height: 200px;
+	font-size: 1rem;
+	line-height: 20px;
+}
+
+.work-view-readmore{
+	height: 30px;
+	font-size: 1rem;
+}
+
 /* Article setting */
 
 .article-window {
@@ -141,6 +225,24 @@ blockquote {
 	padding: 20px;
 	margin: 10px 0;
 	border-radius: 10px;
+}
+
+/* Work Article Setting */
+
+.work-article-window {
+	padding: 5px 5px;
+}
+
+.work-article-title {
+	padding: 5px 20px;
+	margin: 10px 0;
+	border-style: solid;
+}
+
+.work-article-content {
+	padding: 20px;
+	margin: 10px 0;
+	border-style: solid;
 }
 
 /* Footer Setting */

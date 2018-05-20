@@ -45,16 +45,22 @@
         <li class="nav-item">
             <a class="nav-link active" href="/index.html">About Me</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/posts">Articles</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/posts">All</a>
+              <a class="dropdown-item" href="/posts/categories/cs">cs</a>
+              <a class="dropdown-item" href="/posts/categories/life">life</a>
+            </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Works</a>
+            <a class="nav-link" href="/works">Works</a>
         </li>
       </ul>
       </div>
 </div>
 </nav>
+
 		</header>
 		<main>
 			<!-- OK -->
@@ -235,6 +241,7 @@
 		<div class="footer-view footer-license col-md-4">
 			<p>Version 0.0.3</p>
 			<p>0.0.3 - 圖片設定完成</p>
+			<p>下版：圖片插入模組化、資料分離化、文章分類</p>
 			<p>0.0.3 - 2018.4.29</p>
 		</div>
 	</div>

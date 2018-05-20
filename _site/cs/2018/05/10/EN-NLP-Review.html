@@ -63,46 +63,116 @@
 
 		</header>
 		<main>
-			<!-- OK v.0-->
-<!-- img 跟 text 置中問題-->
-<!-- 設計要重新思考 -->
+			<!-- OK -->
 
 <div class="container-fluid text-center">
-	<div class="profile-view row">
-		<div class="profile-intro">
-			<p id="intro"> </p>
+	<div class="row bg-color">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="post-view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title text-bg-color">
+	<h1>[EN] NLP Review</h1>
+</div>
+
+<div class="article-content text-bg-color">
+	<hr />
+<h2 id="preview">Preview</h2>
+<hr />
+
+<blockquote>
+  <p>In this articles, I will cover a few good articles that I found on the internet. The goal is to orgnize the resources and notes in the process of learning NLP. The followings are the index of the article.</p>
+</blockquote>
+
+<ol>
+  <li>Pre-requirments - Suggest what kinds of knowledge are recommanded to gain before starting NLP task</li>
+  <li>Resources - The resources that I used to learn NLP</li>
+  <li>Read-Papers - I will show a short summary for the papers I read before. Some will have detailed introduction articles</li>
+  <li>Concepts - I would like to collect some important concepts related to NLP tasks in this section</li>
+  <li>Implementation - In order to make these theories into real work, what kinds of knowledge do we need.</li>
+  <li>Experiment Results - In this section, I will show the experiments that I made before.</li>
+</ol>
+
+<p>Why I am writting this article in English? It’s because of terminology. I prefer to directly using the original English term to specify the concept or word. Also, Writing in English will be easy to be shared in the world.</p>
+
+<p>Let’s get started!</p>
+
+<hr />
+<h2 id="2-resources">[2] Resources</h2>
+<hr />
+
+<p>There are two necessary textbooks are really recommended to the beginners in NLP.</p>
+
+<ol>
+  <li>PRML</li>
+  <li>Speech and Language Processing</li>
+</ol>
+
+<p>Also, in NLP, there are also a lot of math, mostly probability. So I will recommand to review this textbook</p>
+
+<ol>
+  <li>Saeed-Ghahramani-Fundamentals-of-Probability</li>
+</ol>
+
+<p>And here I am listing some famous papers in NLP. The most possibly related region is shown on the subtitle. Also, I tend to collect all related paper(or let’s say variations) together</p>
+
+<p>Let’s take a look:</p>
+
+<ul>
+  <li></li>
+  <li>[LDA Topic Model, Summarisation]:</li>
+  <li>[Word Embedding, Tagging, Labelling]:</li>
+  <li>[Recurrent Dropout, Tagging, Labelling]:</li>
+  <li>[LexRank, Keyword Extraction]:
+    <ul>
+      <li>[TextRank]:</li>
+    </ul>
+  </li>
+  <li>[Keyword Extraction]:</li>
+  <li>[LSTMs]:</li>
+</ul>
+
+<p>Also, I watched a series of courses about ML and DL in coursera.</p>
+
+<ul>
+  <li>Machine Learning(by Andrew Ng)</li>
+  <li>Deep Learning specialty(by Andrew Ng)</li>
+</ul>
+
+<p>Lastly, when I seek information in the internet, I have found many useful articles. For English:</p>
+
+<ul>
+  <li></li>
+</ul>
+
+<p>and for chinese(both tradional and simplified):</p>
+
+<p>1.</p>
+
+<p>For datasets, since I am doing comments summarisation, There are some available datasets on the internet.</p>
+
+<ul>
+  <li>Google’s rebbit data:</li>
+</ul>
+
+<hr />
+<h2 id="reference">Reference</h2>
+<hr />
+
+<ol>
+  <li></li>
+</ol>
+
+</div>
+
+</div>
+		</div>
+		<div>
 		</div>
 	</div>
 </div>
-
-<script>
-var words = [
-	"我是陳祖培，歡迎來到我的部落格",
-	"現在在東京工業大學交換留學中",
-	"喜歡創作屬於自己的東西"
-]
-var i=0;
-var j=0;
-var speed = 100;
-
-function typeWriter() {
-	txt = words[j];
-	if (i < txt.length) {
-	    document.getElementById("intro").innerHTML += txt.charAt(i);
-	    i++;
-	    setTimeout(typeWriter, speed);
-	}else{
-		if(j+1 < words.length){
-			document.getElementById("intro").innerHTML += "<br>"
-			j++;
-			i=0;
-			setTimeout(typeWriter, speed);
-		}
-	}
-}
-typeWriter()
-
-</script>
 		</main>
 		<footer class="footer">
 			<!-- No -->

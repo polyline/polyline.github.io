@@ -17,11 +17,16 @@
         <li class="nav-item">
             <a class="nav-link active" href="{{site.baseurl}}/index.html">About Me</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{site.baseurl}}/posts">Articles</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{site.baseurl}}/posts">All</a>
+              <a class="dropdown-item" href="{{site.baseurl}}/posts/categories/cs">cs</a>
+              <a class="dropdown-item" href="{{site.baseurl}}/posts/categories/life">life</a>
+            </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Works</a>
+            <a class="nav-link" href="{{site.baseurl}}/works">Works</a>
         </li>
       </ul>
       </div>
