@@ -1,15 +1,17 @@
+
+
 <!-- OK -->
 
-<div class="work-view-window work-view-color">
-	<div class="work-view work-view-title text-left work-text-bg-color" >
+<div class="view-window work-view-color solid-border">
+	<div class="view-section-attr view-section-title text-left work-text-bg-color" >
 		<p>{{ work.title }}</p>
 	</div>
-	<div class="work-view work-view-preview text-left work-text-bg-color">
+	<div class="view-section-attr view-section-content text-left work-text-bg-color">
 		<p>
 			{{ work.excerpt }}
 		</p>
 	</div>		
-	<div class="work-view work-view-readmore text-center work-text-bg-color">
+	<div class="view-section-attr view-section-readmore text-center work-text-bg-color">
 		<a href="{{ site.baseurl }}{{ work.url }}">Readmore</a>
 	</div>
 </div>

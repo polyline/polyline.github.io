@@ -1,15 +1,15 @@
 <!-- OK -->
 
-<div class="post-view-window view-color">
-	<div class="post-view post-view-title text-left text-bg-color" >
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
 		<p>{{ post.title }}</p>
 	</div>
-	<div class="post-view post-view-preview text-left text-bg-color">
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
 		<p>
 			{{ post.content }}
 		</p>
 	</div>		
-	<div class="post-view post-view-readmore text-center text-bg-color">
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
 		<a href="{{ site.baseurl }}{{ post.url }}">Readmore</a>
 	</div>
 </div>

@@ -124,23 +124,18 @@ blockquote {
     color:white;
 }
 
-/* Posts Setting */
+/* View Settings */
 
-.post-view-home{
-    letter-spacing: 1px;
+.veiw-home {
+	letter-spacing: 1px;
     padding: 0 15px;
 }
-
-
-.post-view-window{
+.view-window{
 	display:inline-block;
-	max-height: 350px;
 	width: 100%;
 	margin: 50px 0px;
-	border-radius: 10px;
 }
-
-.post-view{
+.view-section-attr{
 	margin: 15px 10px;
 	padding: 5px 10px;
 	border-radius: 10px;
@@ -148,63 +143,39 @@ blockquote {
 	word-wrap:break-word;
 	overflow: hidden;
 }
-
-.post-view-title{
+.view-section-title{
 	height: 50px;
 	font-size: 1.8rem;
 }
-
-/* should be smaller when appear in smaller device */
-.post-view-preview{
-	max-height: 200px;
+.view-section-content{
 	font-size: 1rem;
 	line-height: 20px;
 }
-
-.post-view-readmore{
+.view-section-readmore{
 	height: 30px;
 	font-size: 1rem;
 }
+
+/* Posts Setting */
+
+.max-height-350{
+	max-height: 350px;
+}
+.max-height-200{
+	max-height: 200px;
+}
+.round-corner{
+	border-radius: 10px;
+}
+
 
 /* Works Setting */
 
-.work-view-home{
-	letter-spacing: 1px;
-    padding: 0 15px;
 
-}
-
-.work-view-window{
-	display:inline-block;
-	width: 100%;
-	margin: 50px 0px;
+.solid-border{
 	border-style: solid;
-	padding: 20px;
 }
 
-.work-view{
-	margin: 15px 10px;
-	padding: 5px 10px;
-	border-radius: 10px;
-	color: black;
-	word-wrap:break-word;
-	overflow: hidden;
-}
-
-.work-view-title{
-	height: 50px;
-	font-size: 1.8rem;
-}
-
-.work-view-preview{
-	font-size: 1rem;
-	line-height: 30px;
-}
-
-.work-view-readmore{
-	height: 30px;
-	font-size: 1rem;
-}
 
 /* Article setting */
 
