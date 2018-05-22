@@ -76,6 +76,145 @@
 
 <div class="post-view-window view-color">
 	<div class="post-view post-view-title text-left text-bg-color" >
+		<p>個人部落格</p>
+	</div>
+	<div class="post-view post-view-preview text-left text-bg-color">
+		<p>
+			<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
+
+<p>使用<code class="highlighter-rouge">github</code>提供的<code class="highlighter-rouge">github page</code>，結合<code class="highlighter-rouge">jekyll</code>簡單製作出具個人風格的網頁。在這個專案中，主要熟悉jekyll的工作模式，可以設定好固定的版型後，直接套用在多個頁面上，也能有類似<code class="highlighter-rouge">物件導向</code>的class功能，能夠直接繼承版型，在該版型基礎上增減東西，除此之外，也讓我練習到版面設計及配色，以及網頁動畫等功能</p>
+
+<!--more-->
+
+<hr />
+<h2 id="專案目的">專案目的</h2>
+<hr />
+
+<p>一直以來，都很希望能做一個屬於自己的網站，把自己的生活點滴記錄下來，每天發生了那麼多有趣的事情，沒有記錄下來的話，就會默默的消退在腦海中
+曾經看過一篇文章，指出了很多寫部落格的好處，我自己也覺得寫部落格一定是有益無害的，但困難的就是，寫文章是需要耗費心力跟時間的，就我自己來說，我想把我研究資工領域的東西都寫成文章，確實曾經寫成文章的概念在我之後忘記時，可以很快的把想法撿回來，寫成文章時，也是再次檢驗自己有沒有真的了解整個概念，因為要用自己的想法解釋比單純的理解還要難更多，所以真的需要很大的動力去做。</p>
+
+<p>另外一個目的是，也能藉這個機會完成一個網站作品，我一直以來都對<code class="highlighter-rouge">寫網站</code>蠻有興趣，大學時期也斷斷續續的學了好幾次，對我而言，我覺得寫網站會牽扯到很多不同的技術，包括<strong>前端</strong>、<strong>後端</strong>、<strong>資料庫</strong>等等，每個部分又有很多不同的語言或工具包來實現，所以我認為<code class="highlighter-rouge">邊做邊學</code>才是最適合的</p>
+
+<hr />
+<h2 id="版本更新">版本更新</h2>
+<hr />
+
+<p><code class="highlighter-rouge">v 1.0.1</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- 建立基本架構
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">v 1.0.2</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- 完成各種版面設計、配色
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">v 1.0.3</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- 建立放置圖片的模板
+- 加入自我介紹的打字特效
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">v.1.0.4</code></p>
+
+<div class="container-fluid one-img">
+	<div class="center">
+		<div>
+			<img class="img-rounded img-responsive" src="https://i.imgur.com/EuGW25L.png" style="max-height:400px;" /> <br />
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid one-img">
+	<div class="center">
+		<div>
+			<img class="img-rounded img-responsive" src="https://i.imgur.com/K1LyWh7.png" style="max-height:400px;" /> <br />
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid one-img">
+	<div class="center">
+		<div>
+			<img class="img-rounded img-responsive" src="https://i.imgur.com/E9hwnzn.png" style="max-height:400px;" /> <br />
+		</div>
+	</div>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- 新增文章分類選單
+- 重新調整文章的配色
+- 新增works頁面的配置
+</code></pre>
+</div>
+
+<hr />
+<h2 id="github-page與jekyll">github Page與Jekyll</h2>
+<hr />
+
+<p>如果你有一個github帳號，你就能擁有一個github提供的個人網頁，你只要在github上創一個你自己帳號名稱的repository，這個就是屬於你自己的github網頁了!其實整個過程大約十分鐘以內可以完成，也有很多現成的模板可以使用，<a href="https://jekyllrb.com">Jekyll網頁上</a>有詳細過程</p>
+
+<p>使用Jekyll的好處是，我們能利用<code class="highlighter-rouge">markdown</code>的語法來撰寫部落格文章，還有能讓整個架構更有組織，接下來會稍微簡單介紹，這些東西在Jekyll網站中都有完整的tutorial能學習！</p>
+
+<p><code class="highlighter-rouge">/_include/</code></p>
+
+<p>在這個資料夾中，我們能寫一些會重複使用的架構，或者說你想分離出來的部分，例如：我們網站的<strong>導覽列(navbar)</strong>，如果把它看作一個元件比較直觀，而且當我們到時候想直接在某個頁面插入時，也能直接套用，另外一個例子是，每當我在網頁中插入圖片時，我希望都能套用相同的格式設定，而這件事情沒辦法只靠<strong>class標籤</strong>完成，所以設定在<code class="highlighter-rouge">/_include/</code>中，到時候只要傳入該圖片的<strong>URL</strong>即可。</p>
+
+<p><code class="highlighter-rouge">/_layout/</code></p>
+
+<p>這個資料夾顧名思義，是用來設定各個版面的<strong>配置</strong>，例如：我的每篇文章都想要套用一樣的配置，唯一的差別只有文章的內容，這時候我只需要在<code class="highlighter-rouge">/_layout/</code>中設定好配置，接下來<strong>Jekyll</strong>就會自動幫我們將每篇文章套用到設定好的配置中了</p>
+
+<p><code class="highlighter-rouge">/_posts/</code></p>
+
+<p>這個資料夾是<strong>Jekyll</strong>一開始內建的，也就是我們把用<strong>markdown語法</strong>寫的文章放在這裡，到時候<strong>Jekyll</strong>會自動幫我們轉換成<strong>HTML的格式</strong>，除了文章以外，假設今天我們也想要用<strong>markdown</strong>來寫某個東西，以我的部落格為例，我想要一個資料夾是放我的作品集的，並且希望能跟<strong>posts</strong>分開來放，這個時候只需要在<strong>_config</strong>中設定好自己的<strong>collection</strong>也能做到</p>
+
+<p><code class="highlighter-rouge">/_data/</code></p>
+
+<p>我們如果有一些資料，通常是細碎的資料，像是圖片的說明、<strong>URL</strong>等等，如果覺得摻雜在文章中太亂，想統一起來整理的話可以放在<code class="highlighter-rouge">/_data/</code>資料夾中，在其他的地方也能直接取用，並能用<strong>迴圈的方式</strong>取得，所以很適合用在<strong>list型態</strong>的資料</p>
+
+<p>大概比較重要的是這些，詳細的用法在網站中都有舉例說明，相當清楚。所以使用<code class="highlighter-rouge">Jekyll</code>，我們能用簡潔、有組織的方法建構部落格，</p>
+
+<hr />
+<h2 id="版面設計">版面設計</h2>
+<hr />
+
+<p>這邊我會詳述我想達到的效果，這個專案也會持續更新。在頁面設計中，主要牽扯到的技術是<code class="highlighter-rouge">Bootstrap</code>跟<code class="highlighter-rouge">CSS</code>，然後要考慮不同瀏覽器跟裝置呈現出來的效果如何，還有配色跟頁面設計如何讓人感到舒服、容易使用，又不落俗套能呈現出自己風格，這一部分比程式設計還要難。</p>
+
+<p>配色的部分，我希望呈現的是一種乾淨、帶點科技的感覺，又有一種玩性的感覺，現在只能單從配色下手，而且我認為還沒達到我的想像，到時候如果能結合一些簡單的符號或者icon，然後加上一些小特效，也許能個完整的呈現出這種風格</p>
+
+<p>頁面的話，目前主要分為三個</p>
+
+<ul>
+  <li>Profile-自我介紹</li>
+  <li>Articles-文章</li>
+  <li>Works-作品集</li>
+</ul>
+
+<p>在自我介紹中，我希望能達到<code class="highlighter-rouge">履歷</code>的效果，並且也能呈現出生活的一面，但要如何呈現會是很難的問題，應該要結合一些小小的動畫，並且若能在相關的地方連接到對應的文章或作品會很棒。另外，我也希望有一個<code class="highlighter-rouge">留言欄</code>在這，訪客可以在這裡馬上回饋我。在這邊主要呈現的內容是：經歷、語言能力、程式能力、作品，次要的內容是旅遊經歷、興趣、創作作品。經歷的部分，想用<code class="highlighter-rouge">連續式的呈現方法</code>，例如一連串的底片等等，而能力的部分則是想用<code class="highlighter-rouge">數據</code>及<code class="highlighter-rouge">作品</code>來呈現，只有數據的話無法說服別人，譬如你說Python大約是中等能力，但沒有看得到的東西來證明，如果在這邊有曾經撰寫的Python學習文章，或者小小的Project、作品等等，會更具說服力。</p>
+
+<p>文章的部分，目前是分為資工文章及生活文章，到時候還想新增日文學習、數學類文章、旅行類文章等等，關於圖片的呈現還是有一些問題，如果在拍照時能夠統一格式（全部都採橫式拍）的話會比較好，還有能夠新增頁碼比較好，一個頁面至多十篇文章等等。</p>
+
+<p>作品集的部分，如果說自我介紹是動態、文章頁面是靜態，作品集我想呈現介於自我介紹跟文章中間的效果，在一開始的預覽列表，是靜態的介紹，有時候可以加入圖片吸引目光，內容的部分，能夠有一些動態的互動效果會很好，因為這邊插入的圖片一定沒辦法限制是橫幅的，通常是一張圖片，然後有對應的一段介紹或者解說，所以版面的部分相對比較不固定，也相對具有做效果的空間。</p>
+
+<p>在最後的footer的部分，我的想法是採三格的形式，分別代表：社群網站連結、座右銘、最新版本的更新訊息。我認為footer有點像名片的感覺，到時候能新增聯絡資訊等等在這邊。</p>
+
+<p>*2018/5/22</p>
+
+		</p>
+	</div>		
+	<div class="post-view post-view-readmore text-center text-bg-color">
+		<a href="/life/2018/05/22/for-test.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="post-view-window view-color">
+	<div class="post-view post-view-title text-left text-bg-color" >
 		<p>京阪櫻花畢旅-中 -incomplete- </p>
 	</div>
 	<div class="post-view post-view-preview text-left text-bg-color">
