@@ -39,7 +39,7 @@ categories: life
 	- 建立放置圖片的模板
 	- 加入自我介紹的打字特效
 
-`v.1.0.4`
+`v 1.0.4`
 
 {% assign photo=site.data.work1[0] %}
 {% include one-img-block.html photo=photo %}
@@ -51,6 +51,15 @@ categories: life
 	- 新增文章分類選單
 	- 重新調整文章的配色
 	- 新增works頁面的配置
+	- 將post與work重複過多的class去除
+
+`預計在 v 1.0.5新增（專案清潔導向）`
+
+	- 將post與work版面結合
+	- 重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
+	- 新增預讀圖片的頁面
+	- 新增留言欄（在profile）
+
 
 
 
