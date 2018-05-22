@@ -1,6 +1,6 @@
 ---
 layout: articles_default
-title:  "[EN] NLP Review"
+title:  "[EN] NLP Review -incomplete-"
 categories: cs
 ---
 

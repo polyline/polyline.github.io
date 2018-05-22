@@ -33,9 +33,17 @@ categories: life
 
 `v.1.0.4`
 
+{% assign photo=site.data.work1[0] %}
+{% include one-img-block.html photo=photo %}
+{% assign photo=site.data.work1[1] %}
+{% include one-img-block.html photo=photo %}
+{% assign photo=site.data.work1[2] %}
+{% include one-img-block.html photo=photo %}
+
 	- 新增文章分類選單
 	- 重新調整文章的配色
 	- 新增works頁面的配置
+
 
 
 ---

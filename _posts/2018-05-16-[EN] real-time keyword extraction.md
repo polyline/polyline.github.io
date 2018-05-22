@@ -1,6 +1,6 @@
 ---
 layout: articles_default
-title:  "[EN] real-time keyword extraction -imcomplete-"
+title:  "[EN] real-time keyword extraction -incomplete-"
 categories: cs
 ---
 
@@ -19,7 +19,7 @@ Problems of meeting scripts
 
 Problems of live streaming 
 1. need to have enough comments data
-2. comments could be imcomplete
+2. comments could be incomplete
 
 把目的再強化一點，這樣可以解決什麼問題
 
