@@ -64,12 +64,12 @@ blockquote {
 }
 
 .view-color {
-	background-color: #F0FFF0	;
+	background-color: white	;
+	opacity: 0.9;
 }
 
 .text-bg-color {
 	background-color: white	;
-	opacity: 0.8;
 }
 
 .footer-color{
@@ -82,7 +82,7 @@ blockquote {
 
 .work-view-color{
 	background-color: #DDDDDD;
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 .work-text-bg-color {
@@ -176,7 +176,6 @@ blockquote {
 
 .work-view-window{
 	display:inline-block;
-	max-height: 350px;
 	width: 100%;
 	margin: 50px 0px;
 	border-style: solid;
@@ -198,7 +197,6 @@ blockquote {
 }
 
 .work-view-preview{
-	max-height: 200px;
 	font-size: 1rem;
 	line-height: 20px;
 }

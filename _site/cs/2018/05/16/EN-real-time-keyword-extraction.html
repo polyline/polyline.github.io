@@ -73,12 +73,40 @@
 		<div class="post-view-home col-md-8 col-sm-12 home-color">
 			<div class="article-window text-left">
 
-<div class="article-title text-bg-color">
-	<h1>[EN] real-time keyword extraction</h1>
+<div class="article-title view-color">
+	<h1>[EN] real-time keyword extraction -imcomplete-</h1>
 </div>
 
-<div class="article-content text-bg-color">
+<div class="article-content view-color">
 	<hr />
+<h2 id="going-to-do">Going to do!</h2>
+<hr />
+
+<ol>
+  <li>複習之前那篇論文，然後跟現在讀的這篇結合，看如何應用在live streaming</li>
+  <li>現在的state-of-the-art是找出最大的subgraph，並且在其中持續刪除最低分的（the lowerest degree），可能存在改進空間的是，關於sliding window設定的問題，還有文章太短(comment)的問題
+    <ol>
+      <li>文本太短，使用sliding window很困難</li>
+      <li></li>
+    </ol>
+  </li>
+</ol>
+
+<p>Problems of meeting scripts</p>
+<ol>
+  <li>multi-party</li>
+  <li>short</li>
+</ol>
+
+<p>Problems of live streaming</p>
+<ol>
+  <li>need to have enough comments data</li>
+  <li>comments could be imcomplete</li>
+</ol>
+
+<p>把目的再強化一點，這樣可以解決什麼問題</p>
+
+<hr />
 <h2 id="preview">Preview</h2>
 <hr />
 
@@ -104,11 +132,22 @@
 <ol>
   <li>comments could be high-repetitive</li>
   <li>information are incompelete<em>*1</em></li>
-  <li>order is important, comments are with time-stamp
-(4.) compared to keyword extraction from meeting scripts, comments are without imcomplete words, filler words(ex. uh..), interruption.</li>
+  <li>order is important, comments are with time-stamp</li>
+  <li>compared to keyword extraction from meeting scripts, comments are without imcomplete words, filler words(ex. uh..), interruption.</li>
 </ol>
 
 <p><em>*1.</em> Comments in a live streaming could be diaglogue between audience and the host, while we can only analyze comments from audience. That’s also why we only want to extract keywords instead of summary. Our goal is to give a quick knowledge of the topic in the live streaming to new audience.</p>
+
+<hr />
+<h2 id="review-keyword-extraction-method">Review Keyword Extraction Method</h2>
+<hr />
+
+<ol>
+  <li>TF/IDF</li>
+  <li>TextRank</li>
+  <li>RAKE(Rapid Automatic Keyword Extraction)</li>
+  <li></li>
+</ol>
 
 <hr />
 <h2 id="read-papers">Read Papers</h2>
@@ -136,40 +175,49 @@
   <li>word co-occurence network, in fixed sliding window size, if two word co-occur, then build a edge between two nodes</li>
   <li>weighted, undirect graph</li>
   <li>k-core decomposition
-    <ol>
+    <ul>
       <li>counting k-core</li>
       <li>counting CoreRank</li>
       <li>get optimistic subgraph</li>
       <li>counting degree</li>
       <li>delete the vertex of the lowest degree in the subgraph</li>
-    </ol>
+    </ul>
   </li>
   <li>Keyword Qaulity Function
  Since we  want to extract the best substructure of the graph, we define a quality function as criteria for choosing. We take two factors into accout, CoreRank and how many steps to be a fully connected graph, which imply the graph being highly knitted.</li>
   <li>Time Complexity
-    <ol>
+    <ul>
       <li>counting k-cores: O(V+Elog(V))</li>
       <li>counting CR: O(V)</li>
-    </ol>
+    </ul>
   </li>
   <li>Evaluation
  Compare with 5 baseline: random, frequency, RAKE, weighted degree centrality, PageRank.
  In this paper, they used two scenario to evaluate. The first one is the cosine similarity of commulative one-hot word vector between extracted keyword set and the provided extractive summary. The second one is to concatenate all extracted keywords as a summary and use two methods, ROUGE-1, WMD, to compare the similarity with abstractive summary.</li>
   <li>Discussion and related papers
-    <ol>
+    <ul>
       <li>Lin et al. 2009
- ?</li>
+        <ul>
+          <li>?</li>
+        </ul>
+      </li>
       <li>Habibi and Popescu-Belis 2003
- LDA and submodularity to select keywords covering as much topics as possible</li>
+        <ul>
+          <li>LDA and submodularity to select keywords covering as much topics as possible</li>
+        </ul>
+      </li>
       <li>Meladianos et al. 2015, <em>Degeneracy-Based Real-Time Sub-Event Detection in Twitter Stream</em>
- ?</li>
-    </ol>
+        <ul>
+          <li>?</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>Some Pre-setting or assumption in this paper
-    <ol>
+    <ul>
       <li>word-embedding - 300-dimensional vectors learned from a 100B-word corpus(Google news)</li>
       <li>assume that at most on topic could be discussed in each interval</li>
-    </ol>
+    </ul>
   </li>
 </ol>
 

@@ -1,6 +1,6 @@
 ---
 layout: articles_default
-title:  "[讀]共軛性(conjugacy)"
+title:  "[讀]共軛性(conjugacy) -imcomplete- "
 categories: cs
 ---
 ---
@@ -30,7 +30,6 @@ categories: cs
 
 {% assign photo=site.data.equation[0] %}
 
-test
 
 ![my equation](https://i.imgur.com/VbuEkLG.png =x10)
 
