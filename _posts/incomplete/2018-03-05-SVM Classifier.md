@@ -1,5 +1,5 @@
 ---
-layout: articles_default
+layout: article_post
 title:  "SVM Classifier"
 categories: cs
 ---
