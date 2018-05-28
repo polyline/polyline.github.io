@@ -1,8 +1,8 @@
 ---
-layout: work_articles_default
+layout: article_work
 title:  "個人部落格"
 excerpt_separator: <!--more-->
-categories: life
+categories: cs
 ---
 
 ---
@@ -55,7 +55,7 @@ categories: life
 
 `預計在 v 1.0.5新增（專案清潔導向）`
 
-	- 將post與work版面結合
+	- post和work頁面還是分開，因為實際上是兩種不同架構，分
 	- 重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
 	- 新增預讀圖片的頁面
 	- 新增留言欄（在profile）

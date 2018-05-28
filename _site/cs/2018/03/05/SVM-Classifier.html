@@ -1,0 +1,122 @@
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>其實在上學期看Couresa上的機器學習課程中，就已經有提到SVM了</p>
+
+<p>不過本人腦袋不太靈光，看過就忘了</p>
+
+<p>現在在看論文時，看到這個似曾相似的詞，腦中卻沒有浮現它的運作原理</p>
+
+<p>於是決定花點時間再重新好好學習它吧！</p>
+
+<hr />
+<h2 id="svmsupport-machine-vector基本介紹">SVM(Support Machine Vector)基本介紹</h2>
+<hr />
+
+<p>SVM屬於一種監督式學習(Supervised Learning)，跟</p>
+
+<hr />
+<h2 id="和logistic-regression與neural-network的比較">和Logistic Regression與Neural Network的比較</h2>
+<hr />
+
+<hr />
+<h2 id="svm原理">SVM原理</h2>
+<hr />
+
+<ol>
+  <li>How does SVM work?</li>
+  <li>Large Margin Classifier</li>
+</ol>
+
+<p>我們可以把SVM看成簡化版的Logistic Regression</p>
+
+<p>為什麼這樣說呢？首先先從Logistic Regression的cost function說起</p>
+
+<p><img src="/res/math/CodeCogsEqn.svg" alt="img" /></p>
+
+<p>而我們最後是要最小化所有的cost總和，所以改寫成這樣</p>
+
+<p><img src="/res/math/CodeCogsEqn-2.svg" alt="img" /></p>
+
+<p>而SVM做的，就是將其中計算cost的function，改成一個較簡單的function</p>
+
+<p>從以下的圖來解說，本來是log，是一種漸進的圖形，而SVM改成使用逼近原本圖形的直線</p>
+
+<p>這樣可以達到節省計算資源的目的</p>
+
+<p>所以讓我們來看SVM的公式長怎樣，由於這是一個optimization的式子，因此對於式子前的乘積我們可以省略</p>
+
+<p>最後得出的optimized value應該要相同</p>
+
+<p><img src="/res/math/CodeCogsEqn-3.svg" alt="img" /></p>
+
+<p>其中，C代表的是調整weight的參數，cost0跟cost1則是SVM用於逼近的函式</p>
+
+<p>Large Margin Classifier</p>
+
+<p>原理是要從「內積」想，我們從SVM帶出的兩個facts來想</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td>&gt;= 1   if y(i) = 1</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td>&lt;= -1. if y(i) = 0</td>
+        </tr>
+        <tr>
+          <td>ps. theta^T .* x(i) = p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<p>所以，假設今天我的decision boundary的margin很小</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>那相對的p(i)就會很小，那要達成上面兩式的要求，只能是</td>
+      <td> </td>
+      <td>theta</td>
+      <td> </td>
+      <td>很大</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>但這樣又會regularization term太大，所以在要求最小值的條件下</p>
+
+<p>SVM就能夠達到Large Margin的效果</p>
+
+<hr />
+<h2 id="實際運用svm">實際運用SVM</h2>
+<hr />
+
+<hr />
+<h2 id="來源references">來源(References)</h2>
+<hr />
+
+<p>*Machine Learning Course by Andrew Ng on Couresa: *</p>

@@ -17,10 +17,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <!-- Font Awesome -->
-<script defer src="/js/fontawesome-all.js"></script>
+<script defer src="/res/js/fontawesome-all.js"></script>
 
 <!-- My CSS -->
-<link href="/css/common.css" rel="stylesheet">
+<link href="/res/css/common.css" rel="stylesheet">
 
 
 	</head>
@@ -51,6 +51,7 @@
               <a class="dropdown-item" href="/posts">All</a>
               <a class="dropdown-item" href="/posts/categories/cs">cs</a>
               <a class="dropdown-item" href="/posts/categories/life">life</a>
+              <a class="dropdown-item" href="/posts/categories/jp">jp</a>
             </div>
         </li>
         <li class="nav-item">
@@ -72,6 +73,365 @@
 		</div>
 		<div class="view-home col-md-8 col-sm-12 home-color">
 			
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+		<p>Naive Bayes Classifier</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+		<p>
+			<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
+
+<p>這邊是第二次看到Naive Bayes Classifier</p>
+
+<p>第一次是在學Machine Learning的時候，給定已知的數據來預估未知的數據</p>
+
+<p>使用Naive Bayes Classifier有幾個優點，在我們缺少某個資料(missing values)時還是能夠計算出相對應的機率</p>
+
+<p>它有一個假設是，各個feature之間是獨立(independent)，稱為Naive Bayes Assumption</p>
+
+<p>用在確定獨立的feature當然是沒問題，但實驗證明用在可能依賴的features也有不錯的表現</p>
+
+<p>另外，在NLP這邊，我們想把Naive Bayes Classifier運用在Text categorization task of sentiment analysis上</p>
+
+<p>如果給定一個文件，我們能否判斷出它屬於哪個類別</p>
+
+<p>最常見是，判斷一個文件是positive還是negative</p>
+
+<hr />
+<h2 id="推導">推導</h2>
+<hr />
+
+<p>先稍微整理一下整個推導的過程：</p>
+
+<ol>
+  <li>
+    <p>我們的目的，給定一個文件d，要求出最有可能的類別c</p>
+
+    <p><img src="https://i.imgur.com/fChgb0a.png" alt="my equation" /></p>
+  </li>
+  <li>將Bayes Theorem套用在這裡</li>
+  <li>
+    <p>由於文件的機率P(d)對於不同的類別來說一樣，我們可以視為常數省略</p>
+
+    <p>如此一來，我們可以得出以下式子</p>
+
+    <p><img src="https://i.imgur.com/K2IKmg0.png" alt="my equation" /></p>
+
+    <p>the highest product of Likelihood and Prior is our answer</p>
+
+    <p>但是，對於計算這樣的Likelihood還是有點困難</p>
+  </li>
+  <li>不失一般性的情況，我們能用a set of festures來表示一個文件d</li>
+  <li>在這裡再帶入兩個假設：Bag of words和Naive Bayes Assumption</li>
+  <li>最後，避免overflow的情況，我們用log space來表示，這樣就得到最後的式子了</li>
+</ol>
+
+<p><img src="https://i.imgur.com/LbTk6XH.png" alt="my equation" /></p>
+
+<hr />
+<h2 id="optimizing-for-sentiment-analysis">Optimizing for Sentiment Analysis</h2>
+<hr />
+
+<p>有幾件常被加在NB Text Classification的方法</p>
+
+<ol>
+  <li>
+    <p>Binary NB</p>
+
+    <p>通常，一個字有沒有出現，會比字出現的次數來得重要，所以我們可以只看字有無出現，也就是0或1</p>
+  </li>
+  <li>
+    <p>Deal with Negation</p>
+
+    <p>在英文中，有時候在否定的狀況，字會是完全相反的意思</p>
+
+    <p>我們看下面這個例子</p>
+
+    <p>didn’t like this movie, but I</p>
+
+    <p>如果把字拆開，我們看like會好像是正面的意思，但其實這是否定的句子，所以反而要是負面的意思才對</p>
+
+    <p>這邊我們可以做個處理，將句子改寫成這樣</p>
+
+    <p>didn’t NOT_like NOT_this NOT_movie, but I</p>
+  </li>
+  <li>
+    <p>using Sentiment Lexicons</p>
+
+    <p>有時候，我們並沒辦法在每個字都labeled上class，這時可以利用一些sentiment lexicon來補</p>
+  </li>
+</ol>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+		<a href="/cs/2018/05/24/Naive-Bayes-Classifier.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+		<p>[讀]Probability Distribution</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+		<p>
+			<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>接續著我們前一篇求Maximum Likelihood的文章繼續，接下來我們要來看幾個常見的Distribution</p>
+
+<p>為了好好學習好，讓我們回到大二的機率課本：<em>FUNDAMENTALS OF PROBABILITY WITH STOCHASTIC PROCESSES</em></p>
+
+<p>裡面的第四章節到第九章節，從Random Variable開始講解，然後從Discrete Distribution到Continuous Distribution</p>
+
+<p>同時也提到一些常用的Distribution，像是Possion Distribution等等</p>
+
+<p>我們預計花一個禮拜的時間好好複習一下這邊</p>
+
+<hr />
+<h2 id="going-to-read">Going to Read</h2>
+<hr />
+
+<h4 id="chapter-4">Chapter 4</h4>
+<ul>
+  <li>4.1 Random Variables</li>
+  <li>4.2 Distribution Functions</li>
+  <li>4.3 Discrete Random Variables</li>
+  <li>4.4 Expectation of Discrete Random Variables</li>
+</ul>
+
+<p><em>Finished</em></p>
+
+<h4 id="chapter-5">Chapter 5</h4>
+<ul>
+  <li>5.1 Bernoulli and Binomial Random Variables</li>
+  <li>5.2 Possion Random Variables</li>
+</ul>
+
+<hr />
+<h2 id="random-variables">Random Variables</h2>
+<hr />
+
+<p><em>First Day</em></p>
+
+<p>我們首先來理解一下Random Variable的定義：</p>
+
+<blockquote>
+  <p>The values of such quantities depend on random actions, and they usually change from one experiment to another</p>
+</blockquote>
+
+<p>也就是在每一次的實驗中，得到的結果都會不同時，我們稱它為Random Variable</p>
+
+<p>在完整的數學定義中：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Let S be the sample space of an experiment. A real-valued function X : S → R is called a random variable of the experiment if, for each interval I ⊆ R , {s: X(s) ∈ I} is an event.
+</code></pre>
+</div>
+
+<p>讓我們來看一個例子，假設我們今天骰三次骰子，求骰到人頭面的次數有多少</p>
+
+<p>骰子的各種結果組合就是我們的S，而人頭面的次數就是我們的R</p>
+
+<p>我們可以說，S是包含Random Variable所有可能的集合，而X是一個S → R的Function，將S用一個實數來表示</p>
+
+<hr />
+
+<p>從原本的Random Variable中，也能產生新的Random Variable，在以下的條件下</p>
+
+<ol>
+  <li>假設有兩個Random Variable, X和Y，在同個定義域S，並且對應到值域R，那麼<code class="highlighter-rouge">X+Y</code>, <code class="highlighter-rouge">X-Y</code>, <code class="highlighter-rouge">aX+bY</code>, <code class="highlighter-rouge">XY</code>, <code class="highlighter-rouge">X/Y, Y!=0</code>也都是Random Variables</li>
+  <li>對於實數對應到實數的function來說，與Random Variable X的composition也還是S → R，所以還是Random Variable，例如<code class="highlighter-rouge">sin X</code>, <code class="highlighter-rouge">cos X2</code>, <code class="highlighter-rouge">eX</code>, <code class="highlighter-rouge">X3 − 2X</code></li>
+</ol>
+
+<p>所以我們看<strong>Example4.5 Disk的範例</strong>就可以很清楚，一開始Random Variable是直徑D，改成求面積也還是一樣符合Random Variable的定義</p>
+
+<hr />
+<h2 id="distribution-functions">Distribution Functions</h2>
+<hr />
+
+<blockquote>
+  <p>Definition: If X is a random variable, then the function F defined on (−∞, +∞) by F(t) = P(X ≤ t) is called the distribution function of X</p>
+</blockquote>
+
+<p>我們只需要求出<code class="highlighter-rouge">P(X ≤ t)</code>，就可以求出其他所有的機率：P(X = a), P(X &lt; a), P(X ≤ a), P(X &gt; b), P(X ≥ b), P(b ≤ X ≤ a), P(b &lt; X ≤ a), P(b ≤ X &lt; a), and P(b &lt; X &lt; a)</p>
+
+<p>以下是一些關於<code class="highlighter-rouge">F</code>的性質</p>
+
+<ol>
+  <li>F is nondecreasing</li>
+  <li>lim(t →∞) F(t) = 1</li>
+  <li>lim(t→−∞) F(t) = 0</li>
+  <li>F is right continuous</li>
+</ol>
+
+<p>利用這些性質，我們就可以求出上面那些其他區間的機率</p>
+
+<hr />
+
+<p>根據<code class="highlighter-rouge">Remark 4.1</code>，我們也可以反推回來，如果一個function F，滿足以上四個條件，那麼一定存在一個Random Variable X over S，使得X的Distribution Function是F</p>
+
+<hr />
+<h2 id="discrete-random-variables">Discrete Random Variables</h2>
+<hr />
+
+<p>Random Variable的集合，可以是Countable, finitely countable, uncountable. 如果是countable或者finitely countable的話，我們稱之為<code class="highlighter-rouge">Discrete Random Variables</code></p>
+
+<blockquote>
+  <p>Definition: The probability mass function p of a random variable X whose set of possible values is {x1 , x2 , x3 , . . . } is a function from R to R that satisfies the following properties</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>a. p(x) = 0 if x !∈ {x1,x2,x3,...}.
+b. p(xi) = P(X = xi) and hence p(xi) ≥ 0 (i = 1,2,3,...).
+c. ∑p(xi) = 1
+</code></pre>
+</div>
+
+<p>所以，如果存在一個countable的set{x1, x2, x3, …}，並且滿足p: R→R，使得p(xi) &gt;= 0(i=1,2,3,…)，並且P(xi) = 0，如果xi !∈{x1,x2,x3, …}，且∑p(xi)= 1，則我們可以稱p是<code class="highlighter-rouge">probability mass function</code>。</p>
+
+<p><code class="highlighter-rouge">probability mass function</code>的<code class="highlighter-rouge">distribution function</code>很簡單，只是將離散的pmf機率相加即可得到</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>x1 &lt;= t &lt; x2
+F(t) = p(X &lt;= t) = p(x1)
+以此能夠類推到
+xn-1 &lt;= t &lt; xn
+F(t) = p(X &lt;= t) = p(x1) + p(x2) + ... + p(xn-1)
+</code></pre>
+</div>
+
+<hr />
+<h2 id="expectation-of-discrete-random-variables">Expectation of Discrete Random Variables</h2>
+<hr />
+
+<p>這個章節算是複習，再加上一些補充的知識</p>
+
+<p><code class="highlighter-rouge">Expectation</code>(期望值)，在<code class="highlighter-rouge">pmf</code>中，只要將每個機率與對應到的x相乘就是答案</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>E(X) =   ∑xp(x)
+We say E(x) exists only if this sum converge absolutely
+</code></pre>
+</div>
+
+<p>期望值要收斂才會存在</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">St. Petersburg Paradox</code>，如果我們說，丟一個硬幣，直到丟到第一次出現正面(head)時，是第k次，那麼可以獲得<code class="highlighter-rouge">2^k</code>的錢</p>
+
+<p>根據這個敘述得到的期望值會是</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1+1+1+1+... = ∞
+</code></pre>
+</div>
+
+<p>課本中提了幾個<code class="highlighter-rouge">期望值發散</code>的範例，有時間可以回來再看:example 4.19~4.22</p>
+
+<hr />
+
+<blockquote>
+  <p>Theorem 4.2: Let X be a discrete random variable with set of possible values A and probability mass function p(x), and let g be a real-valued function. Then g(X) is a random variable with</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>E[g(X)]  =   ∑ g(x)p(x).
+</code></pre>
+</div>
+
+<p>也就是當我們將原本的Random Variable X套進一個<code class="highlighter-rouge">real-valued function</code> g(x)中，g(X)也還是Random Variable(根據前面的說明)，期望值就可以根據上述的式子得出，詳細的證明可以參考課本。</p>
+
+<hr />
+
+<p>Collary: E(X)是線性的，也就是</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>E(∂X+ß) = ∂E(X)+ß
+</code></pre>
+</div>
+
+<hr />
+<h2 id="bernoulli-random-variable-and-binomial-random-variables">Bernoulli Random Variable And Binomial Random Variables</h2>
+<hr />
+<p><em>Second Day</em></p>
+
+<p>關於<code class="highlighter-rouge">Bernoulli</code>，大家應該都相當了解，也就是只有兩種結果的事件，像是擲硬幣只會也正面或反面兩種情況</p>
+
+<blockquote>
+  <p>They have only two possible outcomes. One outcome is usually called a success, denoted by s. The other outcome is called a failure, denoted by f</p>
+</blockquote>
+
+<blockquote>
+  <p>The sample space of a Bernoulli trial contains two points, s and f . The random variable defined by X(s) = 1 and X(f ) = 0 is called a Bernoulli random variable</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>For a Bernoulli random variable X with parameter p, 0 &lt; p &lt; 1, E(X)=p, Var(X)=p(1−p), σX = √p(1−p).
+</code></pre>
+</div>
+
+<p>而我們如果重複<code class="highlighter-rouge">Bernoulli Experiment</code> n次的話，我們就會得到<code class="highlighter-rouge">Binomial Probability Mass Function</code></p>
+
+<blockquote>
+  <p>Definition: The function p(x) given by equation (5.2) is called the binomial probability mass function with parameters (n, p)</p>
+</blockquote>
+
+<p>這邊的<strong>Example 5.6</strong>還蠻有趣的，如果陪審團中，一個人做對決定的機率是p，那麼三人的陪審團跟一人的陪審員，誰做對決定的機率比較高？</p>
+
+<p>我們可以先看三人陪審團，最後決定的方式是簡單多數決，所以就是至少兩個人做對決定時，我們記做<code class="highlighter-rouge">P(X &gt;= 2)</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>P(X &gt;= 2) = P(X = 2) + P(X = 3) = 3p^2 * (1-p) + p^3 = -2p^3 + 3p^2
+</code></pre>
+</div>
+
+<p>假設三人陪審團做對決定的機率較高</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>-2p^3 + 3p^2 &gt; p
+=&gt; -2p^2 + 3p &gt; 1
+=&gt; 2(1-p)(p-1/2) &gt; 0
+</code></pre>
+</div>
+
+<p>所以，當<code class="highlighter-rouge">p&gt;1/2</code>時，三人陪審團做對決定機率較大，反之，單人陪審員做對決定機率較大</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>If X is a binomial random variable with parameters n and p, then E(X)=np, Var(X)=np(1−p), σX = √np(1−p).
+</code></pre>
+</div>
+
+<hr />
+<h2 id="poisson-random-variables">Poisson Random Variables</h2>
+<hr />
+
+<p>Poisson Random Variable是將Binominal Random Variable展開後，如果<code class="highlighter-rouge">n趨近於無限大</code>，所推論出來的式子</p>
+
+<p>所有可能的P(X = xi)相加(i=0,1,2,…,n)也會等於，證明<code class="highlighter-rouge">Probability of Poisson Random Variable</code>是<code class="highlighter-rouge">pmf</code></p>
+
+<blockquote>
+  <p>Definition A discrete random variable X with possible values 0, 1, 2, 3, . . . is called Poisson with parameter λ, λ &gt; 0, if</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>P(X=i)= (e^-λ * λ^i) / i! , i=0,1,2,3,....
+</code></pre>
+</div>
+
+<p>而Poisson也能當作Binomial一種approximation，在<code class="highlighter-rouge">p&lt;0.1</code>, <code class="highlighter-rouge">np&lt;=10</code>的情況下可以有很好的表現</p>
+
+<p>Poisson的Expectation跟Variance都是λ，推論請參考課本</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>If X is a Poisson random variable with parameter λ, then E(X) = Var(X) = λ, σX = √λ.
+</code></pre>
+</div>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+		<a href="/cs/2018/05/23/s_distribution.html">Readmore</a>
+	</div>
+</div>
+
 	<!-- OK -->
 
 <div class="view-window view-color round-corner max-height-350">
@@ -1017,7 +1377,7 @@ X = {x|a &lt;= x &lt;= b}, -inf &lt; a,b &lt; inf
 
 <p>而每個p都有對應到該機率的硬幣</p>
 
-<p>假設今天骰了100次的硬幣，得到正面40次，反面60次的觀測結果</p>
+<p>假設今天隨機拿一個硬幣骰了100次，得到正面40次，反面60次的觀測結果</p>
 
 <p>我們記為H=40，T=60，可以求<code class="highlighter-rouge">Likelihood</code>：</p>
 
@@ -1087,6 +1447,471 @@ t為正面（成功）的次數，N為總次數
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
 		<a href="/cs/2018/05/01/s_MLE.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+		<p>機器學習筆記</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+		<p>
+			<p><em>此文章尚未校正</em>
+<em>此文章尚未完成</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>機器學習(Machine Learning)是最近非常夯的一個詞，而清大資工也在最近將機器學習納入選修課程了，可知他的重要性</p>
+
+<p>而機器學習能應用的範圍據我所知，不僅僅能用於資工相關領域</p>
+
+<p>相反的，幾乎各種領域都能運用這個技術，包括醫學、財經、商業、工業等等</p>
+
+<p>這篇文章將會持續更新，我會將我過去及未來所學相關的機器學習筆記全部消化過</p>
+
+<p>以我自己的語言作成的筆記，分享給大家</p>
+
+<p>因為我並非專業，算是自己自學的，所以內容也許有錯誤或有說得不夠精準的地方</p>
+
+<p>這邊主要的內容來自於Andrew Ng教授在Coursera上所開的課程</p>
+
+<p>其中有一個專業向度為<a href="https://www.coursera.org/specializations/deep-learning">深度學習向度</a></p>
+
+<p>裡面包含了五堂課分別為：</p>
+
+<ol>
+  <li>Neural Network and Deep Learning</li>
+  <li>Improving Deep Neural Networks: Hyperparameters tuning , Regularization, and Optimization</li>
+  <li>Stucturing Machine Learning Project</li>
+  <li>Convlutional Neural Network</li>
+  <li>Sequnce Models</li>
+</ol>
+
+<p>在下一小節的目錄，會簡單列出小標，代表我覺得重要的小概念</p>
+
+<p>看到小標心裡應該要能浮現相關的概念跟算式</p>
+
+<p>能不能清楚的向別人解說這個概念</p>
+
+<p>請不吝來信指正我的錯誤: <strong>a5560648@gmail.com</strong></p>
+
+<hr />
+<h2 id="目錄">目錄</h2>
+<hr />
+
+<ol>
+  <li>Neural Network and Deep Learning
+ a. logistic regression
+ b. gradient descent
+ c. vectorization
+ (d. numpy)
+ e. neural network
+ f. activation function
+ g. gradient descent for nerual network
+ h. backpropagation
+ i. random initialization
+ j. forward-propagation and backward-propagation
+ k. parameters vs. Hyperparameters</li>
+  <li>Improving Deep Neural Networks: Hyperparameters tuning , Regularization, and Optimization
+ a. bias/variance
+ b. train/dev/test dataset
+ c. regularization
+ d. dropout regularization, (keep-probability)
+ e. L2 Regularization
+ f. data augmentation
+ (f-2. Comparision of different regularization methods: …, early-stopping)
+ g. normalizing inputs
+ h. weight initialization for deep learning neural network (Xaiver Initialization or He Initialization)
+ i. Gradient Checking
+ j. mini-batch vs. batch vs. stochastic
+ （j-2. batch-size, power of 2)
+ （j-3. what’s epoch）
+ k. exponentially weighted averages
+ (k-1. increasing or decreasing ß will causes what kind of effect) - ß值越大，就會越平滑，並且越偏向右邊，因為看的歷史更多
+ l. bias correction in exponentially weighted averages
+ m. gradient descent with monentum
+ (m-1. how does it work? - to redcue the oscillation in gradient descent. By looking back the history(kind of average))
+ n. RMS prop
+ (n-1. how does it work? ) - intend to make the smoother part to move fast, steaper part to move slower
+ o. Adam optimization algorithm(combining the advantage of RMS prop and monetum)
+ p. learning rate decay(There are various ways to do so)
+ q. appropriate searching scale for hyperparameters(for examples, learning rate alpha in log scale)
+ r. panda vs. caviar
+ s. normalize activations in a network(how to apply normalization in a neural network)
+ t. the batch norm step happens between z and a(for each layer we have gama and beta), and we can eliminate b, since we have already had beta.（works fine with RMS prpo, Adam ..）
+ u. Covariate shift, (the batch norm eliminate the effect of the previous layer change, and make the neural netowrk more stable)(have a slight regularization effect)
+ v. Batch Norm at test time(since we don’t have batch in test time, i.e. only one test example, so we could use expontentially weighted average to estimate µ and ∂) 
+ )
+ w. sofmax(sofmax activation function) -&gt; need to take a vector as input and out a vector which represents prob
+ (w-1. first, apply activation function, like e^(x), and then normalize it as output)
+ x. sofmax regression generalizes logistic regression to C classes
+ y. tensorflow(plz get to know some basic produres we will use in TensorFlow)
+ z.</li>
+  <li>Stucturing Machine Learning Project</li>
+  <li>
+    <p>Convolutional Neural Network
+ a. edge detection(vertical edge detection, horizontal edge detection)
+ (a-1. using a filter to do convolution)
+ b. Use DL(back-prop) to learn filter’s parameters and do convolution
+ c. padding, why?(1. don’t want image shrink, 2. use the corner pixel more)
+ (c-1. valid convolution(no padding), nxn * fxf -&gt; n-f+1)
+ (c-2. same convolution, pad so that the output size is the same as the input size)
+ d. strided convolution(why?)
+ e. convolution over volumn(just similar process of 2D image, however, we can apply many different kinds of filters and combine them together to get multilayers output.)
+ f. One layer of Convolutional neural network, how does the parameters look like in Convolution Neural Network
+ (f-1. notation of )
+ g.</p>
+
+    <p>week-1-ex: https://hub.coursera-notebooks.org/user/cfcnolvswxoldpqunmvrbt/notebooks/week1/Convolution%20model%20-%20Step%20by%20Step%20-%20v2.ipynb</p>
+  </li>
+  <li>Sequnce Models</li>
+</ol>
+
+<hr />
+<h2 id="什麼是機器學習跟深度學習又有什麼差異">什麼是機器學習？跟深度學習又有什麼差異？</h2>
+<hr />
+
+<hr />
+<h2 id="常常聽到人家說調參數是什麼意思呢">常常聽到人家說「調參數」，是什麼意思呢？</h2>
+<hr />
+
+<hr />
+<h2 id="訓練集training-setdeveloping-set測試集testing-set怎麼分">訓練集(training set)、(developing set)、測試集(testing set)怎麼分？</h2>
+<hr />
+
+<ol>
+  <li>training set, developing set, testing set的意義</li>
+  <li>一個資料集(dataset)，如何切分</li>
+  <li>實際例子以及在python上如何操作</li>
+</ol>
+
+<hr />
+<h2 id="bias-variance-tradeoff">bias-variance tradeoff</h2>
+<hr />
+
+<ol>
+  <li>overfitting及underfitting</li>
+  <li>high-variance及high-bias</li>
+  <li>tradeoff</li>
+  <li>從error觀察model有可能存在問題</li>
+</ol>
+
+<p>overfitting顧名思義，是這個model訓練過頭了，雖然在training set得到的error很低</p>
+
+<p>但是在developing set的error卻很高</p>
+
+<p>換句話說，就是你的model因為訓練過頭，變成只適用於你給的training data，換成沒看過的data，預測失敗的比率就很高</p>
+
+<p>underfitting則跟overfitting相反，在training set的時候error就很高了</p>
+
+<p>代表你的model訓練不夠，所以沒辦法正確的預測結果，通常underfitting的情況下</p>
+
+<p>training set error跟developing set error兩者都會很高</p>
+
+<p>再來我們談high-variance跟high-bias</p>
+
+<p>high-variance基本上可以視作overfitting，過度fit data，所以畫出來的decision boundary會是一條很複雜的曲線</p>
+
+<p>當看到新的data，預測錯誤的機率高</p>
+
+<p>high-bias則是可以視作underfitting，因為訓練不夠或者有錯誤，導致連在training set的data都預測不準</p>
+
+<p>所以簡單來說：</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>overfitting</td>
+      <td>high-variance</td>
+      <td>過度訓練</td>
+      <td>train set error低</td>
+      <td>dev set error高</td>
+    </tr>
+    <tr>
+      <td>underfitting</td>
+      <td>high-bias</td>
+      <td>訓練不夠</td>
+      <td>train set error高</td>
+      <td>dev set error高</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>而回歸這個部分的標題: bias-variance tradeoff，為什麼說tradeoff呢？</p>
+
+<p>因為其實bias跟variance應該是看作為一種「傾向」，當我們往high-bias那一方走時，同時variance就越來越低</p>
+
+<p>從以下的例子來看：</p>
+
+<p>|A|B|C|
+Train set error|1%|15%|15%|
+Dev set error|11%|16%|30%|
+Base error: ~0</p>
+
+<p>這這裡很重要的一個觀念是Base Error，也就是在最好的model下、或者人直接觀察的情況下的error有多少</p>
+
+<p>比如說判別一個圖片中的人，我們用人眼觀察幾乎能百分之百辨認出來，所以Base error就趨近於零</p>
+
+<p>但是若是像辨別一個句子主不主觀，每個人做出來的結果可能就有差，而也有無法辨別出來的人，這是後Base Error就不等於零</p>
+
+<p>而假設今天Base Error等於5%好了，那我們做出來一個model雖然他的error等於6%，但這樣的結果卻是極好的了</p>
+
+<p>換句話說，我們在觀察model的error時，應該考量Base Error來分辨Model的好壞</p>
+
+<p>回到這裡，A的traing set error是1%，相對於Base Error也算是相當好的結果，而dev set error卻很高</p>
+
+<p>所以我們說A是high-variance</p>
+
+<p>B則是training set error跟dev set error都很高，所以B較有可能是high-bias</p>
+
+<p>最後C也是traing set error跟dev set error都很高，但dev set error又比train set error高出許多</p>
+
+<p>這時候不只是訓練不夠，而是訓練錯誤、訓練錯方向，所以導致high-bias&amp;high-variance</p>
+
+<hr />
+<h2 id="regularization">Regularization</h2>
+<hr />
+
+<hr />
+<h2 id="來源reference">來源(Reference)</h2>
+<hr />
+
+<p><em>Coursera</em></p>
+<ul>
+  <li>Machine Learning:</li>
+  <li>Deeping Learning Specialization: https://www.coursera.org/specializations/deep-learning</li>
+</ul>
+
+<p><em>Github</em></p>
+<ul>
+  <li>Kulbear/deep-learning-course: https://github.com/Kulbear/deep-learning-coursera/blob/master/Neural%20Networks%20and%20Deep%20Learning/Deep%20Neural%20Network%20-%20Application.ipynb</li>
+  <li>shenweichemn: https://github.com/shenweichen/Coursera</li>
+</ul>
+
+<p><em>Userful Blog</em></p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+		<a href="/cs/2018/03/20/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98(ML-note).html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+		<p>npm套件管理系統</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+		<p>
+			<p><em>此文章尚未校正</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>由於我最近在學習<em>React.js</em>跟<em>node.js</em>，於是開始接觸到<em>npm</em>這個詞</p>
+
+<p>常常有時候在安裝軟體時，也會看到這行指令</p>
+
+<p>但總是沒有認真地去理解，為什麼要用npm？</p>
+
+<p>所以今天好好的整理一篇文章來學習npm到底是什麼</p>
+
+<hr />
+<h2 id="npm是什麼為什麼要知道它">npm是什麼？為什麼要知道它？</h2>
+<hr />
+
+<p><code class="highlighter-rouge">npm</code>是一個套件管理系統，用來管理專案下使用的套件，並且可以讓JavaScript工程師們分享和使用彼此的套件</p>
+
+<p>有了<code class="highlighter-rouge">npm</code>之後，我們管理跟使用套件變得很容易</p>
+
+<p>只要下簡單的指令，就能夠在npm server上分享或者使用套件</p>
+
+<p>專案下的套件(packages)會放在<code class="highlighter-rouge">node_modules</code>的資料夾下</p>
+
+<p>此外，也能夠自訂自己的套件，並且在<em>package.json</em>檔案中，提供基本訊息像是：作者、版本號、名稱等等</p>
+
+<hr />
+<h2 id="npm常用指令">npm常用指令</h2>
+<hr />
+
+<p>查詢npm命令列表</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm help
+</code></pre>
+</div>
+
+<p>查詢各個命令的基本用法</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm -l
+</code></pre>
+</div>
+
+<p>初始化一個新的<em>package.json</em>文件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm init
+</code></pre>
+</div>
+
+<p>查詢每個package的基本資料</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm info {package-name}
+</code></pre>
+</div>
+
+<p>找出放全局包(glocal packaged)的路徑</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm root -g
+</code></pre>
+</div>
+
+<p>列出當前專案所有的packages</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm list 
+npm list -global
+</code></pre>
+</div>
+
+<p>安裝package「到目前專案」，注意，npm預設本地模式，也就是每次不同專案，都必須重新安裝要用到的packages</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install {package-name}
+npm install -g {package-name} # global mode
+</code></pre>
+</div>
+
+<p>也能直接用<em>Github</em>代碼庫地址</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install {http://github.com/~}
+</code></pre>
+</div>
+
+<p>dependencies(依賴)，也就是專案中會用到的其他工具包列表，分為兩種：dependencies(依賴)跟devDependencies(開發依賴)</p>
+
+<p>dependencies下的package指的是，別人如果要使用現在這個package，也必須安裝的pacakges，就像是堆積木一樣</p>
+
+<p>現在這個package是基於dependencies下其他的packages所構成的，所以當要使用現在這個package，就要先連下面的packages都安裝好</p>
+
+<p>而devDependencies(開發依賴)指的是只有在開發環境下用到的別的packages，意味著別人使用這個package，並不需要安裝</p>
+
+<p>舉例來說，假設你今天買了一台iphone，如果要順利使用iphone，手機裡面那些零件是必備的，所以也要包含在iphone中</p>
+
+<p>但是假設Apple說測試過iphone被車子碾過也不會壞掉</p>
+
+<p>你要順利使用iphone，不用那台車子也可以順利使用，這是因為車子是用來開發時測試的</p>
+
+<hr />
+
+<p>我們安裝packages時，可以選擇要將所安裝的package歸類到dependencies或者devDependencies</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install {package-name} --save # dependencies
+npm install {package-name} --save-dev # devDependencies
+</code></pre>
+</div>
+
+<p>安裝後，我們可以很輕易的來使用這些packages，透過<strong>require</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var package = require('{package-name}')
+</code></pre>
+</div>
+
+<p>在<em>package.json</em>中，有一個欄位是<strong>scripts</strong>，裡面代表我們能夠運行的腳本</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm run {script-name}
+</code></pre>
+</div>
+
+<p>這裡是我目前某個專案的<em>package.json</em>檔節錄</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"scripts": {
+"start": "react-scripts start",
+"build": "react-scripts build",
+"test": "react-scripts test --env=jsdom",
+"eject": "react-scripts eject"
+}
+</code></pre>
+</div>
+
+<p>所以，當我們運行</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm run build
+</code></pre>
+</div>
+
+<p>實際上運行的是</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm run react-scrips build
+</code></pre>
+</div>
+
+<p>此外，npm中每個腳本有兩個hooks，分別為pre-跟post-，在執行腳本時，會先檢查有沒有pre-，有的話會先跑pre-</p>
+
+<p>一樣的，運行完也會檢查有沒有post-</p>
+
+<p>舉例來說：當我們跑</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm run build
+</code></pre>
+</div>
+
+<p>如果scripts中有「prebuild」，那就會先跑prebuild</p>
+
+<hr />
+
+<p>在npm中還有一個很有用的指令：<code class="highlighter-rouge">npm link</code></p>
+
+<p>原本不能直接對global package使用require，但如果使用link指令將global package指到存放local package的位置後</p>
+
+<p>就能夠打破此限制</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm link {package-name} {position of the local package} {position of the global package}
+</code></pre>
+</div>
+
+<hr />
+<h2 id="npm可能潛藏的問題">npm可能潛藏的問題</h2>
+<hr />
+
+<p>根據維基百科的內容：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm的模組以「先到先得」的原則註冊，各模組作者不會發生混亂。然而一旦有人撤回自己釋出的模組，那麼不僅會使依賴那個模組的專案出現問題，還會帶來安全風險。例如有一個模組叫做「left-pad」，其中只有一個字串對齊的功能。但是，當作者把它從registry裡面移除之後，許多模組便無法正確構建
+</code></pre>
+</div>
+
+<p>在npm中，我們建構package時，就像是堆積木一樣，大部分時候我們需要依賴別人已經做好的package，在這之上完成更大的package</p>
+
+<p>但如果今天把積木底層的一塊抽開，整座積木就變得不穩定，甚至可能會倒塌</p>
+
+<p>此外，由於大家都能夠簡單在npm上發布package，在npm上可能存在惡意的package，並且不被注意到廣泛地被使用到新的package中</p>
+
+<p>就像病毒擴散一樣，更多的package又建構在受污染的package上，因而造成安全性問題</p>
+
+<p>下面這篇文章的作者就說明了npm潛藏的問題，假設今天有一段盜用信用卡的程式碼偽裝成有用的小工具，並且利用npm平台擴散出去</p>
+
+<p>便能夠藉此取得全球上千萬人的信用卡資料，有興趣的人可以參考<a href="https://medium.com/@CQD/翻譯-我是這樣拿走大家網站上的信用卡號跟密碼的-991cb6c4631e">這篇文章</a></p>
+
+<hr />
+<h2 id="來源references">來源(References)</h2>
+<hr />
+
+<p><em>wiki: https://zh.wikipedia.org/wiki/Npm</em>
+<em>RUNOOB.COM: http://www.runoob.com/nodejs/nodejs-npm.html</em>
+<em>Never_yu’s Blog: https://neveryu.github.io/2017/04/10/npm/</em>
+<em>CQD&amp;hackermoon</em>: 
+	- https://medium.com/@CQD/翻譯-我是這樣拿走大家網站上的信用卡號跟密碼的-991cb6c4631e
+	- https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+		<a href="/cs/2018/03/20/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">Readmore</a>
 	</div>
 </div>
 
@@ -1478,6 +2303,144 @@ Greeting.defaultProps = {
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
 		<a href="/cs/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+		<p>SVM Classifier</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+		<p>
+			<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>其實在上學期看Couresa上的機器學習課程中，就已經有提到SVM了</p>
+
+<p>不過本人腦袋不太靈光，看過就忘了</p>
+
+<p>現在在看論文時，看到這個似曾相似的詞，腦中卻沒有浮現它的運作原理</p>
+
+<p>於是決定花點時間再重新好好學習它吧！</p>
+
+<hr />
+<h2 id="svmsupport-machine-vector基本介紹">SVM(Support Machine Vector)基本介紹</h2>
+<hr />
+
+<p>SVM屬於一種監督式學習(Supervised Learning)，跟</p>
+
+<hr />
+<h2 id="和logistic-regression與neural-network的比較">和Logistic Regression與Neural Network的比較</h2>
+<hr />
+
+<hr />
+<h2 id="svm原理">SVM原理</h2>
+<hr />
+
+<ol>
+  <li>How does SVM work?</li>
+  <li>Large Margin Classifier</li>
+</ol>
+
+<p>我們可以把SVM看成簡化版的Logistic Regression</p>
+
+<p>為什麼這樣說呢？首先先從Logistic Regression的cost function說起</p>
+
+<p><img src="/res/math/CodeCogsEqn.svg" alt="img" /></p>
+
+<p>而我們最後是要最小化所有的cost總和，所以改寫成這樣</p>
+
+<p><img src="/res/math/CodeCogsEqn-2.svg" alt="img" /></p>
+
+<p>而SVM做的，就是將其中計算cost的function，改成一個較簡單的function</p>
+
+<p>從以下的圖來解說，本來是log，是一種漸進的圖形，而SVM改成使用逼近原本圖形的直線</p>
+
+<p>這樣可以達到節省計算資源的目的</p>
+
+<p>所以讓我們來看SVM的公式長怎樣，由於這是一個optimization的式子，因此對於式子前的乘積我們可以省略</p>
+
+<p>最後得出的optimized value應該要相同</p>
+
+<p><img src="/res/math/CodeCogsEqn-3.svg" alt="img" /></p>
+
+<p>其中，C代表的是調整weight的參數，cost0跟cost1則是SVM用於逼近的函式</p>
+
+<p>Large Margin Classifier</p>
+
+<p>原理是要從「內積」想，我們從SVM帶出的兩個facts來想</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td>&gt;= 1   if y(i) = 1</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td>&lt;= -1. if y(i) = 0</td>
+        </tr>
+        <tr>
+          <td>ps. theta^T .* x(i) = p(i) *</td>
+          <td> </td>
+          <td>theta</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<p>所以，假設今天我的decision boundary的margin很小</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>那相對的p(i)就會很小，那要達成上面兩式的要求，只能是</td>
+      <td> </td>
+      <td>theta</td>
+      <td> </td>
+      <td>很大</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>但這樣又會regularization term太大，所以在要求最小值的條件下</p>
+
+<p>SVM就能夠達到Large Margin的效果</p>
+
+<hr />
+<h2 id="實際運用svm">實際運用SVM</h2>
+<hr />
+
+<hr />
+<h2 id="來源references">來源(References)</h2>
+<hr />
+
+<p>*Machine Learning Course by Andrew Ng on Couresa: *</p>
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+		<a href="/cs/2018/03/05/SVM-Classifier.html">Readmore</a>
 	</div>
 </div>
 

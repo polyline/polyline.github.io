@@ -1,0 +1,226 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Font Awesome -->
+<script defer src="/res/js/fontawesome-all.js"></script>
+
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+
+	</head>
+	<body>		
+		<header>
+			<!-- OK -->
+
+<nav class="navbar navbar-default nav-color">
+<div class="container">
+      <!-- the header of nav-bar, including the name and the stacking setting -->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+      </div>
+      <!--Menu-->
+      <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link active" href="/index.html">About Me</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
+            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/posts">All</a>
+              <a class="dropdown-item" href="/posts/categories/cs">cs</a>
+              <a class="dropdown-item" href="/posts/categories/life">life</a>
+              <a class="dropdown-item" href="/posts/categories/jp">jp</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/works">Works</a>
+        </li>
+      </ul>
+      </div>
+</div>
+</nav>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center">
+	<div class="row bg-color">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>Naive Bayes Classifier</h1>
+</div>
+
+<div class="article-content view-color">
+	<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
+
+<p>這邊是第二次看到Naive Bayes Classifier</p>
+
+<p>第一次是在學Machine Learning的時候，給定已知的數據來預估未知的數據</p>
+
+<p>使用Naive Bayes Classifier有幾個優點，在我們缺少某個資料(missing values)時還是能夠計算出相對應的機率</p>
+
+<p>它有一個假設是，各個feature之間是獨立(independent)，稱為Naive Bayes Assumption</p>
+
+<p>用在確定獨立的feature當然是沒問題，但實驗證明用在可能依賴的features也有不錯的表現</p>
+
+<p>另外，在NLP這邊，我們想把Naive Bayes Classifier運用在Text categorization task of sentiment analysis上</p>
+
+<p>如果給定一個文件，我們能否判斷出它屬於哪個類別</p>
+
+<p>最常見是，判斷一個文件是positive還是negative</p>
+
+<hr />
+<h2 id="推導">推導</h2>
+<hr />
+
+<p>先稍微整理一下整個推導的過程：</p>
+
+<ol>
+  <li>
+    <p>我們的目的，給定一個文件d，要求出最有可能的類別c</p>
+
+    <p><img src="https://i.imgur.com/fChgb0a.png" alt="my equation" /></p>
+  </li>
+  <li>將Bayes Theorem套用在這裡</li>
+  <li>
+    <p>由於文件的機率P(d)對於不同的類別來說一樣，我們可以視為常數省略</p>
+
+    <p>如此一來，我們可以得出以下式子</p>
+
+    <p><img src="https://i.imgur.com/K2IKmg0.png" alt="my equation" /></p>
+
+    <p>the highest product of Likelihood and Prior is our answer</p>
+
+    <p>但是，對於計算這樣的Likelihood還是有點困難</p>
+  </li>
+  <li>不失一般性的情況，我們能用a set of festures來表示一個文件d</li>
+  <li>在這裡再帶入兩個假設：Bag of words和Naive Bayes Assumption</li>
+  <li>最後，避免overflow的情況，我們用log space來表示，這樣就得到最後的式子了</li>
+</ol>
+
+<p><img src="https://i.imgur.com/LbTk6XH.png" alt="my equation" /></p>
+
+<hr />
+<h2 id="optimizing-for-sentiment-analysis">Optimizing for Sentiment Analysis</h2>
+<hr />
+
+<p>有幾件常被加在NB Text Classification的方法</p>
+
+<ol>
+  <li>
+    <p>Binary NB</p>
+
+    <p>通常，一個字有沒有出現，會比字出現的次數來得重要，所以我們可以只看字有無出現，也就是0或1</p>
+  </li>
+  <li>
+    <p>Deal with Negation</p>
+
+    <p>在英文中，有時候在否定的狀況，字會是完全相反的意思</p>
+
+    <p>我們看下面這個例子</p>
+
+    <p>didn’t like this movie, but I</p>
+
+    <p>如果把字拆開，我們看like會好像是正面的意思，但其實這是否定的句子，所以反而要是負面的意思才對</p>
+
+    <p>這邊我們可以做個處理，將句子改寫成這樣</p>
+
+    <p>didn’t NOT_like NOT_this NOT_movie, but I</p>
+  </li>
+  <li>
+    <p>using Sentiment Lexicons</p>
+
+    <p>有時候，我們並沒辦法在每個字都labeled上class，這時可以利用一些sentiment lexicon來補</p>
+  </li>
+</ol>
+
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row text-center">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square account-icon"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram account-icon"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope account-icon" ></i> 
+					<span class="account">a5560648(@gmail)</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4">
+			<p>Version 0.0.3</p>
+			<p>0.0.3 - 圖片設定完成</p>
+			<p>下版：圖片插入模組化、資料分離化、文章分類</p>
+			<p>0.0.3 - 2018.4.29</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
