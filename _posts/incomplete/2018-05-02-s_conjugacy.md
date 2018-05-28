@@ -3,6 +3,8 @@ layout: article_post
 title:  "[讀]共軛性(conjugacy) -imcomplete- "
 categories: cs
 ---
+*incomplete*
+
 ---
 ## 前言
 ---

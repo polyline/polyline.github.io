@@ -3,6 +3,7 @@ layout: article_post
 title:  "SVM Classifier"
 categories: cs
 ---
+*incomplete*
 
 ---
 ## 前言
