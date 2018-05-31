@@ -55,17 +55,23 @@ blockquote {
 	background-color: #FFF2CC;
 }
  
-.bg-color {
+.bg-color{
 	background-color: black;
+	opacity: 0.8;
+}
+.bg-icon {
+	background: url(../photo/baby-transport-side-view.svg);
+	background-size: 100px;
+	opacity: 0.9;
 }
 
 .home-color {
-	background-color: #20B2AA; /* Steel blue */
+	background-color: white; /* Steel blue */
+	opacity: 0.97;
 }
 
 .view-color {
 	background-color: white	;
-	opacity: 0.9;
 }
 
 .text-bg-color {

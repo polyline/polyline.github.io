@@ -2,6 +2,7 @@
 layout: article_post
 title:  "[EN] real-time keyword extraction -incomplete-"
 categories: cs
+excerpt_separator: <!--more-->
 ---
 
 ---
@@ -22,6 +23,8 @@ Problems of live streaming
 2. comments could be incomplete
 
 把目的再強化一點，這樣可以解決什麼問題
+
+<!--more-->
 
 ---
 ## Preview

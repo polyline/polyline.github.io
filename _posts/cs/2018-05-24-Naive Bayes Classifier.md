@@ -2,6 +2,7 @@
 layout: article_post
 title:  "Naive Bayes Classifier"
 categories: cs
+excerpt_separator: <!--more-->
 ---
 
 *2018-5-24*
@@ -25,6 +26,8 @@ categories: cs
 如果給定一個文件，我們能否判斷出它屬於哪個類別
 
 最常見是，判斷一個文件是positive還是negative
+
+<!--more-->
 
 ---
 ## 推導

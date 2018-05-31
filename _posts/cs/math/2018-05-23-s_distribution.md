@@ -2,6 +2,7 @@
 layout: article_post
 title:  "[讀]Probability Distribution"
 categories: cs
+excerpt_separator: <!--more-->
 ---
 *2018-5-23*
 
@@ -18,6 +19,8 @@ categories: cs
 同時也提到一些常用的Distribution，像是Possion Distribution等等
 
 我們預計花一個禮拜的時間好好複習一下這邊
+
+<!--more-->
 
 ---
 ## Going to Read

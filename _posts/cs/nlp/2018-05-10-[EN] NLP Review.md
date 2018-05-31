@@ -2,6 +2,7 @@
 layout: article_post
 title:  "[EN] NLP Review -incomplete-"
 categories: cs
+excerpt_separator: <!--more-->
 ---
 
 ---
@@ -20,6 +21,8 @@ categories: cs
 Why I am writting this article in English? It's because of terminology. I prefer to directly using the original English term to specify the concept or word. Also, Writing in English will be easy to be shared in the world.
 
 Let's get started!
+
+<!--more-->
 
 ---
 ## [2] Resources
