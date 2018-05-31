@@ -256,7 +256,30 @@ MathJax.Hub.Queue(function() {
 
 <p>在最後的footer的部分，我的想法是採三格的形式，分別代表：社群網站連結、座右銘、最新版本的更新訊息。我認為footer有點像名片的感覺，到時候能新增聯絡資訊等等在這邊。</p>
 
-<p>*2018/5/22</p>
+<p><em>2018/5/22</em></p>
+
+<hr />
+<h2 id="插入數學式">插入數學式</h2>
+<hr />
+
+<p><em>v 1.0.5</em></p>
+
+<p>在學術的文章中，常常需要用到一些數學表達式，一直以來都是頭痛的問題</p>
+
+<p>一開始我是使用LaTeX語法產生出SVG檔案後再插入到文章的<a href="https://www.codecogs.com/latex/eqneditor.php">小工具</a></p>
+
+<p>但這樣做實在太麻煩</p>
+
+<p>最近在stackoverflow發現到可以使用JavaScript的插件MathJAX來幫忙</p>
+
+<p>能夠直接在<code class="highlighter-rouge">Markdown文件</code>中插入<code class="highlighter-rouge">LaTeX語法</code></p>
+
+<p>需要用<code class="highlighter-rouge">\$\${equation}\$\$</code>兩個金錢符號包圍著LaTeX語法</p>
+
+<p><em>ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的SDN已經退役了，可以<a href="https://www.mathjax.org/cdn-shutting-down/">參考這裡</a></em></p>
+
+<p><em>2018/5/31</em></p>
+
 
 </div>
 

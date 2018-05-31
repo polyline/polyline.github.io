@@ -4,6 +4,8 @@ title:  "Naive Bayes Classifier"
 categories: cs
 ---
 
+*2018-5-24*
+
 ---
 ## 介紹
 ---

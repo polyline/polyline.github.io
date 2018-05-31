@@ -81,11 +81,6 @@ categories: cs
 	- 網頁背景更改
 	- 新增文章分頁、以及文章滑動效果（往下滑會有淡入的效果）
 
-
-
-
-
-
 ---
 ## github Page與Jekyll
 ---
@@ -134,4 +129,32 @@ categories: cs
 
 在最後的footer的部分，我的想法是採三格的形式，分別代表：社群網站連結、座右銘、最新版本的更新訊息。我認為footer有點像名片的感覺，到時候能新增聯絡資訊等等在這邊。
 
-*2018/5/22
+*2018/5/22*
+
+---
+## 插入數學式
+---
+
+*v 1.0.5*
+
+在學術的文章中，常常需要用到一些數學表達式，一直以來都是頭痛的問題
+
+一開始我是使用LaTeX語法產生出SVG檔案後再插入到文章的[小工具](https://www.codecogs.com/latex/eqneditor.php)
+
+但這樣做實在太麻煩
+
+最近在stackoverflow發現到可以使用JavaScript的插件MathJAX來幫忙
+
+能夠直接在`Markdown文件`中插入`LaTeX語法`
+
+需要用`\$\${equation}\$\$`兩個金錢符號包圍著LaTeX語法
+
+*ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的SDN已經退役了，可以[參考這裡](https://www.mathjax.org/cdn-shutting-down/)*
+
+*2018/5/31*
+
+
+
+
+
+

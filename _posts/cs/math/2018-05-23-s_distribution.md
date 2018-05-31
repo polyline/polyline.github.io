@@ -3,6 +3,7 @@ layout: article_post
 title:  "[讀]Probability Distribution"
 categories: cs
 ---
+*2018-5-23*
 
 ---
 ## 前言
