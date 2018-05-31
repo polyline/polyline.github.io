@@ -184,17 +184,65 @@ Collary: E(X)是線性的，也就是
 
 Poisson Random Variable是將Binominal Random Variable展開後，如果`n趨近於無限大`，所推論出來的式子
 
-所有可能的P(X = xi)相加(i=0,1,2,...,n)也會等於，證明`Probability of Poisson Random Variable`是`pmf`
+所有可能的P(X = xi)相加(i=0,1,2,...,n)也會等於1，證明`Probability of Poisson Random Variable`是`pmf`
 
 >Definition A discrete random variable X with possible values 0, 1, 2, 3, . . . is called Poisson with parameter λ, λ > 0, if
 
 	P(X=i)= (e^-λ * λ^i) / i! , i=0,1,2,3,....
-
-而Poisson也能當作Binomial一種approximation，在`p<0.1`, `np<=10`的情況下可以有很好的表現
+	ps. np = λ
 
 Poisson的Expectation跟Variance都是λ，推論請參考課本
 
 	If X is a Poisson random variable with parameter λ, then E(X) = Var(X) = λ, σX = √λ.
+
+而Poisson也能當作Binomial一種`approximation`，在`p<0.1`且`np<=10`的情況下可以有很好的表現
+
+在課本中也給了一些`Poisson Random Variables`的例子：
+
+	“the number of defective fuses produced by a factory in a given year,” “the number of inhabitants of a town who live at least 85 years,” “the number of machine failures per day in a plant,” and “the number of drivers arriving at a gas station per hour”
+
+主要是`np`是`appreciable`，例如瑕疵品的數量、中樂透的數量等等，而且數量很小，也就是`np<10`，而且p很小，例如中獎機率，符合`p<0.1`
+
+
+---
+## Poisson Processes
+---
+
+我們接下來探討，一段時間內發生事件的機率，例如：加州地震的數量，在區間[0,t]之間發生了N(t)次，我們能以此類推
+
+>On its own merit, the Poisson distribution appears in connection with the study of sequences of random events occurring over time
+
+而我們還有另外三個假設通常這樣的事件會有怎樣的性質
+
+1. Stationarity
+2. Independent Increment
+3. Orderliness
+
+`stationarity`
+
+在同樣長度的兩個區間A, B中，會有相同的`the number of events`的distribution，事件數目的機率會相等，翻成中文可能不太準確
+
+	For all n ≥ 0, and for any two equal time intervals ∆1 and ∆2, the probability of n events in ∆1 is equal to the probability of n events in ∆2
+
+`independent increments`
+
+`increment`指的是在一個區間(ti, ti+1]中的事件數目，而這邊說的`independent`代表，每個區間都是互相獨立的，每個區間中`the number of event`的機率都跟其他區間獨立。 
+
+	For all n ≥ 0, and for any time interval (t, t + s), the probability of n events in (t,t+s) is independent of how many events have occurred earlier or how they have occurred. In particular, suppose that the times 0 ≤ t1 <t2 <···<tk are given. For 1≤i<k−1,let Ai be the event that ni events of the process occur in [ti,ti+1). The independent increments mean that {A1, A2, . . . , Ak−1} is an independent set of events
+
+`Orderliness`
+
+在一個非常小的區間，不可能有兩個以上的事件發生
+
+	The occurrence of two or more events in a very small time interval is practi cally impossible. This condition is mathematically expressed by limh→0 P(N(h)> 1) /h = 0. This implies that as h → 0, the probability of two or more events, P N(h) > 1 , approaches 0 faster than h does. That is, if h is negligible, then P  N (h) > 1  is even more negligible
+
+根據前述的三個特質，我們能引進接下來的`Theorem 5.2`
+
+>Theorem 5.2 If random events occur in time in a way that the preceding conditions stationarity, independent increments, and orderliness—are always satisfied, N(0) = 0 and, for all t > 0, 0 < P N(t) = 0  < 1, then there exists a positive number λ such that P(N(t)=n) = ((λt)^n * e^(−λt))/n!
+That is, for all t > 0, N(t) is a Poisson random variable with parameter λt. Hence E N(t)  = λt and therefore λ = E N(1) 
+
+這邊跟前面的差別在於由`λ`換成了`λt`，我們通常會稱為`Poisson process with rate λ`
+
 
 
 

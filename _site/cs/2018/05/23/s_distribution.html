@@ -22,6 +22,25 @@
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
+<!-- support MathJax -->
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 	</head>
 	<body>		
@@ -303,23 +322,83 @@ We say E(x) exists only if this sum converge absolutely
 
 <p>Poisson Random Variable是將Binominal Random Variable展開後，如果<code class="highlighter-rouge">n趨近於無限大</code>，所推論出來的式子</p>
 
-<p>所有可能的P(X = xi)相加(i=0,1,2,…,n)也會等於，證明<code class="highlighter-rouge">Probability of Poisson Random Variable</code>是<code class="highlighter-rouge">pmf</code></p>
+<p>所有可能的P(X = xi)相加(i=0,1,2,…,n)也會等於1，證明<code class="highlighter-rouge">Probability of Poisson Random Variable</code>是<code class="highlighter-rouge">pmf</code></p>
 
 <blockquote>
   <p>Definition A discrete random variable X with possible values 0, 1, 2, 3, . . . is called Poisson with parameter λ, λ &gt; 0, if</p>
 </blockquote>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>P(X=i)= (e^-λ * λ^i) / i! , i=0,1,2,3,....
+ps. np = λ
 </code></pre>
 </div>
-
-<p>而Poisson也能當作Binomial一種approximation，在<code class="highlighter-rouge">p&lt;0.1</code>, <code class="highlighter-rouge">np&lt;=10</code>的情況下可以有很好的表現</p>
 
 <p>Poisson的Expectation跟Variance都是λ，推論請參考課本</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>If X is a Poisson random variable with parameter λ, then E(X) = Var(X) = λ, σX = √λ.
 </code></pre>
 </div>
+
+<p>而Poisson也能當作Binomial一種<code class="highlighter-rouge">approximation</code>，在<code class="highlighter-rouge">p&lt;0.1</code>且<code class="highlighter-rouge">np&lt;=10</code>的情況下可以有很好的表現</p>
+
+<p>在課本中也給了一些<code class="highlighter-rouge">Poisson Random Variables</code>的例子：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>“the number of defective fuses produced by a factory in a given year,” “the number of inhabitants of a town who live at least 85 years,” “the number of machine failures per day in a plant,” and “the number of drivers arriving at a gas station per hour”
+</code></pre>
+</div>
+
+<p>主要是<code class="highlighter-rouge">np</code>是<code class="highlighter-rouge">appreciable</code>，例如瑕疵品的數量、中樂透的數量等等，而且數量很小，也就是<code class="highlighter-rouge">np&lt;10</code>，而且p很小，例如中獎機率，符合<code class="highlighter-rouge">p&lt;0.1</code></p>
+
+<hr />
+<h2 id="poisson-processes">Poisson Processes</h2>
+<hr />
+
+<p>我們接下來探討，一段時間內發生事件的機率，例如：加州地震的數量，在區間[0,t]之間發生了N(t)次，我們能以此類推</p>
+
+<blockquote>
+  <p>On its own merit, the Poisson distribution appears in connection with the study of sequences of random events occurring over time</p>
+</blockquote>
+
+<p>而我們還有另外三個假設通常這樣的事件會有怎樣的性質</p>
+
+<ol>
+  <li>Stationarity</li>
+  <li>Independent Increment</li>
+  <li>Orderliness</li>
+</ol>
+
+<p><code class="highlighter-rouge">stationarity</code></p>
+
+<p>在同樣長度的兩個區間A, B中，會有相同的<code class="highlighter-rouge">the number of events</code>的distribution，事件數目的機率會相等，翻成中文可能不太準確</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>For all n ≥ 0, and for any two equal time intervals ∆1 and ∆2, the probability of n events in ∆1 is equal to the probability of n events in ∆2
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">independent increments</code></p>
+
+<p><code class="highlighter-rouge">increment</code>指的是在一個區間(ti, ti+1]中的事件數目，而這邊說的<code class="highlighter-rouge">independent</code>代表，每個區間都是互相獨立的，每個區間中<code class="highlighter-rouge">the number of event</code>的機率都跟其他區間獨立。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>For all n ≥ 0, and for any time interval (t, t + s), the probability of n events in (t,t+s) is independent of how many events have occurred earlier or how they have occurred. In particular, suppose that the times 0 ≤ t1 &lt;t2 &lt;···&lt;tk are given. For 1≤i&lt;k−1,let Ai be the event that ni events of the process occur in [ti,ti+1). The independent increments mean that {A1, A2, . . . , Ak−1} is an independent set of events
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">Orderliness</code></p>
+
+<p>在一個非常小的區間，不可能有兩個以上的事件發生</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>The occurrence of two or more events in a very small time interval is practi cally impossible. This condition is mathematically expressed by limh→0 P(N(h)&gt; 1) /h = 0. This implies that as h → 0, the probability of two or more events, P N(h) &gt; 1 , approaches 0 faster than h does. That is, if h is negligible, then P  N (h) &gt; 1  is even more negligible
+</code></pre>
+</div>
+
+<p>根據前述的三個特質，我們能引進接下來的<code class="highlighter-rouge">Theorem 5.2</code></p>
+
+<blockquote>
+  <p>Theorem 5.2 If random events occur in time in a way that the preceding conditions stationarity, independent increments, and orderliness—are always satisfied, N(0) = 0 and, for all t &gt; 0, 0 &lt; P N(t) = 0  &lt; 1, then there exists a positive number λ such that P(N(t)=n) = ((λt)^n * e^(−λt))/n!
+That is, for all t &gt; 0, N(t) is a Poisson random variable with parameter λt. Hence E N(t)  = λt and therefore λ = E N(1)</p>
+</blockquote>
+
+<p>這邊跟前面的差別在於由<code class="highlighter-rouge">λ</code>換成了<code class="highlighter-rouge">λt</code>，我們通常會稱為<code class="highlighter-rouge">Poisson process with rate λ</code></p>
 
 
 </div>

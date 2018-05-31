@@ -22,6 +22,25 @@
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
+<!-- support MathJax -->
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 	</head>
 	<body>		
@@ -87,7 +106,12 @@
 <h2 id="介紹">介紹</h2>
 <hr />
 
-<p>–coming soon–</p>
+<p>在日本交換留學的這一年，我們必須完成一個研究，也就是<code class="highlighter-rouge">YFR Research</code>，雖然沒有限制說應該怎麼做，像是一定要有成品，或者要寫成一篇論文之類的</p>
+
+<p>我所加入的lab是<code class="highlighter-rouge">Okumura-Takamura NLP Lab</code>，<code class="highlighter-rouge">NLP</code>的中文是自然語言處理，而我訂的主題是<code class="highlighter-rouge">利用留言，即時找出直播中的主題</code></p>
+
+<p>乍看之下很簡單的一句話，其實有很多個困難存在，而這也算是我第一次做研究</p>
+
 
 		</p>
 	</div>		
