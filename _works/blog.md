@@ -55,11 +55,14 @@ categories: cs
 
 `預計在 v 1.0.5新增`
 
+{% assign photo=site.data.work1[3] %}
+{% include one-img-block.html photo=photo %}
+
 	- (ok)post和work頁面還是分開，因為實際上是兩種不同架構，分
 	- (ok)重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
 	- 新增預讀圖片的頁面
 	- 新增IG格式
-	- 將數學式改成SVG
+	- (ok!找到更好解法)將數學式改成SVG
 	- footer跑版修正
 	- articles的配色更改
 	- articles的預讀畫面修正
