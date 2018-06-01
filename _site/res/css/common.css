@@ -61,6 +61,7 @@ blockquote {
 }
 .bg-icon {
 	background: url(../photo/baby-transport-side-view.svg);
+	background-position: 1px;
 	background-size: 100px;
 	opacity: 0.9;
 }

@@ -41,6 +41,7 @@ MathJax.Hub.Queue(function() {
 });
 </script>
 
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 	</head>
@@ -68,10 +69,10 @@ MathJax.Hub.Queue(function() {
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
             <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/posts">All</a>
-              <a class="dropdown-item" href="/posts/categories/cs">cs</a>
-              <a class="dropdown-item" href="/posts/categories/life">life</a>
-              <a class="dropdown-item" href="/posts/categories/jp">jp</a>
+              <a class="dropdown-item" href="/posts">All<span class="badge" onclick="">19</span></a>
+              <a class="dropdown-item" href="/posts/categories/cs">cs<span class="badge">9</span></a>
+              <a class="dropdown-item" href="/posts/categories/life">life<span class="badge">10</span></a>
+              <a class="dropdown-item" href="/posts/categories/jp">jp<span class="badge">0</span></a>
             </div>
         </li>
         <li class="nav-item">
@@ -311,3 +312,14 @@ log
 		</div>
 	</body>
 </html>
+
+<script>
+$(".badge").hover(function(){
+    $(this).hide(1000);
+});
+
+$(".view-window").hover(function(){
+	$(this).hide(10000);
+});
+
+</script>
