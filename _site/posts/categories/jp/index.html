@@ -98,16 +98,16 @@ MathJax.Hub.Queue(function() {
 	<!-- OK -->
 
 <div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left text-bg-color round-corner" >
+	<div class="view-section-attr view-section-title text-left round-corner" >
 		<p>單字複習</p>
 	</div>
-	<div class="view-section-attr view-section-content text-left text-bg-color round-corner max-height-200">
+	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
 		<p>
 			<p>–coming soon–</p>
 
 		</p>
 	</div>		
-	<div class="view-section-attr view-section-readmore text-center text-bg-color round-corner">
+	<div class="view-section-attr view-section-readmore text-center round-corner">
 		<a href="/jp/2018/05/25/%E5%96%AE%E5%AD%97%E8%A4%87%E7%BF%92.html">Readmore</a>
 	</div>
 </div>
@@ -173,8 +173,14 @@ $(".badge").hover(function(){
     $(this).hide(1000);
 });
 
-$(".view-window").hover(function(){
-	$(this).hide(10000);
+$(".view-color").hover(function(){
+	$(this).css("background-color", "#D2B48C");
+},function(){
+	$(this).animate({
+		opacity: '1'
+	});
+	$(this).css("background-color", "#FAF0E6");
 });
+
 
 </script>
