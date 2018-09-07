@@ -7,81 +7,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chen Tse-Pei's Blog</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Font Awesome -->
-<script defer src="/res/js/fontawesome-all.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
-<!-- support MathJax -->
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 	</head>
 	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 		<header>
 			<!-- OK -->
 
-<nav class="navbar navbar-default nav-color">
 <div class="container">
-      <!-- the header of nav-bar, including the name and the stacking setting -->
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
-      </div>
-      <!--Menu-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-            <a class="nav-link active" href="/index.html">About Me</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
-            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/posts">All<span class="badge" onclick="">19</span></a>
-              <a class="dropdown-item" href="/posts/categories/cs">cs<span class="badge">9</span></a>
-              <a class="dropdown-item" href="/posts/categories/life">life<span class="badge">10</span></a>
-              <a class="dropdown-item" href="/posts/categories/jp">jp<span class="badge">0</span></a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/works">Works</a>
-        </li>
-      </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
 </div>
-</nav>
 
 		</header>
 		<main>
@@ -95,680 +79,131 @@ MathJax.Hub.Queue(function() {
 		</div>
 		<div class="view-home col-md-8 col-sm-12 home-color">
 			
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Dirichlet Distribution</p>
+<div class="container-fluid">
+	<a href="/posts/categories/cs">
+	<div class="row box">
+		<div class="col-md-3 box-icon" >
+			<span><i class="fas fa-code fa-3x"></i></span>
+		</div>
+		<div class="col-md-9 box-description" >
+			<div class="box-intro text-left" style=" width: 100%;">
+				<span class="box-description-title">程式筆記</span>
+				<span class="box-description-detail">包含NLP、網站前後端、ML等相關學習整理</span>
+			</div>
+			<div class="box-chart progress" style="height: 10px; width: 100%;">
+				<div class="progress-bar bg-info progress-cs" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
 	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>LDA Topic Model中，用到了一些機率分布，像是<code class="highlighter-rouge">Multinomial Distribution</code>, <code class="highlighter-rouge">Beta Distribution</code>, <code class="highlighter-rouge">Dirichlet Distribution</code></p>
-
-<p>不過對於這些分布並沒有一個完整的了解，我們參考<code class="highlighter-rouge">PRML</code>這本書並在這篇文章整理複習一下吧！</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/06/03/s_Dirichlet.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Neural Network</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-31</em></p>
-
-<hr />
-<h2 id="介紹">介紹</h2>
-<hr />
-
-<p>現在邁入<code class="highlighter-rouge">Speech and Language Processing</code>這本書的<code class="highlighter-rouge">第八章Neural Networks and Neural Language Models</code></p>
-
-<p>這章的內容跟之前在<code class="highlighter-rouge">Coursera</code>上過的<code class="highlighter-rouge">Machine Learning</code>課程有很大的重疊，所以可以當作複習來看</p>
-
-<p>這篇文章中，會盡量整理一下重要的觀念、術語、公式</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/31/s_nn.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>二十二歲生日</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-27</em></p>
-
-<p>不知不覺，我也已經到了這樣的年紀了，也即將成為新鮮人，要在險惡的社會中打拼</p>
-
-<p>在二十一歲這一年，我申請交換來到日本，這一年真的是我人生最豐收的一年，我也很感謝所有賦予我這一切的人事物</p>
-
-<p>有太多不可思議的事情發生，有機會的話我會在留學紀錄中一一記載下來</p>
-
-<p>在這一年，我成長了太多，看世界的角度也變得不同</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/05/27/%E4%BA%8C%E5%8D%81%E4%BA%8C%E6%AD%B2%E7%94%9F%E6%97%A5.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>單字複習</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p>–coming soon–</p>
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/jp/2018/05/25/%E5%96%AE%E5%AD%97%E8%A4%87%E7%BF%92.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>Naive Bayes Classifier</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-24</em></p>
-
-<hr />
-<h2 id="介紹">介紹</h2>
-<hr />
-
-<p>這邊是第二次看到Naive Bayes Classifier</p>
-
-<p>第一次是在學Machine Learning的時候，給定已知的數據來預估未知的數據</p>
-
-<p>使用Naive Bayes Classifier有幾個優點，在我們缺少某個資料(missing values)時還是能夠計算出相對應的機率</p>
-
-<p>它有一個假設是，各個feature之間是獨立(independent)，稱為Naive Bayes Assumption</p>
-
-<p>用在確定獨立的feature當然是沒問題，但實驗證明用在可能依賴的features也有不錯的表現</p>
-
-<p>另外，在NLP這邊，我們想把Naive Bayes Classifier運用在Text categorization task of sentiment analysis上</p>
-
-<p>如果給定一個文件，我們能否判斷出它屬於哪個類別</p>
-
-<p>最常見是，判斷一個文件是positive還是negative</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/24/Naive-Bayes-Classifier.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Probability Distribution</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-23</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>接續著我們前一篇求Maximum Likelihood的文章繼續，接下來我們要來看幾個常見的Distribution</p>
-
-<p>為了好好學習好，讓我們回到大二的機率課本：<em>FUNDAMENTALS OF PROBABILITY WITH STOCHASTIC PROCESSES</em></p>
-
-<p>裡面的第四章節到第九章節，從Random Variable開始講解，然後從Discrete Distribution到Continuous Distribution</p>
-
-<p>同時也提到一些常用的Distribution，像是Possion Distribution等等</p>
-
-<p>我們預計花一個禮拜的時間好好複習一下這邊</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/23/s_distribution.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>webpack筆記</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-21</em></p>
-
-<hr />
-<h2 id="什麼是webpack為什麼需要學">什麼是webpack，為什麼需要學？</h2>
-<hr />
-
-<p>一樣的，我們先從維基百科的定義來看</p>
-
-<blockquote>
-  <blockquote>
-    <p>Webpack 是一個開源的前端打包工具。Webpack 提供了前端開發缺乏的模組化開發方式，將各種靜態資源視為模組，並從它生成優化過的程式碼</p>
-  </blockquote>
-</blockquote>
-
-<p>其實維基百科已經用簡短的一句話說明了webpack最重要的兩個功能</p>
-
-<ol>
-  <li>改善模組化產生的效能跟管理問題</li>
-  <li>優化後生成bundle.js</li>
-</ol>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/21/webpack%E7%AD%86%E8%A8%98.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[EN] real-time keyword extraction -incomplete-</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
-<h2 id="going-to-do">Going to do!</h2>
-<hr />
-
-<ol>
-  <li>複習之前那篇論文，然後跟現在讀的這篇結合，看如何應用在live streaming</li>
-  <li>現在的state-of-the-art是找出最大的subgraph，並且在其中持續刪除最低分的（the lowerest degree），可能存在改進空間的是，關於sliding window設定的問題，還有文章太短(comment)的問題
-    <ol>
-      <li>文本太短，使用sliding window很困難</li>
-      <li></li>
-    </ol>
-  </li>
-</ol>
-
-<p>Problems of meeting scripts</p>
-<ol>
-  <li>multi-party</li>
-  <li>short</li>
-</ol>
-
-<p>Problems of live streaming</p>
-<ol>
-  <li>need to have enough comments data</li>
-  <li>comments could be incomplete</li>
-</ol>
-
-<p>把目的再強化一點，這樣可以解決什麼問題</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/16/EN-real-time-keyword-extraction.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[EN] NLP Review -incomplete-</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
-<h2 id="preview">Preview</h2>
-<hr />
-
-<blockquote>
-  <p>In this articles, I will cover a few good articles that I found on the internet. The goal is to orgnize the resources and notes in the process of learning NLP. The followings are the index of the article.</p>
-</blockquote>
-
-<ol>
-  <li>Pre-requirments - Suggest what kinds of knowledge are recommanded to gain before starting NLP task</li>
-  <li>Resources - The resources that I used to learn NLP</li>
-  <li>Read-Papers - I will show a short summary for the papers I read before. Some will have detailed introduction articles</li>
-  <li>Concepts - I would like to collect some important concepts related to NLP tasks in this section</li>
-  <li>Implementation - In order to make these theories into real work, what kinds of knowledge do we need.</li>
-  <li>Experiment Results - In this section, I will show the experiments that I made before.</li>
-</ol>
-
-<p>Why I am writting this article in English? It’s because of terminology. I prefer to directly using the original English term to specify the concept or word. Also, Writing in English will be easy to be shared in the world.</p>
-
-<p>Let’s get started!</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/10/EN-NLP-Review.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>京阪櫻花畢旅-中</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<h2 id="incomplete"><em>incomplete</em></h2>
-<h2 id="前情提要">前情提要</h2>
-<hr />
-
-<p>前兩天，我們主要在京都玩</p>
-
-<p>但其實京都只玩兩天實在不太夠</p>
-
-<p>而且又在是這著超美櫻花季節</p>
-
-<p>另外，令我驚訝的是</p>
-
-<p>從京都搭新快速的電車到大阪只需要三十分鐘</p>
-
-<p>平常從我宿舍到學校都要四十分鐘以上了</p>
-
-<p>意外地比想像中近</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/05/01/%E4%BA%AC%E9%98%AA%E6%AB%BB%E8%8A%B1%E7%95%A2%E6%97%85-%E4%B8%AD.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Maximum Likelihood Estimation(MLE)</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-1</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>最近在努力複習機率</p>
-
-<p>當初資工大一大二時</p>
-
-<p>還記得我們要修線性代數、機率、離散數學、微積分等</p>
-
-<p>當那時候覺得資工為什麼要學這些數學</p>
-
-<p>不是只要會打程式就好了嗎？</p>
-
-<p>現在終於吃到苦頭</p>
-
-<p>在看Paper時，很多數學理論都是需要這些基礎的</p>
-
-<p>但也沒時間後悔了，只能趕快回頭補救</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/01/s_MLE.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>京阪櫻花畢旅-上</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-4-29</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>一直滿心期盼畢旅來到的這一天</p>
-
-<p>雖然我其實今年一整年就在日本</p>
-
-<p>但跟大學朋友們一起旅行感覺會有不一樣的好玩</p>
-
-<p>又剛好，我們誤打誤撞碰到了櫻花滿開時期</p>
-
-<p>這幾天就是滿滿的櫻花看到飽</p>
-
-<p>加上一堆照片紀念</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/04/29/%E4%BA%AC%E9%98%AA%E6%AB%BB%E8%8A%B1%E7%95%A2%E6%97%85-%E4%B8%8A.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>栃木ホームステイ</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-4-26</em></p>
-
-<hr />
-<h2 id="序章">序章</h2>
-<hr />
-
-<p>栃木ホームステイ(Tochigi homestay)是東工大在四月舉辦的homestay program</p>
-
-<p>我跟兩位朋友被分配到內田小姐的家裡（以下簡稱<em>婆婆</em>）</p>
-
-<p>一大早，我們大約七點半從橫濱這邊的宿舍出發</p>
-
-<p>大約11點半才抵達烤肉的湖邊</p>
-
-<p>一開始的第一個活動就是烤肉，這個烤肉真的蠻好吃</p>
-
-<p>但是由於不太懂日本烤肉的習慣，再加上日文不夠好</p>
-
-<p>這個時候是有點尷尬的情況，只能坐在旁默默的吃</p>
-
-<p>婆婆是個很熱情的人，她跟我們分享了很多她的故事</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/04/26/HomeStay.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>孤獨蔓延的傷害</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-4-15</em></p>
-
-<p>今天我看了這部影片：<a href="https://tw.voicetube.com/videos/10792">The lethality of loneliness</a>有很多收穫</p>
-
-<p>這部影片中提到很多觀點來證明孤獨對人來說是很嚴重的傷害</p>
-
-<p>在影片中也提到，孤獨能夠造成早死的機率高達45%，甚至比酗酒、空汙、肥胖都來得高</p>
-
-<p>而現代社會孤獨的現象也不斷加劇，美國單人家庭的比例日益增高</p>
-
-<p>我認為不只是美國，全世界可能都是如此</p>
-
-<p>孤獨其實就是一個不斷擴張、具傳染性的疾病</p>
-
-<p>而且在現代社會會是一個很嚴重的問題，卻不被重視，甚至遭受污名化</p>
-
-<p>意識到這個問題，並且去接受這個身體帶給我們的警示</p>
-
-<p>然後去解決、改善這個狀況，才是正確的做法</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/04/15/%E5%AD%A4%E7%8D%A8%E8%94%93%E5%BB%B6%E7%9A%84%E5%82%B7%E5%AE%B3.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>世界的規則</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-4-6</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>這篇是用來提醒我自己的</p>
-
-<p>這個世界有很多現實的規則</p>
-
-<p>也許不想承認</p>
-
-<p>很多人嘴上說著鄙視這些規則</p>
-
-<p>但其實最後還是跟著那些規則走</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/04/06/%E4%B8%96%E7%95%8C%E7%9A%84%E8%A6%8F%E5%89%87.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>莫忘初衷</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-3-15</em></p>
-
-<p>很多人都會把這句話當作座右銘</p>
-
-<p>「莫忘初衷」很重要沒錯，但仔細一想</p>
-
-<p>我的初衷是什麼呢？</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/03/15/%E8%8E%AB%E5%BF%98%E5%88%9D%E8%A1%B7.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>React.js筆記</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-3-7</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>由於最近在進行的專案中，我打算使用<code class="highlighter-rouge">React.js</code>來完成前端的部分</p>
-
-<p>所以開始學習<code class="highlighter-rouge">React.js</code>，當開始學習後</p>
-
-<p>各式各樣的<code class="highlighter-rouge">名詞</code>跟<code class="highlighter-rouge">套件</code>真是嚇壞我</p>
-
-<p>React.js, MVC, JSX, Flux, Redux, webpack, node.js, express, bootstrap, sass…等等族繁不及備載</p>
-
-<p>總之，我想要一步步慢慢地了解這些</p>
-
-<p>這篇文章可能會有很多錯誤，因為我是使用自己的觀點去解釋</p>
-
-<p>請不吝告訴我，真理是越辯越明，希望我們能互相學習: <code class="highlighter-rouge">a5560648@gmail.com</code></p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>噪音</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-3-6</em></p>
-
-<p>今天經歷了一種好久沒有的自責感，自從來日本之後</p>
-
-<p>不過，在這之後我卻很開心</p>
-
-<p>因為比愧疚更慘的感覺是麻木，而這段時間我是麻木</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/03/06/%E5%99%AA%E9%9F%B3.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>npm套件管理系統</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-3-3</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>由於我最近在學習<code class="highlighter-rouge">React.js</code>跟<code class="highlighter-rouge">node.js</code>，於是開始接觸到<code class="highlighter-rouge">npm</code>這個詞</p>
-
-<p>常常有時候在安裝軟體時，也會看到這行指令</p>
-
-<p>但總是沒有認真地去理解，為什麼要用<code class="highlighter-rouge">npm</code>？</p>
-
-<p>所以今天好好的整理一篇文章來學習<code class="highlighter-rouge">npm</code>到底是什麼</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/03/03/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>重新開始</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-2-27</em></p>
-
-<p>前陣子，重新花了一點時間學了網頁相關的技術</p>
-
-<p>重新架設了這個網站，自己手動刻</p>
-
-<p>我覺得我在這方面算是蠻頑固不知變通的</p>
-
-<p>總是不想使用模板，因為感覺沒有知道整個架構，沒辦法掌握的感覺</p>
-
-<p>但是，資工這個領域現在有太多小工具</p>
-
-<p>只有站在巨人的肩膀上，才能完成更偉大的作品</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/02/27/%E9%87%8D%E6%96%B0%E9%96%8B%E5%A7%8B.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>我管你</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-2-27</em></p>
-
-<p>最近在我是歌手上，很喜歡裡面的一位歌手「華晨宇」</p>
-
-<p>上一期他唱了一首歌叫「我管你」，我非常喜歡</p>
-
-<p>在訪談時他講到：</p>
-
-<blockquote>
-  <p>這個世界的人大家喜歡獨特，但真正遇到獨特的人事物，卻又去否定</p>
-</blockquote>
-
-<p>真的是這樣，每當做出不同於別人的決定時，身邊的人就會不斷勸說你要怎麼做</p>
-
-<p>那些話不用講，其實我也知道你要說什麼，所以聽了也煩</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/2018/02/27/%E6%88%91%E7%AE%A1%E4%BD%A0.html">Readmore</a>
-	</div>
+	</a>
 </div>
 
 
 
 
+<div class="container-fluid">
+	<a href="/posts/categories/jpstudy">
+	<div class="row box">
+		<div class="col-md-3 box-icon" >
+			<span><i class="fas fa-walking fa-3x"></i></span>
+		</div>
+		<div class="col-md-9 box-description" >
+			<div class="box-intro text-left" style=" width: 100%;">
+				<span class="box-description-title">留學記事</span>
+				<span class="box-description-detail">2017-2018在日本東京留學的紀事</span>
+			</div>
+			<div class="box-chart progress" style="height: 10px; width: 100%;">
+				<div class="progress-bar bg-info progress-jpstudy" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	</a>
+</div>
+
+
+
+
+<div class="container-fluid">
+	<a href="/posts/categories/math">
+	<div class="row box">
+		<div class="col-md-3 box-icon" >
+			<span><i class="fas fa-infinity fa-3x"></i></span>
+		</div>
+		<div class="col-md-9 box-description" >
+			<div class="box-intro text-left" style=" width: 100%;">
+				<span class="box-description-title">數學學習</span>
+				<span class="box-description-detail">資工領域相關的數學：線性代數、機率、機器學習等</span>
+			</div>
+			<div class="box-chart progress" style="height: 10px; width: 100%;">
+				<div class="progress-bar bg-info progress-math" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	</a>
+</div>
+
+
+
+
+<div class="container-fluid">
+	<a href="/posts/categories/life">
+	<div class="row box">
+		<div class="col-md-3 box-icon" >
+			<span><i class="fas fa-edit fa-3x"></i></span>
+		</div>
+		<div class="col-md-9 box-description" >
+			<div class="box-intro text-left" style=" width: 100%;">
+				<span class="box-description-title">生活牢騷</span>
+				<span class="box-description-detail">各階段對於周遭人事物的想法</span>
+			</div>
+			<div class="box-chart progress" style="height: 10px; width: 100%;">
+				<div class="progress-bar bg-info progress-life" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	</a>
+</div>
+
+
+
+<script>
+
+speed = 50;
+limit = [4, 1, 4, 7];
+limit = limit.map(zoom)
+nameList = [".progress-cs", ".progress-jpstudy", ".progress-math", ".progress-life"]
+console.log(limit);
+i = 0;
+
+
+function zoom(value, index, array){
+	return value * 3;
+}
+
+function runProgress(){
+	var flag = false;
+	for(c=0; c<5; c++){
+		if(i <= limit[c]){
+			flag = true
+			percentage = i + "%";
+			$(nameList[c]).css("width", percentage);
+			$(nameList[c]).attr("aria-valuenow", i);
+
+		}else{
+			$(nameList[c]).html(limit[c]/3);
+		}
+	}
+	if(flag){
+		setTimeout(runProgress, speed);
+		i++;
+	}
+}
+runProgress();
+	
+
+
+
+</script>
 
 		</div>
 		<div>
@@ -783,19 +218,19 @@ MathJax.Hub.Queue(function() {
 <!--This is the footer of the website-->
 
 <div class="footer-window container-fluid footer-color">
-	<div class="row text-center">
+	<div class="row">
 		<div class="footer-view footer-info col-md-4 text-left">
 				<div class="text-left">
-					<i class="fab fa-github-square account-icon"></i> 
+					<i class="fab fa-github-square fa-3x"></i> 
 					<span class="account">@polyline</span>
 				</div>
 				<div>
-					<i class="fab fa-instagram account-icon"></i> 
+					<i class="fab fa-instagram fa-3x"></i> 
 					<span class="account">@__tsu__pei</span>
 				</div>
 				<div>
-					<i class="fas fa-envelope account-icon" ></i> 
-					<span class="account">a5560648(@gmail)</span>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
 				</div>
 		</div>
 		<div class="footer-view footer-words col-md-4">
@@ -803,8 +238,8 @@ MathJax.Hub.Queue(function() {
 			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
 			<p>追尋自己想要的快樂</p>
 		</div>
-		<div class="footer-view footer-license col-md-4">
-			<p>Version 0.0.4</p>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
 		</div>
 	</div>
 </div>
@@ -826,7 +261,7 @@ log
 </html>
 
 <script>
-$(".badge").hover(function(){
+$(".badge-info").hover(function(){
     $(this).hide(1000);
 });
 

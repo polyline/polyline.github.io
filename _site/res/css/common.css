@@ -7,7 +7,7 @@ html {
 }
 body {
 	height:100%;
-		background-color: #FFF2CC;
+	background-color: #FFF2CC;
 }
 
 /* Custom Markdown Style*/
@@ -109,6 +109,7 @@ blockquote {
       letter-spacing: 5px;
 }
 
+
 .dropdown-menu{
 	padding: 10px;
 	text-decoration:none;
@@ -129,6 +130,31 @@ blockquote {
 	font-size: 1.2rem;
 	letter-spacing: 3px;
     color:white;
+}
+
+.profile-page-left{
+	padding: 100px;
+	background-color: black;
+	opacity: 0.9;
+}
+
+.profile-page-right{
+	background-color: #009FCC; /*藍色*/
+	opacity: 0.9;
+	border-style: solid;
+	padding: 150px 80px;
+}
+
+.profile-page-photo-section{
+
+}
+
+.profile-page-intro-section{
+	display:none;
+	background-color: #DDDDDD; /*淺灰*/
+	padding: 20px;
+	border-radius: 5px;
+	font-family: courier;
 }
 
 /* View Settings */
@@ -225,39 +251,36 @@ blockquote {
 /* Footer Setting */
 
 .footer-window {
-	padding: 30px 60px;
 	margin: 0px;
 	font-size: 12px;
     letter-spacing: 5px;
 }
 
 .footer-view {
-	padding: 30px;
-	display: inline-block;
+	padding: 35px 70px;
 	height: 200px;
 }
 
 .footer-info {
-	line-height: 50px;
+	line-height: 35px;
+	letter-spacing:1.5px;
+	font-family: Courier;
 }
 
 .footer-words{
-	padding: 70px 0;
 	line-height: 20px;
+	border-left-style: dashed;
+	font-size:0.8rem;
 }
 
 .footer-license{
-	padding: 70px 0;
 	line-height: 20px;
-
-}
-
-.account-icon {
-	font-size: 1.5rem;
+	border-left-style: dashed;
 }
 
 .account {
-	font-size: 1rem;
+	padding-left: 5px;
+	font-size:1rem;
 }
 
 /* img window */
@@ -290,11 +313,41 @@ img {
 	padding: 15px;
 }
 
+/* box */
 
+.box{
+	background-color: white;
+	margin: 100px;
+}
 
+.box-icon{
+	background-color: #008B8B;
+	border-radius: 50px;
+	padding: 10px;
+}
 
+.box-description{
 
+}
 
+.box-description-title{
+	font-size: 2rem;
+	border-radius: 5px;
+
+}
+.box-description-detail{
+	font-size: 0.8rem;
+}
+
+.box-intro{
+	background-color: #DDDDDD;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+.box-chart{
+}
 
 
 

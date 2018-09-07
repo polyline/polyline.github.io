@@ -1,0 +1,402 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left round-corner" >
+		<p>[讀]Gibbs Sampling</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
+		<p>
+			<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
+
+<p>首先，在整理這篇關於<code class="highlighter-rouge">Gibbs Smapling</code>，中文叫做<code class="highlighter-rouge">吉普斯採樣</code>的過程中，我參考了許多資料</p>
+
+<p>我得到最多幫助的莫過於<code class="highlighter-rouge">LDA 數學八卦</code>，以及徐亦達教授的<code class="highlighter-rouge">機器學習</code>的課程</p>
+
+<p>這兩個資料只要Google一下都能找到，用大約一天的時間看完會很有幫助的</p>
+
+<p>我認為要弄懂<code class="highlighter-rouge">Gibbs Sampling</code>之前，要先依序搞懂以下的概念</p>
+
+<ol>
+  <li>什麼是sampling? 為什麼要sampling?</li>
+  <li>一般的分布(ex. Gaussian Distribution)如何做sampling</li>
+  <li>MCMC方法</li>
+  <li>M-H Algorithm</li>
+  <li>Gibbs Samping</li>
+</ol>
+
+<hr />
+<h2 id="samping">Samping</h2>
+<hr />
+
+<hr />
+<h2 id="一般容易採樣的分布">一般容易採樣的分布</h2>
+<hr />
+
+<p>如果是一般簡單的分布，我們能夠透過對<code class="highlighter-rouge">Uniform Distribution(均勻分布)</code>的變換生成出來</p>
+
+<p>在<code class="highlighter-rouge">Gaussian Distribution</code>的例子：</p>
+
+<script type="math/tex; mode=display">取隨機變量U_{1}, U_{2} \sim Uniform[0,1] \\</script>
+
+<script type="math/tex; mode=display">Z_{0} = \sqrt{-2 \ln{U_{1}}} \cos (2 \pi U_{2}) \\</script>
+
+<script type="math/tex; mode=display">Z_{1} = \sqrt{-2 \ln{U_{1}}} \sin (2 \pi U_{2})</script>
+
+<script type="math/tex; mode=display">則Z_{0}, Z_{1} 服從於正態分布</script>
+
+<p>上面的例子是有名的<code class="highlighter-rouge">Box-Muller Transform</code>，而其他的分布像是Beta分布、Dirichlet分布、指數分布、Gamma分布等等</p>
+
+<p>也都能用類似的變換方法得到sample</p>
+
+<hr />
+<h2 id="mcmc">MCMC</h2>
+<hr />
+
+<p>目前對於MCMC的理解，有兩處不太懂</p>
+
+<p>這個算法理論上是基於<code class="highlighter-rouge">馬克夫鏈</code>收斂的性質，也就是想達到一個平穩分布$\pi$使得%\pi P = \pi%</p>
+
+<p>我們一開始假設有一個轉移矩陣$Q$，但是並沒有達到<code class="highlighter-rouge">細緻平穩收斂</code></p>
+
+<script type="math/tex; mode=display">p(x^{\star})q(x^{\star} \rightarrow x) \neq p(x)q(x \rightarrow x^{\star})</script>
+
+<p>所以，我們改造轉移矩陣$Q$，把它拆解成兩個步驟: <code class="highlighter-rouge">proposal distribution</code>和<code class="highlighter-rouge">acceptance distribution</code></p>
+
+<p>因為這麼一來，我們可以改寫一下上式</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p為proposal distribution, Alpha為acceptance distribution
+</code></pre>
+</div>
+
+<script type="math/tex; mode=display">p(x^{\star})q(x^{\star} \rightarrow x) \alpha(x^{\star} \rightarrow x) = p(x)q(x \rightarrow x^{\star}) \alpha(x \rightarrow x^{\star})</script>
+
+<p>要使得上式成立的話，我們可以根據對稱性來取$\alpha$</p>
+
+<script type="math/tex; mode=display">\alpha(x^{\star} \rightarrow x) = p(x)q(x \rightarrow x^{\star})</script>
+
+<p>然後用新定義的${Q}’$改寫</p>
+
+<script type="math/tex; mode=display">p(x^{\star}){q}'(x^{\star} \rightarrow x) = p(x){q}'(x \rightarrow x^{\star})</script>
+
+<script type="math/tex; mode=display">{q}'(x^{\star} \rightarrow x) = q(x^{\star} \rightarrow x) \alpha(x^{\star} \rightarrow x)</script>
+
+<p>我們從均勻分布裡面隨機取一個值，如果小於接收率$\alpha$的話，我們就停留在原本的狀態</p>
+
+<p>反之，則能跳到下一個狀態</p>
+
+<p>這便是目前網路上大致對於<code class="highlighter-rouge">MCMC</code>算法的解釋</p>
+
+<p>雖然算法大致理解，但對於為何這樣的算法可以成立還是存在蠻多疑惑的</p>
+
+<ol>
+  <li>我懂馬克夫鏈最後會收斂，但為什麼可以用在這邊，我們現在的目的是要想辦法採樣一個很難採樣的distribution，所以我是在對這個distribution做轉移？並且假設它已經達到平穩分布？</li>
+  <li>為什麼用那樣接受率的算法，就能成功採樣出符合目標分布的樣本</li>
+  <li>我們的轉移矩陣要怎麼取？網路上的資料是說通常會使用平穩分布(normal distribution)，並且要小心均值和方差的選擇</li>
+</ol>
+
+<hr />
+
+<p><em>2018/7/19</em> 再回來看時，大概對MCMC算法更了解了，便可以來回答一下我自己以前的疑惑</p>
+
+<hr />
+
+<p>讓我們再一次好好整理整個MCMC的過程：</p>
+
+<ol>
+  <li>原本的p(x)很難採樣，所以我們設計了一個<code class="highlighter-rouge">Markov Process</code>來採樣</li>
+</ol>
+
+<script type="math/tex; mode=display">p(x_{a})q(x_{b} \mid x_{a}) ?=  p(x_{b})q(x_{a} \mid x_{b})</script>
+
+<p>這邊不要再把p當成<code class="highlighter-rouge">distribution</code>思考，他就只是一個<code class="highlighter-rouge">sample</code>的機率，我們要假設取樣p的機率符合細緻穩定平衡(detailed balance)</p>
+
+<p>所以加入<code class="highlighter-rouge">接受率</code>到式子裡面，變成</p>
+
+<script type="math/tex; mode=display">p(x_{a})q(x_{b} \mid x_{a}) \alpha(x_{b} \mid x_{a})=  p(x_{b})q(x_{a} \mid x_{b}) \alpha(x_{a} \mid x_{b})</script>
+
+<p>讓我試著解釋一下這個式子的意義，假設我們的$\alpha(x_{b} \mid x_{a})$是<code class="highlighter-rouge">0.4</code>，代表我們有0.4的機率能夠從$x_{a}$轉到$x_{b}$</p>
+
+<p>而在程式編寫上呢，我們會直接從<code class="highlighter-rouge">0到1的unifrom distribution</code>抓一個值出來，然後看他有沒有落在0.4以內的範圍裡</p>
+
+<p>有的話轉移成功，我們就把$x_{b}$當作成功的樣本，反之則把現在的樣本$x_{a}$當作樣本</p>
+
+<p>注意，在<code class="highlighter-rouge">MCMC</code>中每次採樣都不會被浪費掉</p>
+
+<hr />
+<h2 id="m-h-method">M-H Method</h2>
+<hr />
+
+<p>而<code class="highlighter-rouge">M-H Method</code>只是將上面的<code class="highlighter-rouge">接受率</code>稍微修改</p>
+
+<script type="math/tex; mode=display">p(x_{a})q(x_{b} \mid x_{a}) \frac{\alpha(x_{b}\mid x_{a})}{\alpha(x_{a} \mid x_{b})} =  p(x_{b})q(x_{a} \mid x_{b})</script>
+
+<script type="math/tex; mode=display">a = \frac{\alpha(x_{b}\mid x_{a})}{\alpha(x_{a} \mid x_{b})} = \frac{p(x_{b})q(x_{a} \mid x_{b})}{p(x_{a})q(x_{b} \mid x_{a})}</script>
+
+<p>所以我們可以把轉移的過程寫成</p>
+
+<script type="math/tex; mode=display">p(x_{a})q(x_{b} \mid x_{a})a(x_{a})q(x_{b} \mid x_{a})</script>
+
+<p>我們先從<code class="highlighter-rouge">proposal distribution</code>$q$中取一個sample，然後計算新的接受率(acceptance ratio)，如果大於等於一的話就接受</p>
+
+<p>反之，則以$a$的機率接受，方法也是跟上面一樣，從<code class="highlighter-rouge">uniform distribution</code>隨機取一個介於[0, 1]的數字</p>
+
+<hr />
+<h2 id="summary-of-m-h-method">Summary of M-H Method</h2>
+<hr />
+
+<p>https://www.quora.com/What-is-an-intuitive-explanation-of-the-Metropolis-Hastings-algorithm</p>
+
+<p>https://stats.stackexchange.com/questions/100121/mcmc-with-metropolis-hastings-algorithm-choosing-proposal</p>
+
+<p>https://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center round-corner">
+		<a href="/math/probability/2018/06/12/Gibbs-Sampling.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left round-corner" >
+		<p>[讀]Dirichlet Distribution</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
+		<p>
+			<p><em>2018-6-3</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>LDA Topic Model中，用到了一些機率分布，像是<code class="highlighter-rouge">Multinomial Distribution</code>, <code class="highlighter-rouge">Beta Distribution</code>, <code class="highlighter-rouge">Dirichlet Distribution</code></p>
+
+<p>不過對於這些分布並沒有一個完整的了解，我們參考<code class="highlighter-rouge">PRML</code>這本書並在這篇文章整理複習一下吧！</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center round-corner">
+		<a href="/math/probability/2018/06/03/s_Dirichlet.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left round-corner" >
+		<p>[讀]Probability Distribution</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
+		<p>
+			<p><em>2018-5-23</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>接續著我們前一篇求Maximum Likelihood的文章繼續，接下來我們要來看幾個常見的Distribution</p>
+
+<p>為了好好學習好，讓我們回到大二的機率課本：<em>FUNDAMENTALS OF PROBABILITY WITH STOCHASTIC PROCESSES</em></p>
+
+<p>裡面的第四章節到第九章節，從Random Variable開始講解，然後從Discrete Distribution到Continuous Distribution</p>
+
+<p>同時也提到一些常用的Distribution，像是Possion Distribution等等</p>
+
+<p>我們預計花一個禮拜的時間好好複習一下這邊</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center round-corner">
+		<a href="/math/probability/2018/05/23/s_distribution.html">Readmore</a>
+	</div>
+</div>
+
+	<!-- OK -->
+
+<div class="view-window view-color round-corner max-height-350">
+	<div class="view-section-attr view-section-title text-left round-corner" >
+		<p>[讀]Maximum Likelihood Estimation(MLE)</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
+		<p>
+			<p><em>2018-5-1</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>最近在努力複習機率</p>
+
+<p>當初資工大一大二時</p>
+
+<p>還記得我們要修線性代數、機率、離散數學、微積分等</p>
+
+<p>當那時候覺得資工為什麼要學這些數學</p>
+
+<p>不是只要會打程式就好了嗎？</p>
+
+<p>現在終於吃到苦頭</p>
+
+<p>在看Paper時，很多數學理論都是需要這些基礎的</p>
+
+<p>但也沒時間後悔了，只能趕快回頭補救</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center round-corner">
+		<a href="/math/probability/2018/05/01/s_MLE.html">Readmore</a>
+	</div>
+</div>
+
+
+		</div>
+		<div>
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>

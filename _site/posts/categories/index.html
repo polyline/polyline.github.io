@@ -7,81 +7,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chen Tse-Pei's Blog</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Font Awesome -->
-<script defer src="/res/js/fontawesome-all.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
-<!-- support MathJax -->
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 	</head>
 	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 		<header>
 			<!-- OK -->
 
-<nav class="navbar navbar-default nav-color">
 <div class="container">
-      <!-- the header of nav-bar, including the name and the stacking setting -->
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
-      </div>
-      <!--Menu-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-            <a class="nav-link active" href="/index.html">About Me</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
-            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/posts">All<span class="badge" onclick="">19</span></a>
-              <a class="dropdown-item" href="/posts/categories/cs">cs<span class="badge">9</span></a>
-              <a class="dropdown-item" href="/posts/categories/life">life<span class="badge">10</span></a>
-              <a class="dropdown-item" href="/posts/categories/jp">jp<span class="badge">0</span></a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/works">Works</a>
-        </li>
-      </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
 </div>
-</nav>
 
 		</header>
 		<main>
@@ -98,12 +82,17 @@ MathJax.Hub.Queue(function() {
 <ul>
 	
 	<li>
-		<a href="/cs/2018/06/03/s_Dirichlet.html">[讀]Dirichlet Distribution</a>
+		<a href="/cs/web/2018/06/18/PSQL%E8%B3%87%E6%96%99%E5%BA%AB%E7%AD%86%E8%A8%98.html">PSQL資料庫筆記</a>
 		<p></p>
 	</li>
 	
 	<li>
-		<a href="/cs/2018/05/31/s_nn.html">[讀]Neural Network</a>
+		<a href="/math/probability/2018/06/12/Gibbs-Sampling.html">[讀]Gibbs Sampling</a>
+		<p></p>
+	</li>
+	
+	<li>
+		<a href="/math/probability/2018/06/03/s_Dirichlet.html">[讀]Dirichlet Distribution</a>
 		<p></p>
 	</li>
 	
@@ -113,52 +102,22 @@ MathJax.Hub.Queue(function() {
 	</li>
 	
 	<li>
-		<a href="/jp/2018/05/25/%E5%96%AE%E5%AD%97%E8%A4%87%E7%BF%92.html">單字複習</a>
+		<a href="/math/probability/2018/05/23/s_distribution.html">[讀]Probability Distribution</a>
 		<p></p>
 	</li>
 	
 	<li>
-		<a href="/cs/2018/05/24/Naive-Bayes-Classifier.html">Naive Bayes Classifier</a>
+		<a href="/cs/web/2018/05/21/webpack%E7%AD%86%E8%A8%98.html">webpack筆記</a>
 		<p></p>
 	</li>
 	
 	<li>
-		<a href="/cs/2018/05/23/s_distribution.html">[讀]Probability Distribution</a>
+		<a href="/math/probability/2018/05/01/s_MLE.html">[讀]Maximum Likelihood Estimation(MLE)</a>
 		<p></p>
 	</li>
 	
 	<li>
-		<a href="/cs/2018/05/21/webpack%E7%AD%86%E8%A8%98.html">webpack筆記</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/cs/2018/05/16/EN-real-time-keyword-extraction.html">[EN] real-time keyword extraction -incomplete-</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/cs/2018/05/10/EN-NLP-Review.html">[EN] NLP Review -incomplete-</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/life/2018/05/01/%E4%BA%AC%E9%98%AA%E6%AB%BB%E8%8A%B1%E7%95%A2%E6%97%85-%E4%B8%AD.html">京阪櫻花畢旅-中</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/cs/2018/05/01/s_MLE.html">[讀]Maximum Likelihood Estimation(MLE)</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/life/2018/04/29/%E4%BA%AC%E9%98%AA%E6%AB%BB%E8%8A%B1%E7%95%A2%E6%97%85-%E4%B8%8A.html">京阪櫻花畢旅-上</a>
-		<p></p>
-	</li>
-	
-	<li>
-		<a href="/life/2018/04/26/HomeStay.html">栃木ホームステイ</a>
+		<a href="/jpstudy/2018/04/26/HomeStay.html">栃木ホームステイ</a>
 		<p></p>
 	</li>
 	
@@ -178,7 +137,7 @@ MathJax.Hub.Queue(function() {
 	</li>
 	
 	<li>
-		<a href="/cs/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">React.js筆記</a>
+		<a href="/cs/web/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">React.js筆記</a>
 		<p></p>
 	</li>
 	
@@ -188,7 +147,7 @@ MathJax.Hub.Queue(function() {
 	</li>
 	
 	<li>
-		<a href="/cs/2018/03/03/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">npm套件管理系統</a>
+		<a href="/cs/web/2018/03/03/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">npm套件管理系統</a>
 		<p></p>
 	</li>
 	
@@ -216,19 +175,19 @@ MathJax.Hub.Queue(function() {
 <!--This is the footer of the website-->
 
 <div class="footer-window container-fluid footer-color">
-	<div class="row text-center">
+	<div class="row">
 		<div class="footer-view footer-info col-md-4 text-left">
 				<div class="text-left">
-					<i class="fab fa-github-square account-icon"></i> 
+					<i class="fab fa-github-square fa-3x"></i> 
 					<span class="account">@polyline</span>
 				</div>
 				<div>
-					<i class="fab fa-instagram account-icon"></i> 
+					<i class="fab fa-instagram fa-3x"></i> 
 					<span class="account">@__tsu__pei</span>
 				</div>
 				<div>
-					<i class="fas fa-envelope account-icon" ></i> 
-					<span class="account">a5560648(@gmail)</span>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
 				</div>
 		</div>
 		<div class="footer-view footer-words col-md-4">
@@ -236,8 +195,8 @@ MathJax.Hub.Queue(function() {
 			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
 			<p>追尋自己想要的快樂</p>
 		</div>
-		<div class="footer-view footer-license col-md-4">
-			<p>Version 0.0.4</p>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
 		</div>
 	</div>
 </div>
@@ -259,7 +218,7 @@ log
 </html>
 
 <script>
-$(".badge").hover(function(){
+$(".badge-info").hover(function(){
     $(this).hide(1000);
 });
 

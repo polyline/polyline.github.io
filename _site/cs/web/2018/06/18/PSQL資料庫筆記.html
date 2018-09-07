@@ -1,0 +1,399 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>PSQL資料庫筆記</h1>
+</div>
+
+<div>
+
+	<a href="#" class="badge badge-success">cs</a>
+
+	<a href="#" class="badge badge-success">web</a>
+
+
+</div>
+
+<div class="article-content view-color">
+	<p><em>2018-6-18</em></p>
+
+<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
+
+<p>我們想做的網路應用，當有了前端的<code class="highlighter-rouge">React.js</code>跟後端的<code class="highlighter-rouge">express</code>後</p>
+
+<p>還缺少也很重要的一塊也就是<code class="highlighter-rouge">資料庫</code></p>
+
+<p>在這邊我們使用<code class="highlighter-rouge">psql</code>來做我們的資料，安裝的過程我們就先省略</p>
+
+<p>這篇文章主要介紹指令的部分，和稍微重溫一下資料庫的重點概念</p>
+
+<!--more-->
+
+<hr />
+<h2 id="常用指令">常用指令</h2>
+<hr />
+
+<p>我們可以鍵入</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>psql
+</code></pre>
+</div>
+
+<p>進入資料庫中。成功進入後，會發現前方的指標變成</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mysq=&gt;
+或
+mysq=#
+</code></pre>
+</div>
+
+<p>若是想要跳出資料庫模式</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>\q
+</code></pre>
+</div>
+
+<p>列出所有的Table</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>\d
+\dt
+</code></pre>
+</div>
+
+<p>列出table的結構</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>\d {tablename}
+</code></pre>
+</div>
+
+<p>列出目前資料庫名字</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT current_database();
+</code></pre>
+</div>
+
+<p>列出目前使用者</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT user;
+</code></pre>
+</div>
+
+<hr />
+<h2 id="資料庫概念">資料庫概念</h2>
+<hr />
+
+<div class="highlighter-rouge"><pre class="highlight"><code>每個資料表都是一個命名的行的集合
+每一行由一組相同的命名字串組成
+而且每一字串都有一特定的類型。雖然每字串在每行裡的位置是固定的
+但一定要記住 SQL 並未對行在資料表中的順序做任何保證（但您可以對它們進行明確的排序進行顯示）
+--引自PSQL官方文件
+</code></pre>
+</div>
+
+<p>上面說明了一個重點，SQL資料庫是<code class="highlighter-rouge">無序的set</code>資料結構</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>CREATE TABLE weather (
+city            varchar(80),
+temp_lo         int,           -- 最低氣溫
+temp_hi         int,           -- 最高氣溫
+prcp            real,          -- 降水量
+date            date
+);
+
+您可以在 SQL 命令中自由使用空白（也就是空格，tab，和換行符)
+這就意味著您可以用和上面不同的對齊方式鍵入命令
+兩個劃線("--") 引入註釋
+任何跟在它後面的東西直到該行的結尾都被忽略
+SQL 是對關鍵字和標識符大小寫不敏感的語言，只有在標識符用雙引號包圍時才能保留它們的大小寫屬性（上面沒有這麼做
+</code></pre>
+</div>
+
+<p>在使用SQL時，常常遇到輸入格式的問題，這邊明確的告訴我們分隔方式可以包含空格、tab、換行三種方式</p>
+
+<p>並且SQL對大小寫是不敏感的，除非特別用雙引號括起來</p>
+
+<p>然後一個指令的結束一定要用<code class="highlighter-rouge">分號</code>才算結束</p>
+
+<hr />
+<h2 id="sql指令">SQL指令</h2>
+<hr />
+
+<p><code class="highlighter-rouge">CREATE</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>CREATE TABLE {table name}{
+	{attr 1}	{data type},
+	{attr 2}	{data type},
+	...
+};
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">INSERT INTO</code></p>
+
+<p>可以仰賴隱含順序</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>INSERT INTO {table name} VALUES ({value 1}, {value 2}, ...);
+</code></pre>
+</div>
+
+<p>也可以指名順序</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>INSERT INTO {table name} ({attr 1}, {attr 2}, ...) VALUES ({value 1}, {value 2}, ...);
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">SELECT</code></p>
+
+<p>選擇表格中的所有項</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT * FROM {table name};
+</code></pre>
+</div>
+
+<p>或者特定幾項</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT {attr 1}, {attr 2} FROM {table name};
+</code></pre>
+</div>
+
+<p>也可以經過運算後，重新命名新的項然後輸出</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT ({attr 1} + {attr 2})/2 AS avg FROM {table name};
+</code></pre>
+</div>
+
+<p>加入判斷式<code class="highlighter-rouge">WHERE</code>，在這邊注意到幾件事</p>
+
+<ol>
+  <li>WHERE在SELECT的最後面</li>
+  <li>等號只有一個</li>
+  <li>可以參雜AND跟OR</li>
+</ol>
+
+<p>所以舉例來說：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT * FROM {table name} WHERE 
+{attr 1} = {value 1} AND {attr 2} &gt; {value 2};
+</code></pre>
+</div>
+
+<p>也可以希望結果按照某種排序</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT * FROM {table name} ORDER BY {attr 1}, {attr 2};
+</code></pre>
+</div>
+
+<p>在搜尋的屬性前面加<code class="highlighter-rouge">DISTINCT</code>可以消除重複的項</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>SELECT DISTINCT {attr 1} FROM {table name};
+</code></pre>
+</div>
+
+<hr />
+
+<p>其他還有更多指令，等我們真的用到的時候再加入紀錄</p>
+
+<hr />
+<h2 id="express與psql">express與psql</h2>
+<hr />
+
+<p>我們想要在使用<code class="highlighter-rouge">express</code>的專案中連接資料庫，建議可以參考<a href="https://blog.csdn.net/zgljl2012/article/details/53718998">這篇</a></p>
+
+<p>首先必須安裝資料包<code class="highlighter-rouge">pg</code></p>
+
+<p>連接的過程中，我們引進資料包，然後定義一些連線所需的資料</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var pg = require('pg')
+var config = {
+	user:"postgres",
+	database:"ghost",
+	password:"123456",
+	port:5432,
+}
+</code></pre>
+</div>
+
+<p>再來，我們使用一個<code class="highlighter-rouge">pool</code>的方法來連接資料庫</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var pool = new pg.Pool(config);
+</code></pre>
+</div>
+
+<p>之後就能透過<code class="highlighter-rouge">pool.connect()</code>的方法來連接資料庫並下<code class="highlighter-rouge">SQL指令</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pool.connect(function(err, client, done){
+	if(err){
+
+	}
+	client.query(...);
+		...
+	});
+</code></pre>
+</div>
+
+<p>基本上架構會是這樣，連接成功後，我們可以用<code class="highlighter-rouge">client</code>來做想要的<code class="highlighter-rouge">query</code></p>
+
+<p>舉例來說，我們進行一個<code class="highlighter-rouge">INSERT INTO</code>的指令，完成後執行<code class="highlighter-rouge">done</code>把client還給pool</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>client.query('INSERT INTO users (name, age) VALUES ($1, $2);', [user.username, user.age], function(err, result){
+	done()
+	if(err){
+		return console.error('無法插入數據到資料庫', err);
+	}
+})
+</code></pre>
+</div>
+
+<hr />
+<h2 id="參考來源">參考來源</h2>
+<hr />
+
+<p><a href="http://twpug.net/docs/postgresql-doc-8.0-zh_TW/tutorial.html">PostgreSQL文件</a></p>
+
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>

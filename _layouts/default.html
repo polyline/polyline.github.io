@@ -7,60 +7,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chen Tse-Pei's Blog</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Font Awesome -->
-<script defer src="{{ site.baseurl }}/res/js/fontawesome-all.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- My CSS -->
 <link href="{{ site.baseurl }}/res/css/common.css" rel="stylesheet">
 
-<!-- support MathJax -->
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 	</head>
 	<body>		
+			{% include fixed-elements/add-external-scripts.html %}
 		<header>
-			{% include nav-bar.html %}
+			{% include fixed-elements/nav-bar.html %}
 		</header>
 		<main>
 			{{content}}
 		</main>
 		<footer class="footer">
-			{% include footer.html %}
+			{% include fixed-elements/footer.html %}
 		</footer>
 		</div>
 	</body>
 </html>
 
 <script>
-$(".badge").hover(function(){
+$(".badge-info").hover(function(){
     $(this).hide(1000);
 });
 

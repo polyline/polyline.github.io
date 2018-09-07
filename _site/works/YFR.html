@@ -7,81 +7,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chen Tse-Pei's Blog</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Font Awesome -->
-<script defer src="/res/js/fontawesome-all.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
-<!-- support MathJax -->
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 	</head>
 	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 		<header>
 			<!-- OK -->
 
-<nav class="navbar navbar-default nav-color">
 <div class="container">
-      <!-- the header of nav-bar, including the name and the stacking setting -->
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
-      </div>
-      <!--Menu-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-            <a class="nav-link active" href="/index.html">About Me</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
-            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/posts">All<span class="badge" onclick="">19</span></a>
-              <a class="dropdown-item" href="/posts/categories/cs">cs<span class="badge">9</span></a>
-              <a class="dropdown-item" href="/posts/categories/life">life<span class="badge">10</span></a>
-              <a class="dropdown-item" href="/posts/categories/jp">jp<span class="badge">0</span></a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/works">Works</a>
-        </li>
-      </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
 </div>
-</nav>
 
 		</header>
 		<main>
@@ -113,6 +97,91 @@ MathJax.Hub.Queue(function() {
 <!--more-->
 
 <hr />
+<h2 id="研究簡介">研究簡介</h2>
+<hr />
+
+<p>如上述所言，我的研究主題是對留言進行分析，也就是對短文本做主題模型或者關鍵字提取</p>
+
+<p>所以這個任務主要會牽扯到兩件事情：</p>
+
+<ol>
+  <li>短文本(short text)</li>
+  <li>帶有時間訊息的資料(data with timestamp)</li>
+</ol>
+
+<p>另外，對於留言(comments)這種型態的資料，具有跟一般的長文本資料，或者短文本(ex. Tweet)不同的性質</p>
+
+<ol>
+  <li>非常短(extremely short)</li>
+  <li>語法結構不嚴謹(without strict syntax structure)</li>
+  <li>用語較為通俗(casual form)</li>
+  <li>線型結構(thread-structure)</li>
+  <li>與主題無關的留言(comments not related to the topic)</li>
+</ol>
+
+<p>接下來，我想要更詳細的說明我的研究</p>
+
+<p>我想要處理的資料型態是<code class="highlighter-rouge">帶時間資訊的留言</code>，所以最直接的應用是直播影片的留言</p>
+
+<p>如此一來，能夠讓直播主(host)能夠即時掌握留言區的主題</p>
+
+<p>也或者是，在一個討論串中，例如：歷時兩天的討論串</p>
+
+<p>關於這個討論串的主題的變化、走向</p>
+
+<p>那我想要的結果是，給定一個區間的留言，我能判斷出這個區間的主題或關鍵字是什麼</p>
+
+<p>找主題的話，那麼第一個想到就是套用主題模型(Topic Model)</p>
+
+<p>找關鍵字的話，就得考慮一些關鍵字(Keyword Extraction)的方法</p>
+
+<hr />
+<h3 id="topic-model">Topic Model</h3>
+<hr />
+
+<p>說到使用LDA主題模型，我們發現LDA Topic Model並不適合使用於短文本</p>
+
+<p>因為在Gibbs Sampling時，我們一開始隨機賦予每個字一個主題，然後不斷取樣直到收斂</p>
+
+<p>在LDA中，我們假設每個文件都有一個主題分布，然後每個字都有一個主題</p>
+
+<p>所以，我們最後取樣出來的結果應該是會符合這個主題分布的</p>
+
+<p>但是，在短文本中，文章過短(假設只有50個字)，那我們取樣出來的分布就很難符合主題分布</p>
+
+<p>我們說，在這個過程中喪失了<code class="highlighter-rouge">word co-occurence</code>的關係</p>
+
+<p>因此，就有人想出了<code class="highlighter-rouge">mixture of unigrams</code>的方法</p>
+
+<p>假設全部的文章都是同一個主題分布，而每個文章只有一個主題(對照LDA是每個字有一個主題)</p>
+
+<p>這樣的假設克服了短文本稀疏性的問題(text sparsity)，因為是所有corpus裡面的字來完成這個主題分布</p>
+
+<p>但這樣的假設卻不太符合實際，就算是短文本(ex. Tweet)，文章中也可能有多種主題</p>
+
+<p>所以在較長的文本中<code class="highlighter-rouge">mixture of unigrams</code>的表現會比較差</p>
+
+<p>而<code class="highlighter-rouge">Biterm Topic Model</code>則巧妙的同時解決這兩件問題</p>
+
+<p>首先讓我們先定義什麼是<code class="highlighter-rouge">Biterm</code>，也就是文章中單詞兩兩的組合，舉例來說</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Tokyo Tech in Tokyo
+</code></pre>
+</div>
+
+<p>在這裡，我們就有$C_{2}^{4}$種組合(ex. Tokyo Tech, Tech in, Tech Tokyo, …)，而它們構成了<code class="highlighter-rouge">Biterm Set</code></p>
+
+<p><em>註：在這邊應該要先去掉stop words</em></p>
+
+<p>再來，我們模擬一個<code class="highlighter-rouge">Biterm</code>的生成過程，整個corpus只有一個主題分布，每次生成一個Biterm時，從主題分布中取一個主題</p>
+
+<p>然後對這個主題的詞項分布取兩個字$W_{i}, W_{j}$</p>
+
+<p>這麼一來，一個短文本中，還是可能有多種不同主題，而且同時保留了詞跟詞之間的<code class="highlighter-rouge">co-occurence</code>的關係</p>
+
+<p>但在這邊我們同時有了另一個假設，我們假設一個文本的主題分布，會等於<code class="highlighter-rouge">Biterm</code>的主題分布</p>
+
+<hr />
 <h2 id="心路歷程">心路歷程</h2>
 <hr />
 
@@ -134,6 +203,7 @@ MathJax.Hub.Queue(function() {
   <li>Fundamentals of Probability</li>
   <li>Pytorch</li>
   <li>LDA Topic Model</li>
+  <li>Gibbs Sampling</li>
 </ul>
 
 <p><code class="highlighter-rouge">going to do</code></p>
@@ -144,9 +214,129 @@ MathJax.Hub.Queue(function() {
   <li>Dynamic LDA Topic Model</li>
 </ul>
 
-<p>其實在來日本之前，我沒有認真的做個研究，甚至也沒完整的看過一篇論文，說要問老師問題，但根本連怎麼問都不知道</p>
+<hr />
+<h2 id="資源一籮筐">資源一籮筐</h2>
+<hr />
 
-<p>所以在前幾個月的時候，根本跟廢物沒兩樣，只能不斷的上網刷教學影片，但沒有目的的學習，很快就都忘記了</p>
+<ol>
+  <li><a href="https://tedboy.github.io/nlps/">nlp的一些工具包整理</a></li>
+  <li><a href="http://www.52nlp.cn/tag/gensim">nlp 使用wiki+gensim, scrapy文章</a></li>
+</ol>
+
+<hr />
+<h2 id="研究歷程">研究歷程</h2>
+<hr />
+
+<p><code class="highlighter-rouge">stage</code></p>
+
+<p>想弄懂<code class="highlighter-rouge">LDA Model</code>，但實在牽扯到太多數學，我已經參考了所有能參考的英文、中文資料，包含</p>
+
+<ol>
+  <li>原始論文</li>
+  <li><a href="https://www.youtube.com/watch?v=FkckgwMHP2s">prof. David’s speech about Dynamic LDA Topic Models</a></li>
+  <li>LDA數學八卦</li>
+  <li>徐亦達教授的MCMC算法影片</li>
+  <li>無數的博客</li>
+</ol>
+
+<p>我還是抓不太到整個LDA的精髓，所以我想這該歸咎於對於<code class="highlighter-rouge">機率</code>的不熟悉，同時也許直接從代碼下手能看到我沒看見的東西</p>
+
+<p><code class="highlighter-rouge">stage</code></p>
+
+<p>在這個階段，我想要好好地想一下我的研究的過程、目的到底是什麼</p>
+
+<ol>
+  <li>我要做的是關於直播評論的summary，所以第一，我要先有這些數據，所以不妨先去抓一下Youtube跟Facebook的直播數據</li>
+  <li>其實現在做的topic model跟我原本要做的方法是兩種不同的方法，我原本的方法是從這些評論中抓取關鍵字，然後作為主題，但現在的主題model是把這些字都賦予一個主題，然後利用LDA Topic Model的方法來歸類出一個時段的主要主題</li>
+</ol>
+
+<p><code class="highlighter-rouge">stage</code></p>
+
+<p>現在對於LDA還有哪些疑惑？</p>
+
+<ol>
+  <li>所謂的吉普斯採樣跟變分算法，到底是怎麼做到的</li>
+  <li>不太懂最後LDA給出的算式是怎樣</li>
+  <li>LDA給的likelihood，不太清楚為什麼可以先得到每個主題的count</li>
+</ol>
+
+<p><code class="highlighter-rouge">stage</code></p>
+
+<p>關於LDA的變種，現在覺得最有相關的是</p>
+
+<ol>
+  <li>DLDA</li>
+  <li>RLDA</li>
+</ol>
+
+<hr />
+<h2 id="練習使用genism的lda-model">練習使用genism的LDA Model</h2>
+<hr />
+
+<p><code class="highlighter-rouge">1~2 day</code></p>
+
+<p>這個任務主要讓我了解一下LDA的整個運作過程</p>
+
+<p>對於LDA來說，最直觀的用途應該是拿來分類<code class="highlighter-rouge">長文本</code>，很幸運的，我們在網路上找到一個<a href="https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/">很完整的Tutorial</a></p>
+
+<p>在這個<code class="highlighter-rouge">tutorial</code>中，除了能學會如何用LDA之外，我們還能學到一些在<code class="highlighter-rouge">nlp</code>中常見的工具包的用法</p>
+
+<p>首先，我們來安裝所有會用到的工具包</p>
+
+<ol>
+  <li>re</li>
+  <li>numpy</li>
+  <li>pandas</li>
+  <li>pprint</li>
+  <li>gensim</li>
+  <li>spacy</li>
+  <li>pyLDAvis</li>
+  <li>matplotlib</li>
+  <li>(optional) logging
+10.(optional) warnings</li>
+</ol>
+
+<p>這篇文章提到，影響我們能不能得到好的、有區別性的topic結果，取決於以下這些條件</p>
+
+<ol>
+  <li>The quality of text processing.</li>
+  <li>The variety of topics the text talks about.</li>
+  <li>The choice of topic modeling algorithm.</li>
+  <li>The number of topics fed to the algorithm.</li>
+  <li>The algorithms tuning parameters.</li>
+</ol>
+
+<hr />
+
+<p><code class="highlighter-rouge">bug疑難雜症處理</code></p>
+
+<p>我們在進行到import <code class="highlighter-rouge">Mallet LDA package</code>時遇到不知名的問題，我們一直無法成功import package</p>
+
+<p>所以我歸納有幾種可能</p>
+
+<ol>
+  <li>java沒有安裝好</li>
+  <li>路徑寫錯誤</li>
+  <li>路徑上的權限問題</li>
+</ol>
+
+<p>結論是第一種，<code class="highlighter-rouge">java</code>在官網的解說並沒有寫得很清楚，而且如果使用官網的安裝後</p>
+
+<p>我們在<code class="highlighter-rouge">terminal</code>上也沒辦法直接用安裝好的新版本</p>
+
+<p>所以會建議直接使用<code class="highlighter-rouge">brew</code>來<a href="https://stackoverflow.com/questions/24342886/how-to-install-java-8-on-mac">安裝</a></p>
+
+<p>然後重新打開<code class="highlighter-rouge">terminal</code>後就能夠順利執行了</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>java -version
+
+java version "10.0.1" 2018-04-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.1+10)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.1+10, mixed mode)
+</code></pre>
+</div>
+
+<hr />
 
 
 </div>
@@ -164,19 +354,19 @@ MathJax.Hub.Queue(function() {
 <!--This is the footer of the website-->
 
 <div class="footer-window container-fluid footer-color">
-	<div class="row text-center">
+	<div class="row">
 		<div class="footer-view footer-info col-md-4 text-left">
 				<div class="text-left">
-					<i class="fab fa-github-square account-icon"></i> 
+					<i class="fab fa-github-square fa-3x"></i> 
 					<span class="account">@polyline</span>
 				</div>
 				<div>
-					<i class="fab fa-instagram account-icon"></i> 
+					<i class="fab fa-instagram fa-3x"></i> 
 					<span class="account">@__tsu__pei</span>
 				</div>
 				<div>
-					<i class="fas fa-envelope account-icon" ></i> 
-					<span class="account">a5560648(@gmail)</span>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
 				</div>
 		</div>
 		<div class="footer-view footer-words col-md-4">
@@ -184,8 +374,8 @@ MathJax.Hub.Queue(function() {
 			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
 			<p>追尋自己想要的快樂</p>
 		</div>
-		<div class="footer-view footer-license col-md-4">
-			<p>Version 0.0.4</p>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
 		</div>
 	</div>
 </div>
@@ -207,7 +397,7 @@ log
 </html>
 
 <script>
-$(".badge").hover(function(){
+$(".badge-info").hover(function(){
     $(this).hide(1000);
 });
 

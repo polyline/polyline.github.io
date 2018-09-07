@@ -2,9 +2,12 @@
 layout: home_post
 ---
 
-{% for post in site.posts %}
-	{% include view-window-post.html post=post %}
-{% endfor %}
+{% include post-overview-page/category-box.html title="程式筆記" icon="fas fa-code" description="包含NLP、網站前後端、ML等相關學習整理" name="progress-cs" type="cs"%}
 
+{% include post-overview-page/category-box.html title="留學記事" icon="fas fa-walking" description="2017-2018在日本東京留學的紀事" name="progress-jpstudy" type="jpstudy"%}
 
+{% include post-overview-page/category-box.html title="數學學習" icon="fas fa-infinity" description="資工領域相關的數學：線性代數、機率、機器學習等" name="progress-math" type="math"%}
 
+{% include post-overview-page/category-box.html title="生活牢騷" icon="fas fa-edit" description="各階段對於周遭人事物的想法" name="progress-life" type="life"%}
+
+{% include script/post-overview-page.html %}

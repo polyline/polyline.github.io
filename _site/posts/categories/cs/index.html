@@ -7,81 +7,65 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chen Tse-Pei's Blog</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- Font Awesome -->
-<script defer src="/res/js/fontawesome-all.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
-<!-- support MathJax -->
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 	</head>
 	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 		<header>
 			<!-- OK -->
 
-<nav class="navbar navbar-default nav-color">
 <div class="container">
-      <!-- the header of nav-bar, including the name and the stacking setting -->
-      <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
-      </div>
-      <!--Menu-->
-      <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-            <a class="nav-link active" href="/index.html">About Me</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articles</a>
-            <div class="dropdown-menu dropdown-color" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/posts">All<span class="badge" onclick="">19</span></a>
-              <a class="dropdown-item" href="/posts/categories/cs">cs<span class="badge">9</span></a>
-              <a class="dropdown-item" href="/posts/categories/life">life<span class="badge">10</span></a>
-              <a class="dropdown-item" href="/posts/categories/jp">jp<span class="badge">0</span></a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/works">Works</a>
-        </li>
-      </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
 </div>
-</nav>
 
 		</header>
 		<main>
@@ -99,121 +83,29 @@ MathJax.Hub.Queue(function() {
 
 <div class="view-window view-color round-corner max-height-350">
 	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Dirichlet Distribution</p>
+		<p>PSQL資料庫筆記</p>
 	</div>
 	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
 		<p>
-			<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>LDA Topic Model中，用到了一些機率分布，像是<code class="highlighter-rouge">Multinomial Distribution</code>, <code class="highlighter-rouge">Beta Distribution</code>, <code class="highlighter-rouge">Dirichlet Distribution</code></p>
-
-<p>不過對於這些分布並沒有一個完整的了解，我們參考<code class="highlighter-rouge">PRML</code>這本書並在這篇文章整理複習一下吧！</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/06/03/s_Dirichlet.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Neural Network</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-31</em></p>
+			<p><em>2018-6-18</em></p>
 
 <hr />
 <h2 id="介紹">介紹</h2>
 <hr />
 
-<p>現在邁入<code class="highlighter-rouge">Speech and Language Processing</code>這本書的<code class="highlighter-rouge">第八章Neural Networks and Neural Language Models</code></p>
+<p>我們想做的網路應用，當有了前端的<code class="highlighter-rouge">React.js</code>跟後端的<code class="highlighter-rouge">express</code>後</p>
 
-<p>這章的內容跟之前在<code class="highlighter-rouge">Coursera</code>上過的<code class="highlighter-rouge">Machine Learning</code>課程有很大的重疊，所以可以當作複習來看</p>
+<p>還缺少也很重要的一塊也就是<code class="highlighter-rouge">資料庫</code></p>
 
-<p>這篇文章中，會盡量整理一下重要的觀念、術語、公式</p>
+<p>在這邊我們使用<code class="highlighter-rouge">psql</code>來做我們的資料，安裝的過程我們就先省略</p>
 
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/31/s_nn.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>Naive Bayes Classifier</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-24</em></p>
-
-<hr />
-<h2 id="介紹">介紹</h2>
-<hr />
-
-<p>這邊是第二次看到Naive Bayes Classifier</p>
-
-<p>第一次是在學Machine Learning的時候，給定已知的數據來預估未知的數據</p>
-
-<p>使用Naive Bayes Classifier有幾個優點，在我們缺少某個資料(missing values)時還是能夠計算出相對應的機率</p>
-
-<p>它有一個假設是，各個feature之間是獨立(independent)，稱為Naive Bayes Assumption</p>
-
-<p>用在確定獨立的feature當然是沒問題，但實驗證明用在可能依賴的features也有不錯的表現</p>
-
-<p>另外，在NLP這邊，我們想把Naive Bayes Classifier運用在Text categorization task of sentiment analysis上</p>
-
-<p>如果給定一個文件，我們能否判斷出它屬於哪個類別</p>
-
-<p>最常見是，判斷一個文件是positive還是negative</p>
+<p>這篇文章主要介紹指令的部分，和稍微重溫一下資料庫的重點概念</p>
 
 
 		</p>
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/24/Naive-Bayes-Classifier.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Probability Distribution</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-23</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>接續著我們前一篇求Maximum Likelihood的文章繼續，接下來我們要來看幾個常見的Distribution</p>
-
-<p>為了好好學習好，讓我們回到大二的機率課本：<em>FUNDAMENTALS OF PROBABILITY WITH STOCHASTIC PROCESSES</em></p>
-
-<p>裡面的第四章節到第九章節，從Random Variable開始講解，然後從Discrete Distribution到Continuous Distribution</p>
-
-<p>同時也提到一些常用的Distribution，像是Possion Distribution等等</p>
-
-<p>我們預計花一個禮拜的時間好好複習一下這邊</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/23/s_distribution.html">Readmore</a>
+		<a href="/cs/web/2018/06/18/PSQL%E8%B3%87%E6%96%99%E5%BA%AB%E7%AD%86%E8%A8%98.html">Readmore</a>
 	</div>
 </div>
 
@@ -250,126 +142,7 @@ MathJax.Hub.Queue(function() {
 		</p>
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/21/webpack%E7%AD%86%E8%A8%98.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[EN] real-time keyword extraction -incomplete-</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
-<h2 id="going-to-do">Going to do!</h2>
-<hr />
-
-<ol>
-  <li>複習之前那篇論文，然後跟現在讀的這篇結合，看如何應用在live streaming</li>
-  <li>現在的state-of-the-art是找出最大的subgraph，並且在其中持續刪除最低分的（the lowerest degree），可能存在改進空間的是，關於sliding window設定的問題，還有文章太短(comment)的問題
-    <ol>
-      <li>文本太短，使用sliding window很困難</li>
-      <li></li>
-    </ol>
-  </li>
-</ol>
-
-<p>Problems of meeting scripts</p>
-<ol>
-  <li>multi-party</li>
-  <li>short</li>
-</ol>
-
-<p>Problems of live streaming</p>
-<ol>
-  <li>need to have enough comments data</li>
-  <li>comments could be incomplete</li>
-</ol>
-
-<p>把目的再強化一點，這樣可以解決什麼問題</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/16/EN-real-time-keyword-extraction.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[EN] NLP Review -incomplete-</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
-<h2 id="preview">Preview</h2>
-<hr />
-
-<blockquote>
-  <p>In this articles, I will cover a few good articles that I found on the internet. The goal is to orgnize the resources and notes in the process of learning NLP. The followings are the index of the article.</p>
-</blockquote>
-
-<ol>
-  <li>Pre-requirments - Suggest what kinds of knowledge are recommanded to gain before starting NLP task</li>
-  <li>Resources - The resources that I used to learn NLP</li>
-  <li>Read-Papers - I will show a short summary for the papers I read before. Some will have detailed introduction articles</li>
-  <li>Concepts - I would like to collect some important concepts related to NLP tasks in this section</li>
-  <li>Implementation - In order to make these theories into real work, what kinds of knowledge do we need.</li>
-  <li>Experiment Results - In this section, I will show the experiments that I made before.</li>
-</ol>
-
-<p>Why I am writting this article in English? It’s because of terminology. I prefer to directly using the original English term to specify the concept or word. Also, Writing in English will be easy to be shared in the world.</p>
-
-<p>Let’s get started!</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/10/EN-NLP-Review.html">Readmore</a>
-	</div>
-</div>
-
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>[讀]Maximum Likelihood Estimation(MLE)</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p><em>2018-5-1</em></p>
-
-<hr />
-<h2 id="前言">前言</h2>
-<hr />
-
-<p>最近在努力複習機率</p>
-
-<p>當初資工大一大二時</p>
-
-<p>還記得我們要修線性代數、機率、離散數學、微積分等</p>
-
-<p>當那時候覺得資工為什麼要學這些數學</p>
-
-<p>不是只要會打程式就好了嗎？</p>
-
-<p>現在終於吃到苦頭</p>
-
-<p>在看Paper時，很多數學理論都是需要這些基礎的</p>
-
-<p>但也沒時間後悔了，只能趕快回頭補救</p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/05/01/s_MLE.html">Readmore</a>
+		<a href="/cs/web/2018/05/21/webpack%E7%AD%86%E8%A8%98.html">Readmore</a>
 	</div>
 </div>
 
@@ -405,7 +178,7 @@ MathJax.Hub.Queue(function() {
 		</p>
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">Readmore</a>
+		<a href="/cs/web/2018/03/07/React.js%E7%AD%86%E8%A8%98.html">Readmore</a>
 	</div>
 </div>
 
@@ -435,7 +208,7 @@ MathJax.Hub.Queue(function() {
 		</p>
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/2018/03/03/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">Readmore</a>
+		<a href="/cs/web/2018/03/03/npm%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.html">Readmore</a>
 	</div>
 </div>
 
@@ -452,19 +225,19 @@ MathJax.Hub.Queue(function() {
 <!--This is the footer of the website-->
 
 <div class="footer-window container-fluid footer-color">
-	<div class="row text-center">
+	<div class="row">
 		<div class="footer-view footer-info col-md-4 text-left">
 				<div class="text-left">
-					<i class="fab fa-github-square account-icon"></i> 
+					<i class="fab fa-github-square fa-3x"></i> 
 					<span class="account">@polyline</span>
 				</div>
 				<div>
-					<i class="fab fa-instagram account-icon"></i> 
+					<i class="fab fa-instagram fa-3x"></i> 
 					<span class="account">@__tsu__pei</span>
 				</div>
 				<div>
-					<i class="fas fa-envelope account-icon" ></i> 
-					<span class="account">a5560648(@gmail)</span>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
 				</div>
 		</div>
 		<div class="footer-view footer-words col-md-4">
@@ -472,8 +245,8 @@ MathJax.Hub.Queue(function() {
 			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
 			<p>追尋自己想要的快樂</p>
 		</div>
-		<div class="footer-view footer-license col-md-4">
-			<p>Version 0.0.4</p>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
 		</div>
 	</div>
 </div>
@@ -495,7 +268,7 @@ log
 </html>
 
 <script>
-$(".badge").hover(function(){
+$(".badge-info").hover(function(){
     $(this).hide(1000);
 });
 

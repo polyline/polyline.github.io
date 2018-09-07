@@ -1,0 +1,541 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>React.js筆記</h1>
+</div>
+
+<div>
+
+	<a href="#" class="badge badge-success">cs</a>
+
+	<a href="#" class="badge badge-success">web</a>
+
+
+</div>
+
+<div class="article-content view-color">
+	<p><em>2018-3-7</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>由於最近在進行的專案中，我打算使用<code class="highlighter-rouge">React.js</code>來完成前端的部分</p>
+
+<p>所以開始學習<code class="highlighter-rouge">React.js</code>，當開始學習後</p>
+
+<p>各式各樣的<code class="highlighter-rouge">名詞</code>跟<code class="highlighter-rouge">套件</code>真是嚇壞我</p>
+
+<p>React.js, MVC, JSX, Flux, Redux, webpack, node.js, express, bootstrap, sass…等等族繁不及備載</p>
+
+<p>總之，我想要一步步慢慢地了解這些</p>
+
+<p>這篇文章可能會有很多錯誤，因為我是使用自己的觀點去解釋</p>
+
+<p>請不吝告訴我，真理是越辯越明，希望我們能互相學習: <code class="highlighter-rouge">a5560648@gmail.com</code></p>
+
+<!--more-->
+
+<hr />
+<h2 id="目錄">目錄</h2>
+<hr />
+
+<ol>
+  <li>React.js是什麼</li>
+  <li>render()</li>
+  <li>什麼時候用function，什麼時候用class</li>
+  <li>JSX語法</li>
+  <li>監聽事件寫法</li>
+  <li>父組件與子組件的溝通</li>
+  <li>在React.js中(在JSX語法中)，要注意的HTML屬性寫法</li>
+  <li>驗證傳入物件類別(Verify Type)</li>
+  <li>習慣的命名規則</li>
+</ol>
+
+<p><em>2018.3.7</em></p>
+
+<hr />
+<h2 id="reactjs是什麼">React.js是什麼？</h2>
+<hr />
+
+<p>以前傳統的前端撰寫方式，是要先寫好HTML，然後再由JavaScript做操作</p>
+
+<p>但是這樣的方式導致維護不易，並且相似的元件<code class="highlighter-rouge">重用性</code>不高</p>
+
+<p>而React.js的理念則是建立一層<code class="highlighter-rouge">虛擬的組件邏輯</code>來管理HTML DOM元素</p>
+
+<p>HTML標籤則退居僅剩<code class="highlighter-rouge">呈現UI</code>的功能，<code class="highlighter-rouge">架構UI</code>的功能則改由React.js來做操作</p>
+
+<p>以下是從<a href="https://exma-square.gitbooks.io/mobious-cookbook/content/Front-End/ReactJS/Intro.html">mobious-cookbook</a>所節錄的React.js介紹</p>
+
+<blockquote>
+  <p>為什麼需要React.js
+基於 HTML 的前端 UI 開發正變得越來越複雜，其本質問題基本上都可以歸結於如何將後端與使用者輸入的操作資料能夠動態且高效的反映到複雜的 UI 上，並且有系統的進行前端的資料管理以及測試。而來自 Facebook 的 React 正是完全根據此問題而生的一個解決方案。相較於傳統的前端開發，React 開闢了一個相當另類的途徑，實現了前端 UI 的高效率、高性能開發</p>
+</blockquote>
+
+<blockquote>
+  <p>React.js與傳統前端開發方法比較
+在傳統的前端開發模式中，HTML 只扮演了「定義 UI 最初的基礎 DOM 結構」的角色，所有在 JavaScript 中進行的 DOM 操作都是基於最初定義好的 DOM 再另外堆疊上去的變更，這讓前端 UI 程式碼的執行結果變得難以預測與維護。而 React 希望讓 HTML 退居為建構 UI 的小細胞，並在其之上建構一層虛擬的組件邏輯來管理 UI，這讓前端 UI 程式碼的的可預測性和可維護性大幅提升，這正是 React 最有價值之處 ── 聲明式的，直觀的定義方式</p>
+</blockquote>
+
+<p>而在React.js中的那層虛擬組件邏輯稱為<code class="highlighter-rouge">Virtual DOM</code>，在<code class="highlighter-rouge">Virtual DOM</code>中管理著UI的資料及邏輯</p>
+
+<p>當UI發生改變時，React能根據新的UI狀態，重新<code class="highlighter-rouge">渲染</code>出新的DOM元素</p>
+
+<p>也因此React可以避免DOM很多複雜的狀態處理，工程師只需專心撰寫UI的定義還有邏輯即可</p>
+
+<p>最後，根據我自己的理解，如果用一句話來表示React，我會說</p>
+
+<blockquote>
+  <p>React是導入物件導向到DOM中，並且提供高效的Diff演算法來即時渲染出新的DOM</p>
+</blockquote>
+
+<hr />
+<h2 id="render方法">render()方法</h2>
+<hr />
+
+<p>在React中，我們可以定義自己的<code class="highlighter-rouge">組件(class)</code></p>
+
+<p>而在之中一定要有<code class="highlighter-rouge">render()</code>方法，定義了當這個組件被使用時</p>
+
+<p>會轉化成什麼樣的UI呈現</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>render(){
+	return(
+		&lt;div&gt;
+			&lt;p&gt;Hello&lt;/p&gt;
+		&lt;/div&gt;
+	)
+}
+</code></pre>
+</div>
+
+<p>例如以上的例子，當這個組件被使用時，就會以那樣的HTML標籤呈現在頁面上</p>
+
+<p>有一點要注意的是，在render()方法中，回傳的內容<code class="highlighter-rouge">必須以一個外層的JSX元素包覆起來</code></p>
+
+<p>這樣的寫法其實就是<code class="highlighter-rouge">JSX語法</code>，是一種語法糖衣(Syntactic Suger)，在編譯過程會被轉換成JavaScript語法</p>
+
+<hr />
+
+<p>我們知道React會即時根據組件的狀態改變，而重新渲染組件，那這件事情是如何做到的呢？</p>
+
+<p>我們在每個組件中，可以<code class="highlighter-rouge">在建構(constructor)中</code>定義<code class="highlighter-rouge">狀態(state)</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>constructor(){
+	super()
+	this.state = {
+		money: 0,
+		active: false 
+	}
+}
+</code></pre>
+</div>
+
+<p>上述的例子包含兩個狀態money跟active，而我們可以藉由<code class="highlighter-rouge">setState()</code>這個函式來更新狀態</p>
+
+<p>當<code class="highlighter-rouge">setState()</code>被呼叫時，<code class="highlighter-rouge">render()</code>方法也會重新啟動，進而重新渲染組件</p>
+
+<hr />
+<h2 id="什麼時候用function什麼時候用class">什麼時候用function，什麼時候用class</h2>
+<hr />
+
+<p>而如果只是使用JSX語法呈現DOM元素，其實只用<code class="highlighter-rouge">function</code>也做得到</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const MyComponent = (props) =&gt; {
+    return (
+      &lt;div&gt;&lt;/div&gt;
+    );
+}
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">props</code>是指使用這個組件時，所傳入的屬性，也就是父組件傳給子組件的資訊</p>
+
+<p>等等會有更詳細的解說</p>
+
+<p>所以，什麼時候該使用<code class="highlighter-rouge">function</code>，什麼時候該使用<code class="highlighter-rouge">class</code>呢？</p>
+
+<p>當我們需要比較複雜的組件時，例如有state的變化、state的不同影響組件的呈現方式等</p>
+
+<p>因為<code class="highlighter-rouge">function</code>中沒有儲存state，所以這種情況下，應該使用<code class="highlighter-rouge">class</code>比較好</p>
+
+<p><a href="https://stackoverflow.com/questions/36097965/react-when-to-use-es6-class-based-components-vs-functional-es6-components">stack上的問答</a></p>
+
+<hr />
+<h2 id="jsx語法">JSX語法</h2>
+<hr />
+
+<p>節錄至<a href="https://exma-square.gitbooks.io/mobious-cookbook/content/Front-End/ReactJS/Intro.html">mobious-cookbook</a></p>
+
+<blockquote>
+  <p>JSX 並不是一個新的語言，他更像是一種幫助開發體驗的語法糖衣。經由像是 Babel 這樣的轉碼器，JSX 會被編譯成原生 JavaScript 程式碼，才能夠在瀏覽器上順利運作。</p>
+</blockquote>
+
+<hr />
+<h2 id="監聽事件寫法">監聽事件寫法</h2>
+<hr />
+
+<ol>
+  <li>on* event</li>
+  <li>event</li>
+  <li>bind</li>
+  <li>this</li>
+</ol>
+
+<p>首先，我們直接來看一個範例</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Header() extends Component{
+	...
+	handleClick(event, message){
+		console.log(event.target.innerHTML)
+		console.log(this.props.index)
+		console.log(message)
+	}
+	render(){
+		return({
+			&lt;div&gt;
+				&lt;h1 onClick={this.handleClick.bind(this, 'Hello!')}&gt;&lt;/h1&gt;
+			&lt;/div&gt;
+			})
+	}
+}
+</code></pre>
+</div>
+
+<p>上述例子，我們用<code class="highlighter-rouge">onClick</code>這個屬性定義了監聽事件，在React中定義了許多不同的事件</p>
+
+<p>關於總共有哪些監聽事件能在React中使用，可以參考<a href="https://reactjs.org/docs/events.html#supported-events">這裡</a></p>
+
+<p>所以當我們點擊這個標籤時，就會執行我們自己定義的<code class="highlighter-rouge">handleClick</code>事件</p>
+
+<p>在<code class="highlighter-rouge">handleClick</code>中，預設會傳入一個event，我們能透過<code class="highlighter-rouge">event.target</code>來取得被點擊的DOM元素</p>
+
+<p>所以像這裡<code class="highlighter-rouge">event.target.innerHTML</code>，即是獲得<code class="highlighter-rouge">h1</code>標籤的HTML內容</p>
+
+<p>另外，這邊我們還使用了bind(this)的原因是，當我們執行<code class="highlighter-rouge">this.handleClick</code>，在這個函式內並不知道this是誰</p>
+
+<p>然後，在大多數的情況下，我們需要在這個函式中調用到<code class="highlighter-rouge">this</code>的資料，像是<code class="highlighter-rouge">this.state</code>和<code class="highlighter-rouge">this.props</code>等</p>
+
+<p>所以我們必須綁定<code class="highlighter-rouge">this</code>到這個函式之中</p>
+
+<p>而除了<code class="highlighter-rouge">event</code>跟<code class="highlighter-rouge">this</code>之外，我們還能自己傳入想要的參數到函式中</p>
+
+<p>像是上述的例子就是傳入一個<code class="highlighter-rouge">字串</code></p>
+
+<p>這樣的寫法就是一個常用的處理事件的架構</p>
+
+<hr />
+<h2 id="父組件與子組件的溝通">父組件與子組件的溝通</h2>
+<hr />
+
+<ol>
+  <li>props與handleEvent()</li>
+</ol>
+
+<p>當我們寫好一個組件之後，他能被其他組件所使用，而使用它的組件我們稱為父組件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>render(){
+	return({
+		&lt;MyComponent /&gt;
+		})
+}
+</code></pre>
+</div>
+
+<p>而一個組件常常並不是只是固定的呈現方式，通常提供一些客製的選項</p>
+
+<p>可以依據傳入的參數不同，有不同的使用或呈現方式</p>
+
+<p>而參數傳入的方式就是透過像設定HTML屬性的方法設定</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;MyComponet 
+	type="text"
+	data={this.state.data}
+/&gt;
+</code></pre>
+</div>
+
+<p>而我們在子組件，就能透過<code class="highlighter-rouge">this.props.*</code>來取得資料</p>
+
+<p>然後這樣的過程，只是由父組件對子組件單向的傳送資料</p>
+
+<p>我們也能透過設定<code class="highlighter-rouge">回調函數(callback function)</code>的方式來從子組件傳送資料回父組件</p>
+
+<p>例如以下的例子，一個父組件中有好幾個子組件，所以當其中某個子組件被點擊之後，要能回傳編號回父組件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#父組件
+...
+handleClick(index){
+	console.log(index)
+}
+render(){
+	return({
+		&lt;div&gt;
+			&lt;MyComponent 
+				index=1
+				onClick={this.handleClick.bind(this)}
+			/&gt;
+			&lt;MyComponent 
+				index=2
+				onClick={this.handleClick.bind(this)}
+			/&gt;
+		&lt;/div&gt;
+	})
+}
+
+#子組件
+handleClick(event){
+	if(this.props.onClick){
+		this.props.onClick(this.props.index)
+	}
+}
+render(){
+	return({
+		&lt;div&gt;
+		&lt;h1 onClick={this.handleClick.bind(this)}&gt;Click Here!&lt;/h1&gt;
+		&lt;/div&gt;
+	})
+}
+</code></pre>
+</div>
+
+<p>這個例子剛好也能複習監聽事件的寫法，只有在原始的<code class="highlighter-rouge">HTML標籤</code>中所調用的監聽事件，才會預設傳入<code class="highlighter-rouge">event</code></p>
+
+<p>像在父組件我們也在子組件的屬性中使用了<code class="highlighter-rouge">onClick</code>，並且事件觸發時同時也會呼叫本地事件<code class="highlighter-rouge">handleClick</code></p>
+
+<p>但是此時handleClick中並沒有傳入event，而其實我們也可以不用以<code class="highlighter-rouge">on</code>開頭命名，只是這樣比較符合直觀</p>
+
+<p><code class="highlighter-rouge">父組件的handleClick</code>接收的參數是決定了子組件能夠傳回哪些資訊回來給父組件</p>
+
+<p>這裡我們需要的是子組件的編號，所以傳回來的參數是<code class="highlighter-rouge">index</code></p>
+
+<p>接下來，讓我們看回子組件，當我們按了<code class="highlighter-rouge">Click!here</code>，即會觸發<code class="highlighter-rouge">子組件的handleClick</code></p>
+
+<p>首先先驗證父組件是否有定義<code class="highlighter-rouge">處理onClick事件的函式</code>，如果有的話，我們就能調用那個函式</p>
+
+<p>在這裡我們能調用函式，並且回傳<code class="highlighter-rouge">this.props.index</code>，也就是當初父組件定義的index編號回父組件</p>
+
+<p>進而讓父組件知道是哪個子組件被點擊了</p>
+
+<hr />
+<h2 id="在reactjs中在jsx語法中要注意的html屬性寫法">在React.js中(在JSX語法中)，要注意的HTML屬性寫法</h2>
+<hr />
+
+<p>在JSX語法中，要特別注意<code class="highlighter-rouge">class</code>跟<code class="highlighter-rouge">for</code>，在JSX語法中分別為<code class="highlighter-rouge">className</code>跟<code class="highlighter-rouge">htmlFor</code></p>
+
+<p>原因是因為<code class="highlighter-rouge">class</code>跟<code class="highlighter-rouge">for</code>在JavaScript中是保留字，所以要避免</p>
+
+<p>而當JSX最後被渲染成DOM後，就會轉換回<code class="highlighter-rouge">class</code>跟<code class="highlighter-rouge">for</code>了</p>
+
+<hr />
+<h2 id="驗證傳入物件類別verify-type">驗證傳入物件類別(Verify Type)</h2>
+<hr />
+
+<p><a href="http://huziketang.com/books/react/lesson24">為什麼要使用PropTypes</a></p>
+
+<p><a href="https://reactjs.org/docs/typechecking-with-proptypes.html">官方文檔對PropTypes的說明</a></p>
+
+<p>大家可以先參閱這兩篇文章，對<code class="highlighter-rouge">PropTypes</code>有一些基本的了解</p>
+
+<p>當我們定義好一個組件，我們可能預設父組件會傳入哪些資料</p>
+
+<p>所以因此直接在子組件中使用那些資料</p>
+
+<p>但是實際上被使用時，我們不知道使用者會傳入哪些資料，如果不是傳入正確的資料</p>
+
+<p>也不會有錯誤訊息，但最後的結果可能並不是我們預設的呈現效果</p>
+
+<p>所以我們能先設定<code class="highlighter-rouge">PropTypes</code>來規範這個組件要怎麼被使用</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Greeting extends React.Component {
+  render() {
+    return (
+    	&lt;div&gt;
+     		&lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;
+     		&lt;p&gt;Age: {this.props.age}&lt;/p&gt;
+     		&lt;p&gt;Sex: {this.props.sex}&lt;/p&gt;
+     	&lt;/div&gt;
+    );
+  }
+}
+Greeting.defaultProps = {
+  name: 'Stranger'
+  age: PropTypes.number
+  sex: PropTypes.element.isRequired
+};
+</code></pre>
+</div>
+
+<p>能夠指定<code class="highlighter-rouge">Type</code>，<code class="highlighter-rouge">是否必須</code>，<code class="highlighter-rouge">預設值</code>等等</p>
+
+<hr />
+<h2 id="習慣的命名規則">習慣的命名規則</h2>
+<hr />
+
+<ol>
+  <li>每個物件一個檔案，並且以大寫作為開頭</li>
+  <li>私有方法用<code class="highlighter-rouge">_</code>開頭</li>
+  <li>事件監聽方法，用<code class="highlighter-rouge">handle</code>開頭</li>
+  <li>使用<code class="highlighter-rouge">Camel</code>命名規則</li>
+</ol>
+
+<hr />
+<h2 id="參考來源references">參考來源(References)</h2>
+<hr />
+
+<ol>
+  <li><a href="https://stackoverflow.com/questions/36097965/react-when-to-use-es6-class-based-components-vs-functional-es6-components">When to use class vs. function</a></li>
+  <li><a href="https://exma-square.gitbooks.io/mobious-cookbook/content/Front-End/ReactJS/Intro.html">mobious-cookbook</a></li>
+  <li><a href="https://blog.techbridge.cc/2016/04/21/react-jsx-introduction/">一看就懂的 JSX 簡明入門教學指南</a></li>
+  <li><a href="http://huziketang.com/books/react/lesson1">React.js小书</a></li>
+</ol>
+
+<p><em>2018.3.07</em></p>
+
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>

@@ -1,0 +1,408 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>[讀]Maximum Likelihood Estimation(MLE)</h1>
+</div>
+
+<div>
+
+	<a href="#" class="badge badge-success">math</a>
+
+	<a href="#" class="badge badge-success">probability</a>
+
+
+</div>
+
+<div class="article-content view-color">
+	<p><em>2018-5-1</em></p>
+
+<hr />
+<h2 id="前言">前言</h2>
+<hr />
+
+<p>最近在努力複習機率</p>
+
+<p>當初資工大一大二時</p>
+
+<p>還記得我們要修線性代數、機率、離散數學、微積分等</p>
+
+<p>當那時候覺得資工為什麼要學這些數學</p>
+
+<p>不是只要會打程式就好了嗎？</p>
+
+<p>現在終於吃到苦頭</p>
+
+<p>在看Paper時，很多數學理論都是需要這些基礎的</p>
+
+<p>但也沒時間後悔了，只能趕快回頭補救</p>
+
+<!--more-->
+
+<hr />
+<h2 id="似然函數likelihood">似然函數(Likelihood)</h2>
+<hr />
+
+<blockquote>
+  <p>機率用於在已知一些參數的情況下，預測接下來的觀測所得到的結果，而似然性則是用於在已知某些觀測所得到的結果時，對有關事物的性質的參數進行估計</p>
+</blockquote>
+
+<p>關於什麼是<code class="highlighter-rouge">Likelihood</code>，什麼是<code class="highlighter-rouge">Maximum Likelihood Estimation</code></p>
+
+<p><a href="https://zh.wikipedia.org/wiki/最大似然估计">維基百科</a>寫得非常完整，可以先去複習一下再回來看</p>
+
+<p>但是在關於<code class="highlighter-rouge">似然函數</code>的定義，我會建議參考<a href="https://www.zhihu.com/question/54082000">這篇</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L(θ|x) = f(x|θ)
+
+x 是聯合樣本隨機變量X取到的值，X = x
+θ 是未知參數
+f 是一個密度函數，給定參數θ下關於聯合樣本值x的聯合密度函數
+</code></pre>
+</div>
+
+<p>雖然<code class="highlighter-rouge">函數值</code>相等，但兩個函數是完全不同的</p>
+
+<p>L是<code class="highlighter-rouge">對θ</code>的函數，f是<code class="highlighter-rouge">對x</code>的函數</p>
+
+<p>也可以看成兩種不同的切入角度</p>
+
+<p>L是給定觀測結果後，去預測參數θ</p>
+
+<p>f則是給定參數θ，去得到結果的機率是多少</p>
+
+<hr />
+
+<p>假設f是<code class="highlighter-rouge">機率質量函數</code></p>
+
+<p>我們可以寫成</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L(θ|x) = P(X = x|θ)
+</code></pre>
+</div>
+
+<p><strong>注意，這邊的|，表示給定θ的意思</strong></p>
+
+<p>所以，舉例來說，在一個公平的投擲硬幣的例子中</p>
+
+<p>前三次結果都是正面，我們記為HHH</p>
+
+<p>所以在一般的機率下，我們已知正面發生的機率為0.5</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L(p=0.5|HHH) = P(HHH|p=0.5) = 0.125
+</code></pre>
+</div>
+
+<p>我們對這個式子可以有兩種解釋</p>
+
+<ol>
+  <li>在給定結果HHH時，骰子骰到正面機率為0.5的機率是0.125</li>
+  <li>在給定骰子骰到正面機率為0.5時，得到結果HHH的機率為0.125</li>
+</ol>
+
+<p>所以回到觀點1，從這樣的觀點，當我們得到HHH的結果時</p>
+
+<p>骰子骰到正面機率最有可能會是1</p>
+
+<p>換句話說，這最有可能是一個怎麼骰到骰到正面的骰子</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L(p=1|HHH) = P(HHH|p=1) = 1 * 1 * 1 = 1
+</code></pre>
+</div>
+
+<p>L(p=1|HHH)等於1，大於L(p=0.5|HHH)的0.125</p>
+
+<hr />
+<h2 id="隨機變數random-variable">隨機變數(Random Variable)</h2>
+<hr />
+
+<p>離散隨機變數(discrete random variable)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>若是隨機變數X的取值是有限或可數的
+X = { x1, x2, x3, ..., xn}
+則稱Ｘ為離散隨機變數
+</code></pre>
+</div>
+
+<p>連續隨機變數(continuous random variable)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>若隨機變數Ｘ是由全部實數或某一部分區間所組成的話
+X = {x|a &lt;= x &lt;= b}, -inf &lt; a,b &lt; inf
+則稱Ｘ為連續隨機變數
+</code></pre>
+</div>
+
+<hr />
+<h2 id="機率質量函數pmf機率密度函數pdf">機率質量函數(pmf)、機率密度函數(pdf)</h2>
+<hr />
+
+<p>關於<a href="https://zh.wikipedia.org/wiki/概率质量函数">機率質量函數</a>跟<a href="https://zh.wikipedia.org/wiki/機率密度函數">機率密度函數</a>的定義跟性質非常重要</p>
+
+<p>但在這裡不加贅述，詳細參考提供的維基百科連結</p>
+
+<hr />
+<h2 id="機率分布離散分布與連續分布">機率分布：離散分布與連續分布</h2>
+<hr />
+
+<p>關於<a href="https://zh.wikipedia.org/wiki/概率分布#伽马分布">機率分布</a>主要分為兩種：</p>
+
+<p>離散分布：值域是離散的，例如：擲硬幣，結果有正面與反面</p>
+
+<p>常見的離散分布有：<code class="highlighter-rouge">二項分布</code></p>
+
+<p>連續分布：值域是連續的，例如：人類的身高分布</p>
+
+<p>常見的連續分布有：<code class="highlighter-rouge">常態分布</code></p>
+
+<p>最好可以記一下每種分布所對應到的<code class="highlighter-rouge">pmf</code>或是<code class="highlighter-rouge">pdf</code></p>
+
+<hr />
+<h2 id="最大似然估計maximum-likelihood-estimation">最大似然估計(Maximum Likelihood Estimation)</h2>
+<hr />
+
+<p>了解了什麼是<code class="highlighter-rouge">似然函數(Likelihood Function)</code>之後</p>
+
+<p>求<code class="highlighter-rouge">最大似然(Maximum Likelihood)</code></p>
+
+<p>也就是在某一機率分布下，最有可能的參數</p>
+
+<p>根據<a href="https://zh.wikipedia.org/wiki/最大似然估计">維基百科</a>所舉的例子</p>
+
+<p>可以分為三種組合</p>
+
+<ol>
+  <li>離散分布，離散有限參數空間</li>
+  <li>離散分布，連續參數空間</li>
+  <li>連續分布，連續參數空間</li>
+</ol>
+
+<hr />
+
+<p>第一種情況，我們的參數由於<code class="highlighter-rouge">離散而且有限</code></p>
+
+<p>所以我們理論上能試過所有可能的機率，取最大值</p>
+
+<hr />
+
+<p>第二種情況：<code class="highlighter-rouge">離散分布，連續參數空間</code></p>
+
+<p>我一開始在這邊有點疑問</p>
+
+<p>連續的參數空間，怎麼使得結果是離散分布呢？</p>
+
+<p>舉維基的例子來說，假設我們今天準備了無數個硬幣</p>
+
+<p>每個硬幣擲到正面的機率p分布在0到1</p>
+
+<p>而每個p都有對應到該機率的硬幣</p>
+
+<p>假設今天隨機拿一個硬幣骰了100次，得到正面40次，反面60次的觀測結果</p>
+
+<p>我們記為H=40，T=60，可以求<code class="highlighter-rouge">Likelihood</code>：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L(θ|H=40,T=60) = P(H=40,T=60|p) = C(100,40) * p^40 * (1-p)^60 (二項分布)
+</code></pre>
+</div>
+
+<p>所以，接下來我們要求得<code class="highlighter-rouge">似然函式L</code>在0~1之間的最大值</p>
+
+<p>由於L是個<code class="highlighter-rouge">連續函數</code>，我們要求得導函數為零的值，於是</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>C(100,40) * (40 * p^39 * (1-p)^60 - 60 * p^40 * (1-p)^59) = 0
+p^39 * (1-p)^59 * ( 40 * (1-p) - 60 * p) = 0
+... * (100p + 40) = 0
+</code></pre>
+</div>
+
+<p>所以可以得出，p = 0, 1, 40/100</p>
+
+<p>0, 1不可能，因為會使得L為0，所以p=40/100時是Maximum Likelihood</p>
+
+<p>由此我們也能歸納出，二項分布的最大似然估計值為</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>MLE = t/N
+
+t為正面（成功）的次數，N為總次數
+</code></pre>
+</div>
+
+<p>我們再回到剛剛說的連續參數空間，為什麼卻是離散分布的問題</p>
+
+<p>我們上述整個過程都是在對<code class="highlighter-rouge">似然函數L</code>做操作</p>
+
+<p>而似然函數的分布是連續的沒錯，但所謂的離散指的是<code class="highlighter-rouge">值域</code>的離散</p>
+
+<p>這邊的結果只會有正面跟反面，不像身高、智商、體重等等呈現連續分布</p>
+
+<hr />
+
+<p>第三種情況：<code class="highlighter-rouge">連續分布，連續參數空間</code></p>
+
+<p>舉常態分布為例</p>
+
+<p>我們發現到，控制的參數有兩個µ, σ^2</p>
+
+<p>等一下做導函數時，需要分別做<code class="highlighter-rouge">偏微分</code>即可</p>
+
+<p>另外值得一提的是，我們通常會取自然對數再求導函數</p>
+
+<p>因為在似然函數L的值域中(0~1)，自然對數是<code class="highlighter-rouge">嚴格遞增的上凸函數</code></p>
+
+<p>所以求似然函數的最大值跟取完自然對數後的最大值是等價的</p>
+
+<p>這邊的計算較繁雜，可以參考<a href="https://zh.wikipedia.org/wiki/最大似然估计">維基即可</a></p>
+
+<hr />
+<h2 id="references">References</h2>
+<hr />
+
+<ol>
+  <li>PRML-Chapter 2</li>
+  <li>Wiki</li>
+  <li>Saeed-Ghahramani-Fundamentals-of-Probability</li>
+</ol>
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>

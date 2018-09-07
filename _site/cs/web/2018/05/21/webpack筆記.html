@@ -1,0 +1,585 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>webpack筆記</h1>
+</div>
+
+<div>
+
+	<a href="#" class="badge badge-success">cs</a>
+
+	<a href="#" class="badge badge-success">web</a>
+
+
+</div>
+
+<div class="article-content view-color">
+	<p><em>2018-5-21</em></p>
+
+<hr />
+<h2 id="什麼是webpack為什麼需要學">什麼是webpack，為什麼需要學？</h2>
+<hr />
+
+<p>一樣的，我們先從維基百科的定義來看</p>
+
+<blockquote>
+  <blockquote>
+    <p>Webpack 是一個開源的前端打包工具。Webpack 提供了前端開發缺乏的模組化開發方式，將各種靜態資源視為模組，並從它生成優化過的程式碼</p>
+  </blockquote>
+</blockquote>
+
+<p>其實維基百科已經用簡短的一句話說明了webpack最重要的兩個功能</p>
+
+<ol>
+  <li>改善模組化產生的效能跟管理問題</li>
+  <li>優化後生成bundle.js</li>
+</ol>
+
+<!--more-->
+
+<p>因為現在有太多用javaScript所撰寫的套件</p>
+
+<p>而webpack是一個能統一管理這些套件，並替我們處理掉考慮這些js檔案相依的問題</p>
+
+<p>例如該先import哪個檔案等等</p>
+
+<p>最後直接輸出一個Bundle.js讓我們能夠直接import這個檔案</p>
+
+<p>這是官網提供的webpack流程圖</p>
+
+<p><a href="\res\photo\webpack.jpg">!webpack</a></p>
+
+<p>以下的筆記主要是參考這個<a href="https://www.jianshu.com/p/42e11515c10f">部落格</a>和<a href="https://webpack.js.org/guides/getting-started/">官方文件</a>來透過實作練習<code class="highlighter-rouge">webpack</code>的功能</p>
+
+<p>練習的檔案上傳在我的<a href="">github</a></p>
+
+<hr />
+<h2 id="安裝install">安裝(install)</h2>
+<hr />
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev webpack
+</code></pre>
+</div>
+
+<p>我們可以很簡單的透過<code class="highlighter-rouge">npm</code>來安裝<code class="highlighter-rouge">webpack</code></p>
+
+<p>當然，也可以選擇全局安裝</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g webpack
+</code></pre>
+</div>
+
+<hr />
+<h2 id="配置文件configuration">配置文件(Configuration)</h2>
+<hr />
+
+<p>在這之前，可以先參考<a href="https://www.jianshu.com/p/42e11515c10f">入门Webpack，看这篇就够了</a>或者<a href="https://webpack.js.org/guides/getting-started/">webpack-官方文件</a>最一開始的部分</p>
+
+<p>我們可以在<code class="highlighter-rouge">terminal</code>上直接執行<code class="highlighter-rouge">webpack</code></p>
+
+<p>例如在官方文檔中的</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npx webpack src/index.js --output dist/bundle.js
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">src/index.js</code>是原始文件，而<code class="highlighter-rouge">dist/bundle.js</code>是輸出文件的位置</p>
+
+<p>但是這樣在terminal上執行太過麻煩，所以我們可以透過新增一個配置文件<code class="highlighter-rouge">webpack.config.js</code>來替代</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const path = require('path');
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">entry</code>表示<code class="highlighter-rouge">入口文件</code>的位置</p>
+
+<p><code class="highlighter-rouge">output</code>表示<code class="highlighter-rouge">輸出文件</code>的的<code class="highlighter-rouge">名稱</code>跟<code class="highlighter-rouge">路徑</code></p>
+
+<p>之後，我們可以把執行<code class="highlighter-rouge">webpack</code>這件事情加到<code class="highlighter-rouge">package.json</code>的腳本中</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+	    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><span class="p">,</span><span class="w">
+	    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack"</span><span class="w">
+	  </span><span class="p">},</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>所以當我們執行</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm run start
+</code></pre>
+</div>
+
+<p>就能夠看到執行完<code class="highlighter-rouge">webpack</code>的結果了</p>
+
+<hr />
+<h2 id="使用webpack-dev-server本地端伺服器">使用webpack-dev-server（本地端伺服器）</h2>
+<hr />
+
+<p><code class="highlighter-rouge">webpack</code>提供我們一個伺服器，讓我們可以用於開發測試</p>
+
+<p>提供了一些功能，像是當程式碼有變化時，自動刷新等</p>
+
+<p>首先我們必須安裝這個套件：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev webpack-dev-server
+</code></pre>
+</div>
+
+<p>之後在<code class="highlighter-rouge">webpack.config.js</code>中加入<code class="highlighter-rouge">webpack-dev-server</code>的一些選項</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>devServer: {
+	contentBase: "./public",
+	historyApiFallback: true,
+	inline: true
+} 
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">contentBase</code>就是我們主頁面的位置</p>
+
+<p><code class="highlighter-rouge">inline</code>是文件改變時，會不會自動刷新頁面</p>
+
+<p><code class="highlighter-rouge">historyApiFallback</code>是讓所有跳轉指向<code class="highlighter-rouge">index.html</code></p>
+
+<p>再來，還要在<code class="highlighter-rouge">package.json</code>中加上<code class="highlighter-rouge">script</code>：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+	    </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><span class="p">,</span><span class="w">
+	    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack"</span><span class="p">,</span><span class="w">
+	    </span><span class="nt">"server"</span><span class="w"> </span><span class="nt">"webpack-dev-server --open"</span><span class="w">
+	  </span><span class="err">}</span><span class="p">,</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<hr />
+<h2 id="source-maps">Source maps</h2>
+<hr />
+
+<p>但是<code class="highlighter-rouge">webpack</code>這樣的運作方式可能會有一個問題</p>
+
+<p>開發後，當我們測試中發生錯誤時</p>
+
+<p>因為所有檔案已被<code class="highlighter-rouge">webpack</code>打包成了<code class="highlighter-rouge">bundle.js</code></p>
+
+<p>所以很難找到錯誤點，可讀性不高</p>
+
+<p>這個時候可以透過<code class="highlighter-rouge">Source maps</code>來解決這個問題</p>
+
+<p>我們要在<code class="highlighter-rouge">配置文件</code>中新增<code class="highlighter-rouge">devtool</code>這個屬性</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>module.exports = {
+	devtool: 'eval-source-map'
+	...
+}
+</code></pre>
+</div>
+
+<p>我們能夠選擇的<code class="highlighter-rouge">source map</code>一般來說有四種</p>
+
+<ol>
+  <li>source-map</li>
+  <li>cheap-module-source-map</li>
+  <li>eval-source-map</li>
+  <li>cheap-module-eval-source-map</li>
+</ol>
+
+<p>其中的差異在這邊不多說，但是由上至下打包速度越快，可讀性越低</p>
+
+<hr />
+<h2 id="模塊加載器loader">模塊加載器(Loader)</h2>
+<hr />
+
+<p><code class="highlighter-rouge">webpack</code>能透過<code class="highlighter-rouge">loader</code>來對不同格式的文件做處理</p>
+
+<p>例如將<code class="highlighter-rouge">sass</code>轉成<code class="highlighter-rouge">css</code>、<code class="highlighter-rouge">JSX文件</code>轉成<code class="highlighter-rouge">JS文件</code>等等</p>
+
+<p>要使用<code class="highlighter-rouge">Loader</code>，必須在<code class="highlighter-rouge">webpack.config.js</code>中作配置</p>
+
+<p>我們將會使用<code class="highlighter-rouge">Babel</code>，所以在<code class="highlighter-rouge">webpack.config.js</code>中加入：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>module.exports = {
+	...,
+	module:{
+		rules: [
+			{
+				test:/(\.jsx|\.js)$/,
+				use:{
+					loader: "bable-loader",
+					options: {
+						presets:[
+							"env", "react"
+						]
+					}
+				},
+				exclude: /node_modules/
+			}
+		]
+	}
+}
+</code></pre>
+</div>
+
+<p>安裝<code class="highlighter-rouge">Babel</code>相關的依類包</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
+</code></pre>
+</div>
+
+<p>完成到這裡，代表<code class="highlighter-rouge">webpack</code>允許我們使用<code class="highlighter-rouge">ES6</code>以及<code class="highlighter-rouge">JSX</code>的語法了</p>
+
+<p><code class="highlighter-rouge">loader</code>會去尋找在我們指定的目錄下的<code class="highlighter-rouge">jsx</code>跟<code class="highlighter-rouge">js</code>檔</p>
+
+<p>並且將他們轉換成瀏覽器所接受的語言</p>
+
+<p>於是，我們可以引進<code class="highlighter-rouge">React.js</code>的語法了</p>
+
+<p>在這裡，我們是把Babel的配置直接寫在<code class="highlighter-rouge">webpack.config.js</code>中</p>
+
+<p>但是我們也能加它分離到另一個檔案<code class="highlighter-rouge">.babelrc</code></p>
+
+<p>編譯時就會自動讀取了<code class="highlighter-rouge">.babelrc</code>文件</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//.babelrc
+{
+	presets:[
+		"env", "react"
+	]
+}
+</code></pre>
+</div>
+
+<hr />
+<h2 id="css相關loader">CSS相關loader</h2>
+<hr />
+
+<p>除了轉化JSX語法，我們也能使用loader來達到CSS模塊化的功能</p>
+
+<p>這邊我們使用<code class="highlighter-rouge">css-loader</code>和<code class="highlighter-rouge">style-loader</code></p>
+
+<p>而為了讓<code class="highlighter-rouge">webpack</code>能找到<code class="highlighter-rouge">css</code>，所以我們必須在我們的</p>
+
+<p>入口檔案<code class="highlighter-rouge">main.js</code>裡面引進<code class="highlighter-rouge">css</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>module:{
+	rules: [
+		{...},
+		{
+			test: /\.css$/,
+			use:[
+				{
+					loader: "style-loader"
+					},
+				{
+					loader: "css-loader",
+					options: {
+						modules: true,
+						localIdentName: '[name]__[local]--[hash:base64:5]'
+					}
+				}
+			]
+		}
+	]
+}
+</code></pre>
+</div>
+
+<p>之後，我們便可以在js檔案中引進<code class="highlighter-rouge">css模塊</code>來使用</p>
+
+<p>例如：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//./main.css
+.root {
+	...
+}
+
+//./main.js
+...
+import main-css from './main.css';
+...
+	render(){
+		return(
+			&lt;div className={main-css.root}&gt;
+					Hello!
+			&lt;/div&gt;
+			);
+	}
+...
+</code></pre>
+</div>
+
+<hr />
+<h2 id="postcss-webpack-plugins">postcss webpack-plugins</h2>
+<hr />
+
+<p>套件是對整個<code class="highlighter-rouge">webpack</code>建構過程作用</p>
+
+<p>而<code class="highlighter-rouge">loader</code>則是處理源文件</p>
+
+<p>常常使用的套件有這些：</p>
+
+<ol>
+  <li>html-webpack-plugin</li>
+  <li>Hot Module Replacement(HMR)</li>
+</ol>
+
+<p><code class="highlighter-rouge">html-webpack-plugin</code>能根據一個html模板來產生對應的<code class="highlighter-rouge">index.html</code>文件</p>
+
+<p>例如，我們創建一個模板文件在<code class="highlighter-rouge">./app/index.templ.html</code></p>
+
+<p>然後必須在<code class="highlighter-rouge">webpack.config.json</code>中添加相關訊息</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>module.export = {
+	...,
+	output: {
+		path: __dirname + "/build", //將webpack編譯後的文件存放在build資料夾中
+		filename: "build.js"
+	},
+	...,
+	plugins: [
+		new webpack.BannerPlugin('Made by Chen, Tsu Pei'), // BannerPlugin 能在產生的代碼中加上版權宣告文字
+		new HtmlWebpackPlugin({
+				template: __dirname + "./app/index.templ.html" // 參考用的源html代碼文件
+			})
+	]
+}
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">HMR</code>則是可以實現<code class="highlighter-rouge">熱加載</code>的功能，也就是當我們開發實作的更改</p>
+
+<p>能即時在網頁上刷新</p>
+
+<p>要使用<code class="highlighter-rouge">HMR</code>的話，我們必須做三件事情</p>
+
+<ol>
+  <li>在webpack配置文件夾加上HMR插件</li>
+  <li>在webpack dev server加上hot參數</li>
+  <li>在JS文件中，調用webpack提供的API</li>
+</ol>
+
+<p>讓我們先來完成前兩件事情</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>module.export = {
+	...,
+	devServer: {
+		...,
+		hot: true
+	},
+	plugins: [
+		new webpack.BannerPlugin('Made by Chen, Tsu Pei'),
+		new HtmlWebpackPlugin({
+				template: __dirname + "./app/index.templ.html"
+			}),
+		new webpack.HotModuleReplacementPlugin() //實現熱插件
+	]
+}
+</code></pre>
+</div>
+
+<p>關於第三件事情，react模塊可以直接使用Babel更方便的實現熱加載</p>
+
+<p>我們透過一個在<code class="highlighter-rouge">Babel</code>中叫做<code class="highlighter-rouge">react-transform-hrm</code>的套件</p>
+
+<p>就可以不用在<code class="highlighter-rouge">react模塊</code>中載入API而達到熱加載的功能</p>
+
+<p>所以我們要在<code class="highlighter-rouge">.babelrc</code>中做一些配置</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//.babelrc
+{
+	"presets": ["react", "env"],
+	"env": {
+		"development": {
+			"plugins": [
+				[
+					"react-transform",
+					{
+						"transforms":[
+							{
+								"transform": "react-transform-hmr",
+								"imports": ["react"],
+								"locals": ["module"]
+							}
+						]
+					}
+				]
+			]
+		}
+	}
+}
+</code></pre>
+</div>
+
+<p>當然，這些套件都要事先透過<code class="highlighter-rouge">npm</code>安裝好才能使用</p>
+
+<hr />
+<h2 id="來源references">來源(References)</h2>
+<hr />
+
+<ol>
+  <li><a href="https://www.jianshu.com/p/42e11515c10f">入门Webpack，看这篇就够了</a></li>
+  <li><a href="https://zh.wikipedia.org/wiki/Webpack">webpack-wiki</a></li>
+  <li><a href="https://webpack.js.org/guides/getting-started/">webpack-官方文件</a></li>
+  <li><a href="https://medium.com/@Roy_Huang/新手向-webpack-完全攻略-1-e7981097e6a3">Roy_Huang-新手向-webpack-完全攻略</a></li>
+  <li><a href="https://github.com/css-modules/css-modules">css modules</a></li>
+</ol>
+
+
+</div>
+
+</div>
+		</div>
+		<div>
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+				<div class="text-left">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div>
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div>
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+		</div>
+		<div class="footer-view footer-words col-md-4">
+			<p>快樂有很多種</p>
+			<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+			<p>追尋自己想要的快樂</p>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<p>Version 0.0.5</p>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>
