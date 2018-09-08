@@ -41,12 +41,9 @@ categories: cs
 
 `v 1.0.4`
 
-{% assign photo=site.data.work1[0] %}
-{% include one-img-block.html photo=photo %}
-{% assign photo=site.data.work1[1] %}
-{% include one-img-block.html photo=photo %}
-{% assign photo=site.data.work1[2] %}
-{% include one-img-block.html photo=photo %}
+<img src="https://i.imgur.com/EuGW25L.png" alt="新的作品預覽頁面版型" style="max-width:100%">
+<img src="https://i.imgur.com/K1LyWh7.png" alt="新的文章預覽頁面版型" style="max-width:100%">
+<img src="https://i.imgur.com/E9hwnzn.png" alt="種類列表" style="max-width:30%">
 
 	- 新增文章分類選單
 	- 重新調整文章的配色
@@ -55,8 +52,8 @@ categories: cs
 
 `v 1.0.5`
 
-{% assign photo=site.data.work1[3] %}
-{% include one-img-block.html photo=photo %}
+<img src="https://i.imgur.com/cFzMjms.png" alt="新的文章預覽頁面版型" style="max-width:100%">
+
 
 	- (ok)post和work頁面還是分開，因為實際上是兩種不同架構，分
 	- (ok)重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
@@ -177,7 +174,7 @@ categories: cs
 
 <img src="https://i.imgur.com/FxgJ8lg.png" alt="電腦顯示下" style="max-width:100%">
 
-<img src="https://i.imgur.com/uLP4HPb.png" alt="手機顯示下" style="max-width:100%">
+<img src="https://i.imgur.com/uLP4HPb.png" alt="手機顯示下" style="max-width:50%">
 
 
 
