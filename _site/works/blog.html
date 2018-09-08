@@ -157,7 +157,7 @@
 </code></pre>
 </div>
 
-<p><code class="highlighter-rouge">預計在 v 1.0.5新增</code></p>
+<p><code class="highlighter-rouge">v 1.0.5</code></p>
 
 <div class="container-fluid one-img">
 	<div class="center">
@@ -169,14 +169,14 @@
 
 <div class="highlighter-rouge"><pre class="highlight"><code>- (ok)post和work頁面還是分開，因為實際上是兩種不同架構，分
 - (ok)重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
-- 新增預讀圖片的頁面
-- 新增IG格式
 - (ok!找到更好解法)將數學式改成SVG
-- footer跑版修正
+- (ok)footer跑版修正
 - (ok)articles的配色更改
 - (ok)articles的預讀畫面修正
 - (ok)文章全部校正
 - (ok)把未完成的文章剔除
+- (ok)重新改版Profile頁面
+- (ok)將article頁面加上能依照種類預覽
 </code></pre>
 </div>
 
@@ -186,6 +186,8 @@
 - 按愛心功能
 - 瀏覽次數
 - 標籤欄位
+- 新增預讀圖片的頁面
+- 新增IG格式
 </code></pre>
 </div>
 
@@ -272,9 +274,27 @@
 
 <p>需要用<code class="highlighter-rouge">\$\${equation}\$\$</code>兩個金錢符號包圍著LaTeX語法</p>
 
-<p><em>ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的SDN已經退役了，可以<a href="https://www.mathjax.org/cdn-shutting-down/">參考這裡</a></em></p>
+<p><em>ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的CDN已經退役了，可以<a href="https://www.mathjax.org/cdn-shutting-down/">參考這裡</a></em></p>
 
 <p><em>2018/5/31</em></p>
+
+<hr />
+<h2 id="rwd網頁">RWD網頁</h2>
+<hr />
+
+<p><code class="highlighter-rouge">RWD</code>是<code class="highlighter-rouge">Responsitive Website Design</code>的簡稱，顧名思義就是能在不同的裝置上都能夠顯示正常的網頁</p>
+
+<p>在這之前，我對<code class="highlighter-rouge">RWD</code>的了解停留在使用<code class="highlighter-rouge">Bootstrap</code>上，我以為只要用<code class="highlighter-rouge">Bootstrap</code>的<code class="highlighter-rouge">grid</code>就能讓網頁能夠自適在各裝置</p>
+
+<p>但現實遇到的狀況，例如我的profile頁面分為兩個部分，左邊和右邊，左邊放一張圖片，右邊放一段說明文字</p>
+
+<p>問題是留白的部分，在電腦螢幕上，留白的空間要大，但在手機螢幕本身就小的情況下，留白的空間要很小</p>
+
+<p>這樣的情況是光用<code class="highlighter-rouge">Bootstrap</code>無法解決的，而我們在<code class="highlighter-rouge">CSS</code>設定檔中，可以設定在不同的解析度下，套用不同的<code class="highlighter-rouge">CSS語法</code>，便能解決這樣的問題</p>
+
+<p><img src="https://i.imgur.com/FxgJ8lg.png" alt="電腦顯示下" /></p>
+
+<p><img src="https://i.imgur.com/uLP4HPb.png" alt="手機顯示下" /></p>
 
 
 </div>

@@ -53,21 +53,21 @@ categories: cs
 	- 新增works頁面的配置
 	- 將post與work重複過多的class去除
 
-`預計在 v 1.0.5新增`
+`v 1.0.5`
 
 {% assign photo=site.data.work1[3] %}
 {% include one-img-block.html photo=photo %}
 
 	- (ok)post和work頁面還是分開，因為實際上是兩種不同架構，分
 	- (ok)重新整理專案架構，目前問題：名稱命名不夠好分類、資源夾可以再統整進去一個資料夾、posts資料夾過度肥大、重複的配置檔案統一、資料型態的檔案用法可以再尋求更有效率地方法
-	- 新增預讀圖片的頁面
-	- 新增IG格式
 	- (ok!找到更好解法)將數學式改成SVG
-	- footer跑版修正
+	- (ok)footer跑版修正
 	- (ok)articles的配色更改
 	- (ok)articles的預讀畫面修正
 	- (ok)文章全部校正
 	- (ok)把未完成的文章剔除
+	- (ok)重新改版Profile頁面
+	- (ok)將article頁面加上能依照種類預覽
 
 `預計在 v 1.0.6新增`
 	
@@ -75,6 +75,8 @@ categories: cs
 	- 按愛心功能
 	- 瀏覽次數
 	- 標籤欄位
+	- 新增預讀圖片的頁面
+	- 新增IG格式
 
 到`v 1.0.6`已是一個完全沒有bugs、跑版問題，可以使用的部落格
 
@@ -155,9 +157,34 @@ categories: cs
 
 需要用`\$\${equation}\$\$`兩個金錢符號包圍著LaTeX語法
 
-*ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的SDN已經退役了，可以[參考這裡](https://www.mathjax.org/cdn-shutting-down/)*
+*ps: 你可以能會遇到在一些瀏覽器上會說這是不安全的內容，無法執行MathJAX插件，你需要檢查你的mathJAX是不是最新版本的，還有CDN是否還在服役中，我當初的問題就是使用的CDN已經退役了，可以[參考這裡](https://www.mathjax.org/cdn-shutting-down/)*
 
 *2018/5/31*
+
+---
+## RWD網頁
+---
+
+`RWD`是`Responsitive Website Design`的簡稱，顧名思義就是能在不同的裝置上都能夠顯示正常的網頁
+
+在這之前，我對`RWD`的了解停留在使用`Bootstrap`上，我以為只要用`Bootstrap`的`grid`就能讓網頁能夠自適在各裝置
+
+但現實遇到的狀況，例如我的profile頁面分為兩個部分，左邊和右邊，左邊放一張圖片，右邊放一段說明文字
+
+問題是留白的部分，在電腦螢幕上，留白的空間要大，但在手機螢幕本身就小的情況下，留白的空間要很小
+
+這樣的情況是光用`Bootstrap`無法解決的，而我們在`CSS`設定檔中，可以設定在不同的解析度下，套用不同的`CSS語法`，便能解決這樣的問題
+
+![電腦顯示下](https://i.imgur.com/FxgJ8lg.png)
+
+![手機顯示下](https://i.imgur.com/uLP4HPb.png)
+
+
+
+
+
+
+
 
 
 
