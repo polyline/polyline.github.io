@@ -125,21 +125,26 @@ blockquote {
 /* profile */
 
 .profile-page-left{
+	height: 500px;
 	background-color: black;
 	opacity: 0.9;
 }
 
 .profile-page-right{
+	height: 500px;
 	background-color: #009FCC; /*藍色*/
 	opacity: 0.9;
 	border-style: solid;
 }
 
 .profile-page-photo-section{
-
+	margin-top: 250px;
+	transform: translateY(-50%);
 }
 
 .profile-page-intro-section{
+	margin-top: 250px;
+	transform: translateY(-50%);
 	display:none;
 	background-color: #DDDDDD; /*淺灰*/
 	padding: 20px;
@@ -386,15 +391,16 @@ img {
 	margin: 100px;
 }
 
-/* profile-left's padding and profile-right's padding*/
+/* profile-page-left's padding and profile-right's padding*/
 
 .profile-page-left{
-	padding: 100px;
+	padding: 0 100px 0;
 }
 
 .profile-page-right{
-	padding: 150px 80px;
+	padding: 0 100px 0;
 }
+
 
 }
 
@@ -435,11 +441,11 @@ img {
 /* profile-left's padding and profile-right's padding*/
 
 .profile-page-left{
-	padding: 40px;
+	padding: 0 50px 0;
 }
 
 .profile-page-right{
-	padding: 100px 40px;
+	padding: 0 50px 0;
 }
 
 
@@ -486,11 +492,11 @@ img {
 /* profile-left's padding and profile-right's padding*/
 
 .profile-page-left{
-	padding: 40px;
+	padding: 0 20px 0;
 }
 
 .profile-page-right{
-	padding: 100px 40px;
+	padding: 0 20px 0;
 }
 
 }
