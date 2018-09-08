@@ -175,9 +175,10 @@ categories: cs
 
 這樣的情況是光用`Bootstrap`無法解決的，而我們在`CSS`設定檔中，可以設定在不同的解析度下，套用不同的`CSS語法`，便能解決這樣的問題
 
-![電腦顯示下](https://i.imgur.com/FxgJ8lg.png)
+<img src="https://i.imgur.com/FxgJ8lg.png" alt="電腦顯示下" style="max-width:100%">
 
-![手機顯示下](https://i.imgur.com/uLP4HPb.png)
+<img src="https://i.imgur.com/uLP4HPb.png" alt="手機顯示下" style="max-width:100%">
+
 
 
 
