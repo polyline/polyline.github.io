@@ -52,6 +52,8 @@ categories: cs
 
 `v 1.0.5`
 
+<img src="https://i.imgur.com/a0SvoUU.png" alt="新的自我介紹頁面" style="max-width:100%">
+<img src="https://i.imgur.com/mxU702d.png" alt="新的文章種類預覽頁面版型" style="max-width:100%">
 <img src="https://i.imgur.com/cFzMjms.png" alt="新的文章預覽頁面版型" style="max-width:100%">
 
 
