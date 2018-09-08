@@ -247,8 +247,13 @@ blockquote {
 }
 
 .footer-view {
-	padding: 60px 70px;
 	height: 300px;
+}
+
+.footer-section {
+	text-align: center;
+	margin: 150px auto;
+	transform: translateY(-50%)
 }
 /**********
 .footer-info {
@@ -370,7 +375,7 @@ img {
 }
 
 .account {
-	padding-left: 50px;
+	padding-left: 20px;
 	font-size:1rem;
 }
 
@@ -399,7 +404,6 @@ img {
 
 
 .footer-info {
-	padding-left: 130px;
 	line-height: 35px;
 	letter-spacing:1.5px;
 	border-top-style: dashed;
@@ -417,7 +421,7 @@ img {
 	border-top-style: dashed;
 }
 .account {
-	padding-left: 40px;
+	padding-left: 10px;
 	font-size:0.9rem;
 }
 
@@ -468,8 +472,8 @@ img {
 }
 
 .account {
-	padding-left: 40px;
-	font-size:0.9rem;
+	padding-left: 10px;
+	font-size:0.7rem;
 }
 
 /* Box (category-box)*/
