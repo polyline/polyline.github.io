@@ -78,133 +78,31 @@
 
 		</div>
 		<div class="view-home col-md-8 col-sm-12 home-color">
-			
-<div class="container-fluid">
-	<a href="/posts/categories/cs">
-	<div class="row box">
-		<div class="col-md-3 box-icon" >
-			<span><i class="fas fa-code fa-3x"></i></span>
-		</div>
-		<div class="col-md-9 box-description" >
-			<div class="box-intro text-left" style=" width: 100%;">
-				<span class="box-description-title">程式筆記</span>
-				<span class="box-description-detail">包含NLP、網站前後端、ML等相關學習整理</span>
-			</div>
-			<div class="box-chart progress" style="height: 10px; width: 100%;">
-				<div class="progress-bar bg-info progress-cs" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-	</div>
-	</a>
+			<div class="article-window text-left">
+
+<div class="article-title view-color">
+	<h1>上高地</h1>
 </div>
 
+<div>
+
+	<a href="#" class="badge badge-success">jpstudy</a>
 
 
-
-<div class="container-fluid">
-	<a href="/posts/categories/jpstudy">
-	<div class="row box">
-		<div class="col-md-3 box-icon" >
-			<span><i class="fas fa-walking fa-3x"></i></span>
-		</div>
-		<div class="col-md-9 box-description" >
-			<div class="box-intro text-left" style=" width: 100%;">
-				<span class="box-description-title">留學記事</span>
-				<span class="box-description-detail">2017-2018在日本東京留學的紀事</span>
-			</div>
-			<div class="box-chart progress" style="height: 10px; width: 100%;">
-				<div class="progress-bar bg-info progress-jpstudy" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-	</div>
-	</a>
 </div>
 
+<div class="article-content view-color">
+	<p>試試看</p>
 
+<!--more-->
 
+<p><img src="https://i.imgur.com/0ixqNfn.jpg" style="width: 80%;" /></p>
 
-<div class="container-fluid">
-	<a href="/posts/categories/math">
-	<div class="row box">
-		<div class="col-md-3 box-icon" >
-			<span><i class="fas fa-infinity fa-3x"></i></span>
-		</div>
-		<div class="col-md-9 box-description" >
-			<div class="box-intro text-left" style=" width: 100%;">
-				<span class="box-description-title">數學學習</span>
-				<span class="box-description-detail">資工領域相關的數學：線性代數、機率、機器學習等</span>
-			</div>
-			<div class="box-chart progress" style="height: 10px; width: 100%;">
-				<div class="progress-bar bg-info progress-math" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-	</div>
-	</a>
+<p>上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方</p>
+
 </div>
 
-
-
-
-<div class="container-fluid">
-	<a href="/posts/categories/life">
-	<div class="row box">
-		<div class="col-md-3 box-icon" >
-			<span><i class="fas fa-edit fa-3x"></i></span>
-		</div>
-		<div class="col-md-9 box-description" >
-			<div class="box-intro text-left" style=" width: 100%;">
-				<span class="box-description-title">生活牢騷</span>
-				<span class="box-description-detail">各階段對於周遭人事物的想法</span>
-			</div>
-			<div class="box-chart progress" style="height: 10px; width: 100%;">
-				<div class="progress-bar bg-info progress-life" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-			</div>
-		</div>
-	</div>
-	</a>
 </div>
-
-
-
-<script>
-
-speed = 50;
-limit = [4, 2, 4, 7];
-limit = limit.map(zoom)
-nameList = [".progress-cs", ".progress-jpstudy", ".progress-math", ".progress-life"]
-console.log(limit);
-i = 0;
-
-
-function zoom(value, index, array){
-	return value * 3;
-}
-
-function runProgress(){
-	var flag = false;
-	for(c=0; c<5; c++){
-		if(i <= limit[c]){
-			flag = true
-			percentage = i + "%";
-			$(nameList[c]).css("width", percentage);
-			$(nameList[c]).attr("aria-valuenow", i);
-
-		}else{
-			$(nameList[c]).html(limit[c]/3);
-		}
-	}
-	if(flag){
-		setTimeout(runProgress, speed);
-		i++;
-	}
-}
-runProgress();
-	
-
-
-
-</script>
-
 		</div>
 		<div class="col-md-2 col-sm-0">
 		</div>
