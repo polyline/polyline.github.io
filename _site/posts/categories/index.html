@@ -11,6 +11,34 @@
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhAu-yfC5fDBPfdaJGCiVta9o0477Ealg",
+    authDomain: "test-45295.firebaseapp.com",
+    databaseURL: "https://test-45295.firebaseio.com",
+    projectId: "test-45295",
+    storageBucket: "test-45295.appspot.com",
+    messagingSenderId: "884207275698"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+</script>
+
+<script>
+function myTestingFunc(userId) {
+  console.log('GOOD');
+  firebase.database().ref('users/' + userId).set({
+    text: "KUKU",
+    Hey: "1243"
+  })
+}
+</script>
+
 	</head>
 	<body>		
 				<!-- JQeury -->
@@ -80,6 +108,16 @@
 		<div class="view-home col-md-8 col-sm-12 home-color">
 			<h1>POSTS</h1>
 <ul>
+	
+	<li>
+		<a href="/nlp/2018/10/21/Naive-Bayes-Classifier.html">Naive Bayes Classifier</a>
+		<p></p>
+	</li>
+	
+	<li>
+		<a href="/life/2018/10/10/%E5%AF%A6%E7%BF%92%E5%B0%8F%E5%BF%83%E5%BE%97.html">實習小心得</a>
+		<p></p>
+	</li>
 	
 	<li>
 		<a href="/jpstudy/2018/09/08/%E4%B8%8A%E9%AB%98%E5%9C%B0.html">上高地</a>

@@ -232,6 +232,21 @@ blockquote {
 	border-radius: 10px;
 }
 
+/* Comment to Articles */
+
+.comment-box {
+	padding: 20px;
+}
+
+.comment-box-author {
+
+}
+
+.comment-box-content {
+
+
+}
+
 /* Work Article Setting */
 
 .work-article-window {

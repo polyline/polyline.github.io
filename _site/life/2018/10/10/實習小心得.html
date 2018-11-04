@@ -1,0 +1,291 @@
+<!-- OK -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chen Tse-Pei's Blog</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- My CSS -->
+<link href="/res/css/common.css" rel="stylesheet">
+
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhAu-yfC5fDBPfdaJGCiVta9o0477Ealg",
+    authDomain: "test-45295.firebaseapp.com",
+    databaseURL: "https://test-45295.firebaseio.com",
+    projectId: "test-45295",
+    storageBucket: "test-45295.appspot.com",
+    messagingSenderId: "884207275698"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+</script>
+
+<script>
+function myTestingFunc(userId) {
+  console.log('GOOD');
+  firebase.database().ref('users/' + userId).set({
+    text: "KUKU",
+    Hey: "1243"
+  })
+}
+</script>
+
+	</head>
+	<body>		
+				<!-- JQeury -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+	<!-- Font Awesome -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="	sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+	<!-- support MathJax -->
+	<style TYPE="text/css">
+	code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+	</style>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+	    }
+	});
+	MathJax.Hub.Queue(function() {
+	    var all = MathJax.Hub.getAllJax(), i;
+	    for(i = 0; i < all.length; i += 1) {
+	        all[i].SourceElement().parentNode.className += ' has-jax';
+	    }
+	});
+	</script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		<header>
+			<!-- OK -->
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-default nav-color" >
+    <a class="navbar-brand" href="/index.html">Tsu-Pei Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars" ></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+             <a class="nav-link" href="/index.html">About me</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="/posts">Ariticles</a>
+          </li
+          <li class="nav-item">
+             <a class="nav-link" href="/works">Works</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+		</header>
+		<main>
+			<!-- OK -->
+
+<div class="container-fluid text-center bg-color">
+	<div class="">
+	<div class="row bg-icon">
+		<div class="col-md-2 col-sm-0">
+
+		</div>
+		<div class="view-home col-md-8 col-sm-12 home-color">
+			<div class="article-window text-left">
+
+<!-- title -->
+<div class="article-title view-color">
+	<h1>實習小心得</h1>
+</div>
+
+<!-- tags -->
+<div>
+
+	<a href="#" class="badge badge-success">life</a>
+
+</div>
+
+<!-- content -->
+<div class="article-content view-color">
+	<p>從上個月開始，我開始到台北的一間新創公司實習</p>
+
+<p>這家公司主要是做<code class="highlighter-rouge">NLP</code>(自然語言處理)及<code class="highlighter-rouge">NLG</code>(自然語言生成)，剛好和我在日本研究室相關</p>
+
+<p>當時在日本也算是懞懞懂懂才申請到自然語言相關的實驗室</p>
+
+<p>而在這一年中，其實也因為本來沒有實力基礎，沒有做出什麼厲害的成果來</p>
+
+<p>但是，卻也幫我對這領域打下良好基礎，很多東西我都大概聽過、理解它的理論</p>
+
+<p>我缺乏的是要將其好好系統化整理、紀錄，然後加強實作的部分</p>
+
+<p>現在在公司，我有一位<code class="highlighter-rouge">NLP Team</code>的主管會帶我</p>
+
+<p>我主要在讀情緒文本分類(Sentiment Classification)相關的論文(Paper Review)，並想辦法實作出來</p>
+
+<p>在剛剛實習這兩週，我已經試過<code class="highlighter-rouge">Bayes</code>、<code class="highlighter-rouge">SVM</code>、<code class="highlighter-rouge">TextCNN</code>來實作</p>
+
+<p>深深覺得程式碼的能力要更加強，尤其是對<code class="highlighter-rouge">gensim</code>、<code class="highlighter-rouge">pytorch</code>、<code class="highlighter-rouge">tensorflow</code>、<code class="highlighter-rouge">sk-learn</code>這幾個套件的熟悉程度還不夠</p>
+
+<p>我會繼續用這樣邊寫邊學的方式來學習，並且要整理程筆記記錄下來</p>
+
+<p><em>2018/10/10</em></p>
+
+<hr />
+
+<p>實習過了快一個月了，每個禮拜兩天的實習已經成為我最充實的時間</p>
+
+<p>雖然只有一個簡單的任務，就是做情緒分析</p>
+
+<p>但是我要用什麼方法、怎麼讓效果更好，讓我要閱讀大量文章跟論文來做</p>
+
+<p>像是，當時候發現了一些問題</p>
+
+<ol>
+  <li>直接使用<code class="highlighter-rouge">word embedding</code>會導致無法判斷反義詞</li>
+  <li>分詞的問題，像是如果<code class="highlighter-rouge">不開心</code>，如果分詞分成<code class="highlighter-rouge">不</code> <code class="highlighter-rouge">開心</code>就會失敗，因為<code class="highlighter-rouge">不</code>屬於停用詞，沒有對應的詞向量</li>
+  <li>改用了<code class="highlighter-rouge">char-level CNN</code>，但是太多無關（無情緒）的字會洗掉情緒字</li>
+  <li>不能使用<code class="highlighter-rouge">data augmentation</code>，跟第一點同原因</li>
+</ol>
+
+<p>所以我發現，與其說哪一個model能做的比較好，不如說怎樣組裝各種方法能達到比較好效果</p>
+
+<p>因此，最後表現的比較好的有以下幾種</p>
+
+<ol>
+  <li>TextCNN + Standard Tokenizer + pre-trained WB</li>
+  <li>TextCNN + char-level + one-hot WB</li>
+  <li>similar words</li>
+</ol>
+
+<p>除此之外，我也學到了怎麼更有組織的寫code，讓別人能夠一目暸然</p>
+
+<p>還有接觸到很多工具，AWS, Robot3T, Celebro等</p>
+
+<p><em>2018/11/4</em></p>
+
+</div>
+
+<!-- botton for leaving comments -->
+<!--div>
+	<button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#collapseCommentForm" aria-expanded="false" aria-controls="collapseCommentForm">留言 Comment</button>
+</div>
+
+<div class="comment-box collapse" id="collapseCommentForm">
+	<form id="commentForm">
+		<div class="comment-box-author form-group">
+    		<input class="form-control" id="nameEntry" placeholder="Enter Name">
+		</div>
+		<div class="comment-box-content form-group">
+			<textarea class="form-control" id="contentEntry" rows="7" placeholder="Leave a comment"></textarea>
+		</div>
+		<button type="submit" class="btn btn-outline-success">Submit</button>
+	</form>
+</div>
+
+
+<!-- showing comments -->
+<!-- 
+
+Read the amount
+
+
+-->
+
+<script>
+
+//get the amount
+
+// for loop
+
+</script>
+
+<div>
+
+</div>
+
+</div>
+
+		</div>
+		<div class="col-md-2 col-sm-0">
+		</div>
+	</div>
+	<div>
+</div>
+		</main>
+		<footer class="footer">
+			<!-- No -->
+
+<!--This is the footer of the website-->
+
+<div class="footer-window container-fluid footer-color">
+	<div class="row">
+		<div class="footer-view footer-info col-md-4 text-left">
+			<div class="footer-section">
+				<div class="account-box">
+					<i class="fab fa-github-square fa-3x"></i> 
+					<span class="account">@polyline</span>
+				</div>
+				<div class="account-box">
+					<i class="fab fa-instagram fa-3x"></i> 
+					<span class="account">@__tsu__pei</span>
+				</div>
+				<div class="account-box">
+					<i class="fas fa-envelope fa-3x" ></i> 
+					<span class="account">a5560648@gmail.com</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer-view footer-words col-md-4 text-center">
+			<div class="footer-section">
+				<p>快樂有很多種</p>
+				<p>平凡的快樂、頹廢的快樂、成就的快樂</p>
+				<p>追尋自己想要的快樂</p>
+			</div>
+		</div>
+		<div class="footer-view footer-license col-md-4 text-center">
+			<div class="footer-section">
+				<p>Version 0.0.5</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+log
+<p>Version 0.0.2</p>
+			<p>0.0.2 - 配色完成</p>
+			<p>0.0.2 - 基本模板完成</p>
+			<p>0.0.2 - 自我介紹新增打字效果</p>
+
+
+
+
+-->
+		</footer>
+		</div>
+	</body>
+</html>
+
+<script>
+$(".badge-info").hover(function(){
+    $(this).hide(1000);
+});
+
+
+</script>

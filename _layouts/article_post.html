@@ -4,19 +4,48 @@ layout: home_post
 
 <div class="article-window text-left">
 
+<!-- title -->
 <div class="article-title view-color">
 	<h1>{{page.title}}</h1>
 </div>
 
+<!-- tags -->
 <div>
 {% for tag in page.categories %}
 	<a href="#" class="badge badge-success">{{ tag }}</a>
 {% endfor %}
-
 </div>
 
+<!-- content -->
 <div class="article-content view-color">
 	{{ content }}
+</div>
+
+<!-- botton for leaving comments -->
+<!--div>
+	<button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#collapseCommentForm" aria-expanded="false" aria-controls="collapseCommentForm">留言 Comment</button>
+</div>
+
+{% include article-page/comment-box-form.html %}
+
+<!-- showing comments -->
+<!-- 
+
+Read the amount
+
+
+-->
+
+<script>
+
+//get the amount
+
+// for loop
+
+</script>
+
+<div>
+
 </div>
 
 </div>

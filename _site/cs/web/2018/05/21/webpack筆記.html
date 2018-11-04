@@ -11,6 +11,34 @@
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhAu-yfC5fDBPfdaJGCiVta9o0477Ealg",
+    authDomain: "test-45295.firebaseapp.com",
+    databaseURL: "https://test-45295.firebaseio.com",
+    projectId: "test-45295",
+    storageBucket: "test-45295.appspot.com",
+    messagingSenderId: "884207275698"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+</script>
+
+<script>
+function myTestingFunc(userId) {
+  console.log('GOOD');
+  firebase.database().ref('users/' + userId).set({
+    text: "KUKU",
+    Hey: "1243"
+  })
+}
+</script>
+
 	</head>
 	<body>		
 				<!-- JQeury -->
@@ -80,19 +108,21 @@
 		<div class="view-home col-md-8 col-sm-12 home-color">
 			<div class="article-window text-left">
 
+<!-- title -->
 <div class="article-title view-color">
 	<h1>webpack筆記</h1>
 </div>
 
+<!-- tags -->
 <div>
 
 	<a href="#" class="badge badge-success">cs</a>
 
 	<a href="#" class="badge badge-success">web</a>
 
-
 </div>
 
+<!-- content -->
 <div class="article-content view-color">
 	<p><em>2018-5-21</em></p>
 
@@ -520,7 +550,46 @@ import main-css from './main.css';
 
 </div>
 
+<!-- botton for leaving comments -->
+<!--div>
+	<button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#collapseCommentForm" aria-expanded="false" aria-controls="collapseCommentForm">留言 Comment</button>
 </div>
+
+<div class="comment-box collapse" id="collapseCommentForm">
+	<form id="commentForm">
+		<div class="comment-box-author form-group">
+    		<input class="form-control" id="nameEntry" placeholder="Enter Name">
+		</div>
+		<div class="comment-box-content form-group">
+			<textarea class="form-control" id="contentEntry" rows="7" placeholder="Leave a comment"></textarea>
+		</div>
+		<button type="submit" class="btn btn-outline-success">Submit</button>
+	</form>
+</div>
+
+
+<!-- showing comments -->
+<!-- 
+
+Read the amount
+
+
+-->
+
+<script>
+
+//get the amount
+
+// for loop
+
+</script>
+
+<div>
+
+</div>
+
+</div>
+
 		</div>
 		<div class="col-md-2 col-sm-0">
 		</div>

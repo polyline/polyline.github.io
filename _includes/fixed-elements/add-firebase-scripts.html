@@ -1,0 +1,27 @@
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhAu-yfC5fDBPfdaJGCiVta9o0477Ealg",
+    authDomain: "test-45295.firebaseapp.com",
+    databaseURL: "https://test-45295.firebaseio.com",
+    projectId: "test-45295",
+    storageBucket: "test-45295.appspot.com",
+    messagingSenderId: "884207275698"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+</script>
+
+<script>
+function myTestingFunc(userId) {
+  console.log('GOOD');
+  firebase.database().ref('users/' + userId).set({
+    text: "KUKU",
+    Hey: "1243"
+  })
+}
+</script>

@@ -11,6 +11,34 @@
 <!-- My CSS -->
 <link href="/res/css/common.css" rel="stylesheet">
 
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAhAu-yfC5fDBPfdaJGCiVta9o0477Ealg",
+    authDomain: "test-45295.firebaseapp.com",
+    databaseURL: "https://test-45295.firebaseio.com",
+    projectId: "test-45295",
+    storageBucket: "test-45295.appspot.com",
+    messagingSenderId: "884207275698"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+</script>
+
+<script>
+function myTestingFunc(userId) {
+  console.log('GOOD');
+  firebase.database().ref('users/' + userId).set({
+    text: "KUKU",
+    Hey: "1243"
+  })
+}
+</script>
+
 	</head>
 	<body>		
 				<!-- JQeury -->
@@ -127,6 +155,36 @@
 	</div>		
 	<div class="view-section-attr view-section-readmore text-center work-text-bg-color">
 		<a href="/works/blog.html">Readmore</a>
+	</div>
+</div>
+
+	
+
+<!-- OK -->
+
+<div class="view-window work-view-color solid-border">
+	<div class="view-section-attr view-section-title text-left work-text-bg-color" >
+		<p>ptt文本分類(I)</p>
+	</div>
+	<div class="view-section-attr view-section-content text-left work-text-bg-color">
+		<p>
+			<hr />
+<h1 id="介紹">介紹</h1>
+<hr />
+
+<p>在我仔細地學習完各種文本分類器後，我很想要比較看看用在實際的數據中，分別的表現為如何</p>
+
+<p>這次的專案中，我將使用NB, SVM, LR在PTT的數據中</p>
+
+<p>由於PTT的資料已知爬蟲可以拿到，我們將每個版視為一個類別</p>
+
+<p>我也想藉由這次的專案來學習資料視覺化，來更好的比較結果</p>
+
+
+		</p>
+	</div>		
+	<div class="view-section-attr view-section-readmore text-center work-text-bg-color">
+		<a href="/works/ptt%E6%96%87%E6%9C%AC%E5%88%86%E9%A1%9E.html">Readmore</a>
 	</div>
 </div>
 
