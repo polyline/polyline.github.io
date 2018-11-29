@@ -11,7 +11,7 @@ categories: cs nlp
 
 在我仔細地學習完各種文本分類器後，我很想要比較看看用在實際的數據中，分別的表現為如何
 
-這次的專案中，我將使用NB, SVM, LR在PTT的數據中
+這次的專案中，我將使用`NB`, `SVM`, `LR`在PTT的數據中
 
 由於PTT的資料已知爬蟲可以拿到，我們將每個版視為一個類別
 
@@ -22,6 +22,8 @@ categories: cs nlp
 ---
 # 抓ptt資料及處理(Crawler)
 ---
+
+
 
 ---
 # 資料預處理(preprocessing)

@@ -106,119 +106,126 @@ function myTestingFunc(userId) {
 
 		</div>
 		<div class="view-home col-md-8 col-sm-12 home-color">
-			
-	<!-- OK -->
+			<div class="article-window text-left">
 
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>Common Classifiers</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p>在這篇文章，我想要介紹一些常見的<code class="highlighter-rouge">Classifier</code></p>
-
-<p>包含：<code class="highlighter-rouge">SVM</code>, <code class="highlighter-rouge">NB</code>, <code class="highlighter-rouge">Logistic Regression</code></p>
-
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/nlp/2018/10/21/Naive-Bayes-Classifier.html">Readmore</a>
-	</div>
+<!-- title -->
+<div class="article-title view-color">
+	<h1>node.js+express重點避忌</h1>
 </div>
 
-	<!-- OK -->
+<!-- tags -->
+<div>
 
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>實習小心得</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<p>從上個月開始，我開始到台北的一間新創公司實習</p>
+	<a href="#" class="badge badge-success">cs</a>
 
-<p>這家公司主要是做<code class="highlighter-rouge">NLP</code>(自然語言處理)及<code class="highlighter-rouge">NLG</code>(自然語言生成)，剛好和我在日本研究室相關</p>
+	<a href="#" class="badge badge-success">web</a>
 
-<p>當時在日本也算是懞懞懂懂才申請到自然語言相關的實驗室</p>
-
-<p>而在這一年中，其實也因為本來沒有實力基礎，沒有做出什麼厲害的成果來</p>
-
-<p>但是，卻也幫我對這領域打下良好基礎，很多東西我都大概聽過、理解它的理論</p>
-
-<p>我缺乏的是要將其好好系統化整理、紀錄，然後加強實作的部分</p>
-
-<p>現在在公司，我有一位<code class="highlighter-rouge">NLP Team</code>的主管會帶我</p>
-
-<p>我主要在讀情緒文本分類(Sentiment Classification)相關的論文(Paper Review)，並想辦法實作出來</p>
-
-<p>在剛剛實習這兩週，我已經試過<code class="highlighter-rouge">Bayes</code>、<code class="highlighter-rouge">SVM</code>、<code class="highlighter-rouge">TextCNN</code>來實作</p>
-
-<p>深深覺得程式碼的能力要更加強，尤其是對<code class="highlighter-rouge">gensim</code>、<code class="highlighter-rouge">pytorch</code>、<code class="highlighter-rouge">tensorflow</code>、<code class="highlighter-rouge">sk-learn</code>這幾個套件的熟悉程度還不夠</p>
-
-<p>我會繼續用這樣邊寫邊學的方式來學習，並且要整理程筆記記錄下來</p>
-
-<p><em>2018/10/10</em></p>
-
-<hr />
-
-<p>實習過了快一個月了，每個禮拜兩天的實習已經成為我最充實的時間</p>
-
-<p>雖然只有一個簡單的任務，就是做情緒分析</p>
-
-<p>但是我要用什麼方法、怎麼讓效果更好，讓我要閱讀大量文章跟論文來做</p>
-
-<p>像是，當時候發現了一些問題</p>
-
-<ol>
-  <li>直接使用<code class="highlighter-rouge">word embedding</code>會導致無法判斷反義詞</li>
-  <li>分詞的問題，像是如果<code class="highlighter-rouge">不開心</code>，如果分詞分成<code class="highlighter-rouge">不</code> <code class="highlighter-rouge">開心</code>就會失敗，因為<code class="highlighter-rouge">不</code>屬於停用詞，沒有對應的詞向量</li>
-  <li>改用了<code class="highlighter-rouge">char-level CNN</code>，但是太多無關（無情緒）的字會洗掉情緒字</li>
-  <li>不能使用<code class="highlighter-rouge">data augmentation</code>，跟第一點同原因</li>
-</ol>
-
-<p>所以我發現，與其說哪一個model能做的比較好，不如說怎樣組裝各種方法能達到比較好效果</p>
-
-<p>因此，最後表現的比較好的有以下幾種</p>
-
-<ol>
-  <li>TextCNN + Standard Tokenizer + pre-trained WB</li>
-  <li>TextCNN + char-level + one-hot WB</li>
-  <li>similar words</li>
-</ol>
-
-<p>除此之外，我也學到了怎麼更有組織的寫code，讓別人能夠一目暸然</p>
-
-<p>還有接觸到很多工具，AWS, Robot3T, Celebro等</p>
-
-<p><em>2018/11/4</em></p>
-
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/life/nlp/2018/10/10/%E5%AF%A6%E7%BF%92%E5%B0%8F%E5%BF%83%E5%BE%97.html">Readmore</a>
-	</div>
 </div>
 
-	<!-- OK -->
-
-<div class="view-window view-color round-corner max-height-350">
-	<div class="view-section-attr view-section-title text-left round-corner" >
-		<p>HMM</p>
-	</div>
-	<div class="view-section-attr view-section-content text-left round-corner max-height-200">
-		<p>
-			<hr />
+<!-- content -->
+<div class="article-content view-color">
+	<hr />
 <h2 id="介紹">介紹</h2>
 <hr />
 
+<p>如果你也對以下的問題抱有疑惑，那從這篇文章我們來一步步解開它們吧！</p>
 
-		</p>
-	</div>		
-	<div class="view-section-attr view-section-readmore text-center round-corner">
-		<a href="/cs/nlp/2018/06/09/HMM.html">Readmore</a>
-	</div>
+<ol>
+  <li>怎麼開始用node.js來建我的網站</li>
+  <li>express是什麼？跟node.js又有什麼關係</li>
+</ol>
+
+<!--more-->
+
+<hr />
+<h2 id="開始">開始</h2>
+<hr />
+
+<p>假設你是一個完全不懂的新手，要開始一個專案</p>
+
+<p>我們先為專案想個名稱，並為它創個資料夾，進去後輸入</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm init
+</code></pre>
 </div>
 
+<p>就能開啟一個<code class="highlighter-rouge">node.js</code>的專案</p>
+
+<p>輸入後，<code class="highlighter-rouge">console</code>會有一堆問題問你，要你設定一些基本資訊</p>
+
+<p>設定完畢後，我們能看到<code class="highlighter-rouge">package.json</code>這個檔案中記載了這個專案的所有基本資訊</p>
+
+<hr />
+<h2 id="hello-world">Hello World!</h2>
+<hr />
+
+<p>在<code class="highlighter-rouge">node.js</code>中安裝套件相當容易，我們使用<a href="https://polyline.github.io/cs/web/2018/03/03/npm套件管理系統.html">npm套件管理系統</a>一行指令就能完成安裝</p>
+
+<p>這邊我們要安裝<code class="highlighter-rouge">express</code>，所以就輸入</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install express --save
+</code></pre>
+</div>
+
+<p>這樣就安裝好了！</p>
+
+<p>我們想要做一個會顯示<code class="highlighter-rouge">Hello World!</code>頁面的網站</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!');
+});
+</code></pre>
+</div>
+
+<p>使用<code class="highlighter-rouge">require</code>就能直接引用套件，當我們送出<code class="highlighter-rouge">/</code>這個<code class="highlighter-rouge">request</code>時，回傳只包含字串<code class="highlighter-rouge">Hello World!</code>的<code class="highlighter-rouge">response</code></p>
+
+
+</div>
+
+<!-- botton for leaving comments -->
+<!--div>
+	<button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#collapseCommentForm" aria-expanded="false" aria-controls="collapseCommentForm">留言 Comment</button>
+</div>
+
+<div class="comment-box collapse" id="collapseCommentForm">
+	<form id="commentForm">
+		<div class="comment-box-author form-group">
+    		<input class="form-control" id="nameEntry" placeholder="Enter Name">
+		</div>
+		<div class="comment-box-content form-group">
+			<textarea class="form-control" id="contentEntry" rows="7" placeholder="Leave a comment"></textarea>
+		</div>
+		<button type="submit" class="btn btn-outline-success">Submit</button>
+	</form>
+</div>
+
+
+<!-- showing comments -->
+<!-- 
+
+Read the amount
+
+
+-->
+
+<script>
+
+//get the amount
+
+// for loop
+
+</script>
+
+<div>
+
+</div>
+
+</div>
 
 		</div>
 		<div class="col-md-2 col-sm-0">

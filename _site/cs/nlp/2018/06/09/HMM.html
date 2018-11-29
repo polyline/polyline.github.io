@@ -110,25 +110,117 @@ function myTestingFunc(userId) {
 
 <!-- title -->
 <div class="article-title view-color">
-	<h1>上高地</h1>
+	<h1>HMM</h1>
 </div>
 
 <!-- tags -->
 <div>
 
-	<a href="#" class="badge badge-success">jpstudy</a>
+	<a href="#" class="badge badge-success">cs</a>
+
+	<a href="#" class="badge badge-success">nlp</a>
 
 </div>
 
 <!-- content -->
 <div class="article-content view-color">
-	<p>試試看</p>
+	<hr />
+<h2 id="介紹">介紹</h2>
+<hr />
 
-<!--more-->
+<p>最近研究跟讀書會，剛好同時接觸到<code class="highlighter-rouge">Markov Chain</code>這個名詞</p>
 
-<p><img src="https://i.imgur.com/0ixqNfn.jpg" style="width: 80%;" /></p>
+<p>往下鑽研才會發現，這些概念都是相互綁在一起的<code class="highlighter-rouge">Probability</code>, <code class="highlighter-rouge">Graphic Model</code>, <code class="highlighter-rouge">Markov Chain</code>, <code class="highlighter-rouge">HMM</code>等</p>
 
-<p>上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方上高地是個非常美的地方</p>
+<p>讓我們在這篇文章中，把相關的知識都整理一下吧！</p>
+
+<p><em>PS. 在我的文章中，會盡量將第一次出現的專有名詞同時中英文標註，我自己在查資料時常常會因為翻譯的問題而看不懂</em></p>
+
+<hr />
+<h2 id="hmm">HMM</h2>
+<hr />
+
+<p>一個<code class="highlighter-rouge">HMM Model</code>可以歸類成三個問題</p>
+
+<ol>
+  <li>Likelihood</li>
+  <li>Decoding</li>
+  <li>Learning</li>
+</ol>
+
+<p>首先，讓我們回顧一下什麼是<code class="highlighter-rouge">Markov Assumption</code></p>
+
+<script type="math/tex; mode=display">P(q_{t} \mid q_{t-1}, q_{t-2}, ...) = P(q_{t} \mid q_{t-1})</script>
+
+<p>也就是假設我們現在的狀態$q_{t}$只依賴於前一個狀態$q_{t-1}$，$P(q_{t} \mid q_{t-1})$就是<code class="highlighter-rouge">轉移機率(transition probability)</code></p>
+
+<p>在Hidden Markov Model中，除了狀態轉移的<code class="highlighter-rouge">transition probability</code>，還有從狀態到觀測值的<code class="highlighter-rouge">發射機率(emission probability)</code></p>
+
+<script type="math/tex; mode=display">P(y_{t} \mid q_{t}), y_{t}為在t時的觀測值</script>
+
+<p>所以在<code class="highlighter-rouge">HMM</code>中，我們用矩陣來表示這兩個機率</p>
+
+<ol>
+  <li>轉移矩陣(transition matrix)$ A_{kxk}$</li>
+  <li>發射矩陣(emission matrix)$ B_{kxL}$</li>
+</ol>
+
+<p>我們用三個參數來表示一個<code class="highlighter-rouge">HMM Model</code>，$A代表的是狀態之間的轉移矩陣，B代表的是狀態到觀測值的發射矩陣$，而$\pi$是我們的起始狀態</p>
+
+<script type="math/tex; mode=display">\Lambda = \{ A, B, \pi \}</script>
+
+<p>假設我們現在有三個觀測值，我們想求這樣的觀測值出現的機率為多少</p>
+
+<script type="math/tex; mode=display">P(y_{1}, y_{2}, y_{3}) = \sum_{q_{1}=1}^{k} \sum_{q_{2}=1}^{k} \sum_{q_{3}=1}^{k} P(y_{1}, y_{2}, y_{3}, q_{1}, q_{2}, q_{3}) \\ = \sum_{q_{1}=1}^{k} \sum_{q_{2}=1}^{k} \sum_{q_{3}=1}^{k} P(y_{3} \mid q_{3}) P(q_{3} \mid q_{2}) P(y_{2} \mid q_{2}) P(q_{2} \mid q_{1}) P(y_{1} \mid q_{1}) P(q_{1})</script>
+
+<p>在上面的式子中，我們第一步先將狀態$q$加進去，之後利用<code class="highlighter-rouge">Bayes' rules</code>的條件機率定義展開，並且藉由<code class="highlighter-rouge">Markov Assumption</code>將前面狀態及前面觀測值消除(狀態只跟前一個狀態有關，觀測也只跟現在這個狀態有關)</p>
+
+<p>但是，這樣的結果還是非常難計算，我們需要做那麼多次的sum，假設我們現在觀測值不只三個的話，我們有$T$個觀測值</p>
+
+<p>那我們總共需要做$T$的$sum$，每次做$k$次，所以總共有$k^{T}$的計算量，而且在現實應用中，$k$和$T$都是很大的值</p>
+
+<p>因此，我們可以利用程式設計中的<code class="highlighter-rouge">DP</code>觀念來解決這個問題，我們稱之為<code class="highlighter-rouge">Forward Algorithm, Backward Algorithm</code></p>
+
+<p>首先，先定義兩個變數$\alpha , \beta$</p>
+
+<script type="math/tex; mode=display">\alpha_{i}(t) = P(y_{1}, ..., y_{t}, q_{t} = i \mid \lambda)</script>
+
+<script type="math/tex; mode=display">\beta_{i}(t) = P(y_{t+1}, ..., y_{T}, q_{t} = i \mid \lambda)</script>
+
+<p>稍微解釋一下，$\alpha$即<code class="highlighter-rouge">狀態t</code>跟<code class="highlighter-rouge">觀測值1到t</code>的<code class="highlighter-rouge">joint probability</code>，$\beta$則是<code class="highlighter-rouge">狀態t</code>跟<code class="highlighter-rouge">觀測值t+1到T</code>的<code class="highlighter-rouge">joint probability</code></p>
+
+<p>我們接下來從$\alpha_{i}(1)$開始推導，看能不能找出什麼規律</p>
+
+<script type="math/tex; mode=display">\alpha_{i}(1) = P(y_{1}, q_{1} = i \mid \lambda) = P(y_{1} \mid q_{1} = i) \times P(q_{1})</script>
+
+<script type="math/tex; mode=display">\alpha_{j}(2) = P(y_{1}, y_{2}, q_{2} = j \mid \lambda) = \sum_{i=1}^{k} P(y_{1}, y_{2}, q_{1}=i, q_{2}=j) = 
+
+P(y_{2} \mid q_{2} = j) \sum_{i=1}^{k} P(q_{2}=j \mid q_{1}=i) \times \alpha_{i}(1)</script>
+
+<p>從此我們可以發現，可以找出規律寫出以下式子</p>
+
+<script type="math/tex; mode=display">\alpha_{i}(T) = P(y_{1}, .., y_{T}, q_{T} = i) = P(y_{T} \mid q_{T} = i) \sum_{i=1}^{k} P(q_{T}=j \mid q_{T-1} = i) \times \alpha_{i}(T-1) = b_{i}(T) \sum_{i=1}^{k} a_{i, j} \alpha_{i}(T-1)</script>
+
+<p>經過這樣的式子，我們可以將計算量$k^{T}$降到$kT$，因為每一個$\alpha$都只需做計算量k次的$sum$，也就是<code class="highlighter-rouge">forward formula</code></p>
+
+<p>而還記得我們原來要求的是$P(y_{1}, …, y_{T})$而我們現在有的是$\alpha_{i}(T) = P(y_{1}, …, y_{T}, q_{T} = i)$</p>
+
+<p>所以我們只要把$q_{T}$積分起來，就能得到我們要的式子了</p>
+
+<script type="math/tex; mode=display">P(y_{1}, ..., y_{T}) = \sum_{i=1}^{k}\alpha_{i}(T)</script>
+
+<hr />
+<h2 id="reference">Reference</h2>
+<hr />
+
+<ol>
+  <li><a href="https://www.youtube.com/watch?v=jY2E6ExLxaw">Youtube上講解HMM影片，UBC大學的影片</a></li>
+  <li>[LDA數學八卦，關於馬可夫鏈的章節]</li>
+  <li>[Graphic Model]</li>
+  <li><a href="https://www.youtube.com/watch?v=Ji6KbkyNmk8">徐亦達機器學習課程</a>
+ -非常清楚的講解HMM的推導</li>
+</ol>
+
 
 </div>
 
