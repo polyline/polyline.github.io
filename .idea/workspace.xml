@@ -3,21 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92f48281-39d8-4bd8-908b-089020b40dba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/jpstudy/2018-09-08-上高地.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/life/2018-10-10-實習小心得.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/life/2018-10-10-實習小心得.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/nlp/2018-10-21-Naive Bayes Classifier.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/nlp/2018-10-21-Naive Bayes Classifier.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/jpstudy/2018/09/08/上高地.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/life/2018/10/10/實習小心得.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/nlp/2018/10/21/Naive-Bayes-Classifier.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/2018/10/21/Naive-Bayes-Classifier.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/categories/cs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/categories/cs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/categories/jpstudy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/categories/jpstudy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/categories/life/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/categories/life/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/categories/nlp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/categories/nlp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/posts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/posts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/works/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/works/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/works/ptt文本分類.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/works/ptt文本分類.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_works/ptt文本分類.md" beforeDir="false" afterPath="$PROJECT_DIR$/_works/ptt文本分類.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,54 +15,45 @@
     <session id="-1591935934">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="15" />
+          <entry key="md" value="16" />
+          <entry key="py" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="15" />
+          <entry key="Markdown" value="16" />
+          <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="957" />
+          <entry key="md" value="1685" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="957" />
+          <entry key="Markdown" value="1685" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/math/2018-06-03-s_Dirichlet.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="70">
-                <caret line="14" selection-start-line="14" selection-end-line="14" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-10-21-Naive Bayes Classifier.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="165">
-                <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <first_editor>
+                <caret selection-end-line="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -84,10 +61,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_works/blog.md">
+        <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-11-29-Label Propagation.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -119,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/_works/YFR.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-4053" />
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -129,10 +108,19 @@
         <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-161">
-                <caret line="32" column="24" selection-start-line="32" selection-end-line="33" />
+              <first_editor relative-caret-position="-292">
+                <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-12-08-EncoderDecoder.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -141,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2018-05-01-s_MLE.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1348" />
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -151,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/jpstudy/2018-04-26-HomeStay.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-504" />
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -161,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/cs/web/2018-09-15-nodejs+express重點整理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="116">
+              <first_editor relative-caret-position="420">
                 <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               </first_editor>
               <second_editor />
@@ -171,23 +159,33 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md" />
         <option value="$PROJECT_DIR$/_posts/life/2018-10-10-實習小心得.md" />
         <option value="$PROJECT_DIR$/_posts/cs/web/2018-09-15-nodejs+express重點整理.md" />
+        <option value="$PROJECT_DIR$/_posts/nlp/2018-11-29-Label Propagation.md" />
+        <option value="$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md" />
         <option value="$PROJECT_DIR$/_posts/nlp/2018-10-21-Naive Bayes Classifier.md" />
+        <option value="$PROJECT_DIR$/_posts/nlp/2018-12-08-EncoderDecoder.md.py" />
+        <option value="$PROJECT_DIR$/_posts/nlp/2018-12-08-EncoderDecoder.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="815" />
+    <option name="width" value="1399" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -197,6 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,7 +236,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,16 +267,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <frame x="0" y="23" width="1399" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26487663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -286,6 +280,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -323,20 +321,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_works/ptt文本分類.md">
+    <entry file="file://$PROJECT_DIR$/_posts/jpstudy/2018-09-08-上高地.md" />
+    <entry file="file://$PROJECT_DIR$/_posts/math/2018-06-03-s_Dirichlet.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <first_editor relative-caret-position="210">
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
           </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_works/YFR.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-4053" />
           <second_editor />
         </state>
       </provider>
@@ -357,25 +348,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/math/2018-06-03-s_Dirichlet.md">
+    <entry file="file://$PROJECT_DIR$/_works/ptt文本分類.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="70">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <first_editor relative-caret-position="330">
+            <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/math/2018-05-01-s_MLE.md">
+    <entry file="file://$PROJECT_DIR$/_works/YFR.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1348" />
+          <first_editor />
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/jpstudy/2018-09-08-上高地.md">
+    <entry file="file://$PROJECT_DIR$/_posts/math/2018-05-01-s_MLE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -386,7 +377,7 @@
     <entry file="file://$PROJECT_DIR$/_posts/jpstudy/2018-04-26-HomeStay.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-504" />
+          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -394,7 +385,7 @@
     <entry file="file://$PROJECT_DIR$/_posts/cs/web/2018-09-15-nodejs+express重點整理.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="116">
+          <first_editor relative-caret-position="420">
             <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           </first_editor>
           <second_editor />
@@ -404,8 +395,18 @@
     <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-06-09-HMM.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-161">
-            <caret line="32" column="24" selection-start-line="32" selection-end-line="33" />
+          <first_editor relative-caret-position="-292">
+            <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-11-29-Label Propagation.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>
@@ -414,10 +415,17 @@
     <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-10-21-Naive Bayes Classifier.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <first_editor>
+            <caret selection-end-line="6" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/nlp/2018-12-08-EncoderDecoder.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
